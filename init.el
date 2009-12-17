@@ -1,7 +1,6 @@
 ;;;;;;;;;;;;;;;;;;;;;
 ;; global settings ;;
 ;;;;;;;;;;;;;;;;;;;;;
-
 (show-paren-mode)
 (global-set-key (kbd "<RET>") 'reindent-then-newline-and-indent)
 (global-set-key (kbd "C-j") 'join-line)
@@ -23,12 +22,22 @@
 
 (global-set-key (kbd "C-m") 'kill-whole-line)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; loading custom files ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(load elisp-mode)
+(setq dotfiles-dir (file-name-directory
+		    (or
+		     (buffer-file-name)
+		     load-file-name)))
 
-
-(load c-mode)
+(add-to-list 'load-path dotfiles-dir)
+(load "my-elisp-mode")
+(load "my-c-mode")
 			   
+;;;;;;;;;;;;;;;;;;;;;;;;
+;; customize settings ;;
+;;;;;;;;;;;;;;;;;;;;;;;;
 
 (put 'narrow-to-region 'disabled nil)
 (custom-set-variables
