@@ -2,7 +2,9 @@
 ;; global settings ;;
 ;;;;;;;;;;;;;;;;;;;;;
 (show-paren-mode)
+(tool-bar-mode -1)
 (global-set-key (kbd "<RET>") 'reindent-then-newline-and-indent)
+
 (global-set-key (kbd "C-j") 'join-line)
 (global-set-key (kbd "M-j")
                 (lambda () (interactive)
@@ -21,19 +23,19 @@
                   (indent-for-tab-command)))
 
 (global-set-key (kbd "C-m") 'kill-whole-line)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; loading custom files ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(setq dotfiles-dir (file-name-directory
-		    (or
-		     (buffer-file-name)
-		     load-file-name)))
+;; (setq dotfiles-dir (file-name-directory
+;; 		    (or
+;; 		     (buffer-file-name)
+;; 		     load-file-name)))
 
-(add-to-list 'load-path dotfiles-dir)
-(load "my-elisp-mode")
-(load "my-c-mode")
+;; (add-to-list 'load-path dotfiles-dir)
+
+;(load "my-elisp-mode")
+;(load "my-c-mode")
 			   
 ;;;;;;;;;;;;;;;;;;;;;;;;
 ;; customize settings ;;
