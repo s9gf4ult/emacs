@@ -4,7 +4,9 @@
 
 (add-hook 'c-mode-hook
           (lambda ()
+            (semantic-load-enable-code-helpers)
             (local-set-key (kbd "<tab>")
                            (lambda () (interactive)
                              (indent-for-tab-command)
-                             (complete-symbol (point))))))
+                             (semantic-complete-analyze-inline)))))
+          
