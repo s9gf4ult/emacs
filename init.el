@@ -1,3 +1,4 @@
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; global settings ;;
 ;;;;;;;;;;;;;;;;;;;;;
@@ -34,15 +35,9 @@
 
 (add-to-list 'load-path dotfiles-dir)
 
-(add-hook 'emacs-lisp-mode-hook
-          (lambda () (interactive)
-            (load "my-elisp-mode")))
+(load "my-elisp-mode")
+(load "my-c-mode")
 
-            
-(add-hook 'c-mode-hook
-          (lambda () (interactive)
-            (load "my-c-mode")))
-			   
 ;;;;;;;;;;;;;;;;;;;;;;;;
 ;; customize settings ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;
@@ -53,6 +48,7 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
+ '(ecb-options-version "2.40")
  '(indent-tabs-mode nil)
  '(tab-width 3))
 (custom-set-faces
