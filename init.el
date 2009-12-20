@@ -35,6 +35,7 @@
 
 (add-to-list 'load-path dotfiles-dir)
 
+(load "my-custom-funcs")
 (load "my-elisp-mode")
 (load "my-c-mode")
 
