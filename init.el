@@ -51,7 +51,8 @@
   ;; If there is more than one, they won't work right.
  '(ecb-options-version "2.40")
  '(indent-tabs-mode nil)
- '(tab-width 3))
+ '(tab-width 3)
+ '(undo-limit 500000))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
