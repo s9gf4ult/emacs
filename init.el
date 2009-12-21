@@ -52,6 +52,7 @@
   ;; If there is more than one, they won't work right.
  '(ecb-options-version "2.40")
  '(indent-tabs-mode nil)
+ '(tab-always-indent nil)
  '(tab-width 3)
  '(undo-limit 500000))
 (custom-set-faces
