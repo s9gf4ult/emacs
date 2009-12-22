@@ -1,0 +1,11 @@
+(add-hook 'debugger-mode-hook
+          (lambda () 
+            (require 'cedet-edebug)
+            (define-key debugger-mode-map "A" 'data-debug-edebug-expr)
+            (local-set-key (kbd "<f5>")
+                           (lambda () (interactive)
+                             (gdb-many-windows 1)))
+            (local-set-key (kbd "<C-f5>")
+                           (lambda () (interactive)
+                             (gdb-many-windows -1)))
+            ))
