@@ -26,6 +26,11 @@
 (blink-cursor-mode -1)
 (scroll-bar-mode -1)
 
+;;;;;;;;;;;;;;
+;; requires ;;
+;;;;;;;;;;;;;;
+(require 'yasnippet)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; loading custom files ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
