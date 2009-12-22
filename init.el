@@ -26,6 +26,18 @@
 (blink-cursor-mode -1)
 (scroll-bar-mode -1)
 
+;;;;;;;;;;;;;;;;;;;;
+;; receive pathes ;;
+;;;;;;;;;;;;;;;;;;;;
+
+(setq dotfiles-dir (file-name-directory
+		    (or
+		     (buffer-file-name)
+		     load-file-name)))
+
+(add-to-list 'load-path dotfiles-dir)
+(yas/load-directory (concat dotfiles-dir "snippets/text-mode"))
+
 ;;;;;;;;;;;;;;
 ;; requires ;;
 ;;;;;;;;;;;;;;
@@ -35,12 +47,6 @@
 ;; loading custom files ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(setq dotfiles-dir (file-name-directory
-		    (or
-		     (buffer-file-name)
-		     load-file-name)))
-
-(add-to-list 'load-path dotfiles-dir)
 
 (load "my-custom-funcs")
 (load "my-elisp-mode")
