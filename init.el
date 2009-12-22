@@ -36,12 +36,12 @@
 		     load-file-name)))
 
 (add-to-list 'load-path dotfiles-dir)
-(yas/load-directory (concat dotfiles-dir "snippets/text-mode"))
 
 ;;;;;;;;;;;;;;
 ;; requires ;;
 ;;;;;;;;;;;;;;
 (require 'yasnippet)
+(yas/load-directory (concat dotfiles-dir "snippets/text-mode"))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; loading custom files ;;
@@ -51,6 +51,7 @@
 (load "my-custom-funcs")
 (load "my-elisp-mode")
 (load "my-c-mode")
+(load "my-gdb-mode")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;
 ;; customize settings ;;
@@ -61,6 +62,7 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
+ '(auto-insert t)
  '(ecb-options-version "2.40")
  '(indent-tabs-mode nil)
  '(tab-always-indent t)
