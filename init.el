@@ -26,7 +26,6 @@
 (global-set-key (kbd "C-S-k") 'kill-whole-line)
 (blink-cursor-mode -1)
 (scroll-bar-mode -1)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; loading custom files ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -38,9 +37,9 @@
 
 (add-to-list 'load-path dotfiles-dir)
 
-(load "my-custom-funcs")
-(load "my-elisp-mode")
-(load "my-c-mode")
+(require "my-custom-funcs")
+(require "my-elisp-mode")
+(require "my-c-mode")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;
 ;; customize settings ;;
@@ -53,8 +52,8 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  '(ecb-options-version "2.40")
+ '(gdb-many-windows t)
  '(indent-tabs-mode nil)
- '(tab-always-indent nil)
  '(tab-width 3)
  '(undo-limit 500000))
 (custom-set-faces
