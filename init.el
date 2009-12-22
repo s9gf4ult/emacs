@@ -1,4 +1,3 @@
-
 ;;;;;;;;;;;;;;;;;;;;;
 ;; global settings ;;
 ;;;;;;;;;;;;;;;;;;;;;
@@ -45,7 +44,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;
 ;; customize settings ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;
-
 (put 'narrow-to-region 'disabled nil)
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
@@ -54,7 +52,7 @@
   ;; If there is more than one, they won't work right.
  '(ecb-options-version "2.40")
  '(indent-tabs-mode nil)
- '(tab-always-indent nil)
+ '(tab-always-indent t)
  '(tab-width 3)
  '(undo-limit 500000))
 (custom-set-faces
