@@ -25,6 +25,8 @@
 
 (global-set-key (kbd "C-S-k") 'kill-whole-line)
 (blink-cursor-mode -1)
+(scroll-bar-mode -1)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; loading custom files ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
