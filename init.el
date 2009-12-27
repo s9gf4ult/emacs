@@ -24,6 +24,7 @@
                   (indent-for-tab-command)))
 
 (global-set-key (kbd "C-S-k") 'kill-whole-line)
+(global-set-key (kbd "<f5>") 'compile)
 (blink-cursor-mode -1)
 (scroll-bar-mode -1)
 
