@@ -54,6 +54,7 @@
 (load "my-elisp-mode")
 (load "my-c-mode")
 (load "my-gdb-mode")
+(load "my-haskell-mode")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;
 ;; customize settings ;;
