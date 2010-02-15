@@ -57,6 +57,7 @@
 (load "my-haskell-mode")
 (load "my-python-mode")
 (load "my-makefile-mode")
+(load "my-org-mode")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;
 ;; customize settings ;;
@@ -70,6 +71,7 @@
  '(auto-insert t)
  '(ecb-options-version "2.40")
  '(indent-tabs-mode nil)
+ '(org-remember-clock-out-on-exit t)
  '(tab-always-indent t)
  '(tab-width 3)
  '(undo-limit 500000)
