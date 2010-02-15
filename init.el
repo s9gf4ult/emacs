@@ -56,6 +56,7 @@
 (load "my-gdb-mode")
 (load "my-haskell-mode")
 (load "my-python-mode")
+(load "my-org-mode")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;
 ;; customize settings ;;
