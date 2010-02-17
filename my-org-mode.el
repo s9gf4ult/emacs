@@ -8,4 +8,6 @@
                                                                  (org-insert-todo-heading-respect-content)))
                            (local-set-key (kbd "<C-return>") (lambda () (interactive)
                                                                (move-end-of-line 1)
-                                                               (org-insert-heading-respect-content)))))
+                                                               (org-insert-heading-respect-content)))
+                           (local-set-key (kbd "<C-down>") 'outline-forward-same-level)
+                           (local-set-key (kbd "<C-up>") 'outline-backward-same-level)))
