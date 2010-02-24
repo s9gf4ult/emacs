@@ -16,3 +16,4 @@
   (local-set-key (kbd "<C-tab>") 'yas/expand))
 (add-hook 'c-mode-hook 'my-c-mode-hook)
 (add-hook 'c++-mode-hook 'my-c-mode-hook)
+(semantic-add-system-include "/usr/lib/gcc/i686-pc-linux-gnu/4.3.3/include/g++-v4" 'c++-mode)
