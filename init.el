@@ -4,7 +4,7 @@
 (show-paren-mode)
 (ido-mode)
 (tool-bar-mode -1)
-;;(desktop-save-mode 1)
+(desktop-save-mode 1)
 (global-set-key (kbd "<RET>") 'reindent-then-newline-and-indent)
 (global-set-key (kbd "C-j") 'join-line)
 (global-set-key (kbd "M-j")
