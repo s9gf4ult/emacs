@@ -43,6 +43,7 @@
 ;; requires ;;
 ;;;;;;;;;;;;;;
 (require 'yasnippet)
+(require 'semantic-gcc)
 (yas/load-directory (concat dotfiles-dir "snippets/text-mode"))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
