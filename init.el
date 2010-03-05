@@ -29,6 +29,11 @@
 (scroll-bar-mode -1)
 
 ;;;;;;;;;;;;;;;;;;;;
+;; color settings ;;
+;;;;;;;;;;;;;;;;;;;;
+(set-cursor-color 'white)
+(set-background-color 'gray10)
+;;;;;;;;;;;;;;;;;;;;
 ;; receive pathes ;;
 ;;;;;;;;;;;;;;;;;;;;
 
@@ -73,6 +78,7 @@
  '(ecb-options-version "2.40")
  '(indent-tabs-mode nil)
  '(org-remember-clock-out-on-exit t)
+ '(scroll-preserve-screen-position t)
  '(tab-always-indent t)
  '(tab-width 3)
  '(undo-limit 500000)
