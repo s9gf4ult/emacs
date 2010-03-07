@@ -31,8 +31,8 @@
 ;;;;;;;;;;;;;;;;;;;;
 ;; color settings ;;
 ;;;;;;;;;;;;;;;;;;;;
-(set-cursor-color 'white)
-(set-background-color 'gray10)
+(set-cursor-color "white")
+(set-background-color "gray10")
 ;;;;;;;;;;;;;;;;;;;;
 ;; receive pathes ;;
 ;;;;;;;;;;;;;;;;;;;;
