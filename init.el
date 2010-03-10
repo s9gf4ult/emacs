@@ -55,7 +55,6 @@
 ;; loading custom files ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-
 (load "my-custom-funcs")
 (load "my-elisp-mode")
 (load "my-c-mode")
@@ -64,6 +63,7 @@
 (load "my-python-mode")
 (load "my-makefile-mode")
 (load "my-org-mode")
+(load "my-python-mode")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;
 ;; customize settings ;;
