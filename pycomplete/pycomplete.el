@@ -5,7 +5,7 @@
 (require 'pymacs)
 (require 'python-mode)
 
-(pymacs-load "pycomplete")
+(pymacs-load "./pycomplete.py")
 
 ;;check if prev character is blank-type
 (defun char-before-blank ()
