@@ -64,6 +64,7 @@
 (load "my-makefile-mode")
 (load "my-org-mode")
 (load "my-python-mode")
+(load "my-sh-mode")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;
 ;; customize settings ;;
