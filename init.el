@@ -78,6 +78,7 @@
  '(auto-insert t)
  '(ecb-options-version "2.40")
  '(indent-tabs-mode nil)
+ '(org-agenda-files (quote ("~/org/work.org")))
  '(org-remember-clock-out-on-exit t)
  '(scroll-preserve-screen-position t)
  '(tab-always-indent t)
