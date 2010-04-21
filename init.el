@@ -1,3 +1,11 @@
+;;;;;;;;;;;;;;
+;; prologue ;;
+;;;;;;;;;;;;;;
+
+(defun my-recenter ()
+  (recenter-top-bottom (/ (window-height) 2)))
+
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; global settings ;;
 ;;;;;;;;;;;;;;;;;;;;;
@@ -5,25 +13,37 @@
 (ido-mode)
 (tool-bar-mode -1)
 (desktop-save-mode 1)
-(global-set-key (kbd "<RET>") 'reindent-then-newline-and-indent)
+(global-set-key (kbd "<RET>") (lambda () (interactive)
+                                (reindent-then-newline-and-indent)
+                                (my-recenter)))
 (global-set-key (kbd "C-j") 'join-line)
 (global-set-key (kbd "M-j")
                 (lambda () (interactive)
                   (next-line)
-                  (join-line)))
+                  (join-line)
+                  (my-recenter)))
 
 (global-set-key (kbd "C-o")
                 (lambda () (interactive)
                   (end-of-line)
-                  (newline-and-indent)))
+                  (newline-and-indent)
+                  (my-recenter)))
 
 (global-set-key (kbd "C-S-o")
                 (lambda () (interactive)
                   (beginning-of-line)
                   (open-line 1)
-                  (indent-for-tab-command)))
+                  (indent-for-tab-command)
+                  (my-recenter)))
 
-(global-set-key (kbd "C-S-k") 'kill-whole-line)
+(global-set-key (kbd "C-S-k") (lambda () (interactive)
+                                (my-recenter)
+                                (kill-whole-line)))
+
+(global-set-key (kbd "C-/") (lambda () (interactive)
+                              (undo)
+                              (my-recenter)))
+
 (global-set-key (kbd "<f5>") 'compile)
 (blink-cursor-mode -1)
 (scroll-bar-mode -1)
