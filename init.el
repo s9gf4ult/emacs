@@ -28,6 +28,24 @@
 (blink-cursor-mode -1)
 (scroll-bar-mode -1)
 
+;;;;;;;;;;;;;;;
+;; scrooling ;;
+;;;;;;;;;;;;;;;
+
+(defun new-next-line () (interactive)
+  (next-line)
+  (recenter-top-bottom (/ (window-height) 2)))
+
+(defun new-previous-line () (interactive)
+  (previous-line)
+  (recenter-top-bottom (/ (window-height) 2)))
+
+(global-set-key (kbd "C-n") 'new-next-line)
+(global-set-key (kbd "C-p") 'new-previous-line)
+(global-set-key (kbd "<down>") 'new-next-line)
+(global-set-key (kbd "<up>") 'new-previous-line)
+                          
+
 ;;;;;;;;;;;;;;;;;;;;
 ;; color settings ;;
 ;;;;;;;;;;;;;;;;;;;;
@@ -49,6 +67,7 @@
 ;;;;;;;;;;;;;;
 (require 'yasnippet)
 (require 'semantic-gcc)
+
 (yas/load-directory (concat dotfiles-dir "snippets/text-mode"))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;

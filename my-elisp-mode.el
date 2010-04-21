@@ -11,3 +11,4 @@
             (local-set-key (kbd "<C-return>")
                            (lambda () (interactive)
                              (semantic-ia-fast-jump (point))))))
+;(load "my-scrool")
