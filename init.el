@@ -36,9 +36,9 @@
                   (indent-for-tab-command)
                   (my-recenter)))
 
-(global-set-key (kbd "C-S-k") (lambda () (interactive)
-                                (my-recenter)
-                                (kill-whole-line)))
+(global-set-key (kbd "C-S-k") (lambda (&optional a) (interactive)
+                                (kill-whole-line a)
+                                (my-recenter)))
 
 (global-set-key (kbd "C-/") (lambda () (interactive)
                               (undo)
