@@ -117,6 +117,7 @@
  '(auto-insert t)
  '(ecb-options-version "2.40")
  '(indent-tabs-mode nil)
+ '(inferior-lisp-program "/usr/bin/sbcl --noinform")
  '(org-agenda-files (quote ("~/org/work.org")))
  '(org-remember-clock-out-on-exit t)
  '(scroll-preserve-screen-position t)
