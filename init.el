@@ -44,6 +44,8 @@
                               (undo)
                               (my-recenter)))
 
+(global-set-key (kbd "M-/") 'hippie-expand)
+
 (global-set-key (kbd "<f5>") 'compile)
 (blink-cursor-mode -1)
 (scroll-bar-mode -1)
