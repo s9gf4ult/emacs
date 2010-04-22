@@ -126,7 +126,9 @@
  '(tab-always-indent t)
  '(tab-width 3)
  '(undo-limit 500000)
- '(use-file-dialog nil))
+ '(use-file-dialog nil)
+ '(woman-fill-column (- (window-width) 5))
+ '(woman-use-own-frame nil))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
