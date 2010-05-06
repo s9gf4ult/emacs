@@ -41,7 +41,7 @@
       (let ((pull-point (point)))
         (yank)
         (goto-char (+ pull-point current-fun-diff))))))
-(require 'cl)
+
 (defun kill-all-buffers-by-regexp (regexp &optional buffers-to-kill)
   "Kills all buffers whitch names matches by `regexp'.
 If `buffers-to-kill' is not nil then kills just buffers from this list.
