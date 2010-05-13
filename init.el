@@ -95,6 +95,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; loading custom files ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
+(add-to-list 'load-path "/home/razor/.emacs.d")
 
 (load "my-custom-funcs")
 (load "my-elisp-mode")

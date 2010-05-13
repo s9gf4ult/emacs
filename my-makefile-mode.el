@@ -2,4 +2,5 @@
                                 (local-set-key (kbd "<return>")
                                                (lambda () (interactive)
                                                  (newline-and-indent)))))
-                                             
+
+(provide 'my-makefile-mode)

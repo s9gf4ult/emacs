@@ -18,4 +18,6 @@
 (add-hook 'c++-mode-hook 'my-c-mode-hook)
 (semantic-add-system-include "/usr/lib/gcc/i686-pc-linux-gnu/4.3.3/include/g++-v4" 'c++-mode)
 (semantic-add-system-include "/usr/lib/gcc/x86_64-pc-linux-gnu/4.3.3/include/g++-v4" 'c++-mode)
+
+(provide 'my-c-mode)
 ;(load "my-scrool")

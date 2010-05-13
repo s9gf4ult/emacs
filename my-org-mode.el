@@ -11,3 +11,5 @@
                                                                (org-insert-heading-respect-content)))
                            (local-set-key (kbd "<C-down>") 'outline-forward-same-level)
                            (local-set-key (kbd "<C-up>") 'outline-backward-same-level)))
+
+(provide 'my-org-mode)

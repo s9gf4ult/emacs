@@ -9,3 +9,6 @@
                            (lambda () (interactive)
                              (gdb-many-windows -1)))
             ))
+
+
+(provide 'my-gdb-mode)
