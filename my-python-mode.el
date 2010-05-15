@@ -1,5 +1,6 @@
 (add-hook 'python-mode-hook (lambda ()
-                              (load "pycomplete/pycomplete")
+                              (load "py-complete/py-complete.el")
+                              (py-complete-init)
                               (local-set-key (kbd "<return>")
                                              (lambda () (interactive)
                                                (newline-and-indent)))))
