@@ -87,10 +87,10 @@
 ;;;;;;;;;;;;;;
 ;; requires ;;
 ;;;;;;;;;;;;;;
-;(require 'yasnippet)
-;(require 'semantic-gcc)
+(require 'yasnippet)
+(require 'semantic-gcc)
 
-;(yas/load-directory (concat dotfiles-dir "snippets/text-mode"))
+(yas/load-directory (concat dotfiles-dir "snippets/text-mode"))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; loading custom files ;;
@@ -98,8 +98,8 @@
 (add-to-list 'load-path "/home/razor/.emacs.d")
 
 (load "my-custom-funcs")
-;(load "my-elisp-mode")
-;(load "my-c-mode")
+(load "my-elisp-mode")
+(load "my-c-mode")
 (load "my-gdb-mode")
 (load "my-haskell-mode")
 (load "my-python-mode")
