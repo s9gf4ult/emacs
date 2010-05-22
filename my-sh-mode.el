@@ -3,6 +3,4 @@
                           (local-set-ket (kbd "<C-tab>") (lambda () (interactive)
                                                            (insert "\t")))))
 
-                         
-
 (provide 'my-sh-mode)
