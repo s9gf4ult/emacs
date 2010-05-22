@@ -1,3 +1,7 @@
+;;;;;;;;;;;;;;;;;
+;; my-gdb-mode ;;
+;;;;;;;;;;;;;;;;;
+
 (add-hook 'gdb-mode-hook
           (lambda () 
             (require 'cedet-edebug)

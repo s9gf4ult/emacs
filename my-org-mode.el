@@ -1,3 +1,7 @@
+;;;;;;;;;;;;;;;;;
+;; my-org-mode ;;
+;;;;;;;;;;;;;;;;;
+
 (add-hook 'org-mode-hook (lambda ()
                            (auto-fill-mode 1)
                            (local-set-key (kbd "C-o") (lambda () (interactive)
