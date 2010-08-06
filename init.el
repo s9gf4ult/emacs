@@ -109,6 +109,12 @@
 (load "my-sh-mode")
 (load "my-slime-mode")
 
+;;;;;;;;;;;;;;;
+;; slime for ;;
+;;;;;;;;;;;;;;;
+
+(setq slime-net-coding-system 'utf-8-unix)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;
 ;; customize settings ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;
@@ -124,6 +130,9 @@
  '(inferior-lisp-program "/usr/bin/sbcl --noinform")
  '(org-agenda-files (quote ("~/org/work.org")))
  '(org-remember-clock-out-on-exit t)
+ '(quack-default-program "csi")
+ '(quack-fontify-style nil)
+ '(scheme-program-name "sci")
  '(scroll-preserve-screen-position t)
  '(tab-always-indent t)
  '(tab-width 3)
@@ -134,3 +143,9 @@
 
 
 
+(custom-set-faces
+  ;; custom-set-faces was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ )
