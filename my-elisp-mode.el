@@ -1,6 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; my emacs lisp mode hook ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (add-hook 'emacs-lisp-mode-hook
           (lambda ()
             (semantic-load-enable-code-helpers)

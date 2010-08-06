@@ -1,3 +1,7 @@
+;;;;;;;;;;;;;;;;;;;;
+;; my-python-mode ;;
+;;;;;;;;;;;;;;;;;;;;
+
 (add-hook 'python-mode-hook (lambda ()
                               (load "py-complete/py-complete.el")
                               (py-complete-init)

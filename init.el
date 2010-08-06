@@ -108,6 +108,7 @@
 (load "my-python-mode")
 (load "my-sh-mode")
 (load "my-slime-mode")
+(load "my-perl-mode")
 
 ;;;;;;;;;;;;;;;
 ;; slime for ;;
