@@ -109,6 +109,7 @@
 (load "my-sh-mode")
 (load "my-slime-mode")
 (load "my-perl-mode")
+(load "my-ruby-mode")
 
 ;;;;;;;;;;;;;;;
 ;; slime for ;;
