@@ -47,6 +47,8 @@
 (global-set-key (kbd "M-/") 'hippie-expand)
 
 (global-set-key (kbd "<f5>") 'compile)
+(global-set-key (kbd "<C-f5>") 'previous-multiframe-window)
+(global-set-key (kbd "<C-f6>") 'next-multiframe-window)
 (blink-cursor-mode -1)
 (scroll-bar-mode -1)
 
