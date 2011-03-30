@@ -115,6 +115,11 @@
 (load "my-perl-mode")
 (load "my-ruby-mode")
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; enable-semantic-helpers ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(semantic-load-enable-excessive-code-helpers)
 
 ;;;;;;;;;;;;;;;
 ;; slime for ;;
