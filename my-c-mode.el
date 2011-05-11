@@ -12,7 +12,7 @@
                    (semantic-complete-analyze-inline)))
   (local-set-key (kbd "<C-return>") 'semantic-ia-fast-jump)
   (local-set-key (kbd "<C-f1>") 'pop-mark)
-  (local-set-key (kbd "<C-f2>") 'pop-global-mark)
+  (local-set-key (kbd "<C-f2>") 'pop-global-mark))
 (add-hook 'c-mode-hook 'my-c-mode-hook)
 (add-hook 'c++-mode-hook 'my-c-mode-hook)
 (semantic-add-system-include "/usr/lib/gcc/i686-pc-linux-gnu/4.3.3/include/g++-v4" 'c++-mode)
