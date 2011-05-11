@@ -58,6 +58,8 @@
 (blink-cursor-mode -1)
 (scroll-bar-mode -1)
 
+(global-set-key (kbd "<C-tab>") 'yas/expand)
+
 ;;;;;;;;;;;;;;;
 ;; scrooling ;;
 ;;;;;;;;;;;;;;;
