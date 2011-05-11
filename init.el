@@ -6,6 +6,9 @@
 (defun my-recenter ()
   (recenter-top-bottom (/ (window-height) 2)))
 
+(load-file "~/emacs/cedet/common/cedet.el")
+(require 'semantic-ia)
+(pymacs-load "ropemacs" "rope-")
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; global settings ;;
