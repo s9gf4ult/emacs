@@ -1,0 +1,5 @@
+# -*- coding: utf-8 -*-
+# name: casen
+# contributor: s9gf4ult
+# --
+(${1:instance} != None and ${2:affirmative} or ${3:None}) $0

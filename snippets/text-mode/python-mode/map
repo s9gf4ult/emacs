@@ -1,0 +1,5 @@
+# -*- coding: utf-8 -*-
+# name: map
+# contributor: s9gf4ult
+# --
+map(lambda ${1:a}: ${2:exp}, ${3:seq}) $0
