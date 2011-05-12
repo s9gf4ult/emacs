@@ -153,6 +153,7 @@
  '(quack-fontify-style nil)
  '(scheme-program-name "sci")
  '(scroll-preserve-screen-position t)
+ '(semantic-idle-scheduler-idle-time 25)
  '(tab-always-indent t)
  '(tab-width 3)
  '(template-default-directories (quote ("/usr/share/emacs/site-lisp/template/templates" "~/.emacs.d/templates")))
