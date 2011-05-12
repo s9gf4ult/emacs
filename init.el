@@ -45,6 +45,7 @@
 (global-set-key (kbd "C-S-k") (lambda (&optional aa) (interactive "p")
                                 (kill-whole-line aa)))
                                 ;(my-recenter)))
+(global-set-key (kbd "C-S-d") 'delete-region)
 
 (global-set-key (kbd "C-/") (lambda () (interactive)
                               (undo)))
