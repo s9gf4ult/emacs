@@ -100,6 +100,8 @@
 (require 'yasnippet)
 (require 'semantic-gcc)
 
+
+
 (yas/load-directory (concat dotfiles-dir "snippets/text-mode"))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -153,6 +155,7 @@
  '(scroll-preserve-screen-position t)
  '(tab-always-indent t)
  '(tab-width 3)
+ '(template-default-directories (quote ("/usr/share/emacs/site-lisp/template/templates" "~/.emacs.d/templates")))
  '(undo-limit 500000)
  '(use-file-dialog nil)
  '(woman-fill-column (- (window-width) 5))
