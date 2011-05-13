@@ -9,3 +9,4 @@ def get_${1:name}(self):
     """
     $3
     ${1:$(format "return self._%s" text)}
+    $0

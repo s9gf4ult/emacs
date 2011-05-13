@@ -34,3 +34,4 @@ def set_${1:name}(self, ${1:$(format "%s" text)}):
     }
     $3
     ${1:$(format "self._%s = %s" text text)}
+    $0
