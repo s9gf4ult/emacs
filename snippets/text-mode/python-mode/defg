@@ -1,0 +1,11 @@
+# -*- coding: utf-8 -*-
+# name: defg
+# contributor: Yasser Gonz¨¢lez Fern¨¢ndez <yglez@uh.cu>
+# contributor: s9gf4ult
+# --
+def get_${1:name}(self):
+    """${1:$(format "Getter for property %s" text)}
+    $2
+    """
+    $3
+    ${1:$(format "return self._%s" text)}

@@ -56,6 +56,7 @@
 (global-set-key (kbd "<f5>") 'compile)
 (global-set-key (kbd "<C-f5>") 'previous-multiframe-window)
 (global-set-key (kbd "<C-f6>") 'next-multiframe-window)
+(global-set-key (kbd "C-c , v") 'semantic-decoration-include-visit)
 (blink-cursor-mode -1)
 (scroll-bar-mode -1)
 
