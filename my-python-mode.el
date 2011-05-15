@@ -3,8 +3,10 @@
 ;;;;;;;;;;;;;;;;;;;;
 ;(load "python-pep7")
 ;(load "python-pylint")
-(local-set-key (kbd "M-?") 'rope-lucky-assist)
-(local-set-key (kbd "M-S-?") 'rope-code-assist)
-
+(defun my-python-mode-hook ()
+  (local-set-key (kbd "M-/") #'rope-lucky-assist)
+  (local-set-key (kbd "M-S-/") #'rope-code-assist)
+  (local-set-key (kbd "<ret>") #'newline))
+(add-hook 'python-mode-hook #'my-python-mode-hook)
 
 (provide 'my-python-mode)

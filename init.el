@@ -118,7 +118,7 @@
 (load "my-haskell-mode")
 (load "my-makefile-mode")
 (load "my-org-mode")
-;(load "my-python-mode")
+(load "my-python-mode")
 (load "my-sh-mode")
 (load "my-slime-mode")
 (load "my-perl-mode")
