@@ -57,6 +57,7 @@
 (global-set-key (kbd "<C-f5>") 'previous-multiframe-window)
 (global-set-key (kbd "<C-f6>") 'next-multiframe-window)
 (global-set-key (kbd "C-c , v") 'semantic-decoration-include-visit)
+(global-set-key (kbd "<M-tab>") 'auto-complete)
 (blink-cursor-mode -1)
 (scroll-bar-mode -1)
 
@@ -145,6 +146,7 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
+ '(ac-modes (quote (emacs-lisp-mode lisp-interaction-mode c-mode cc-mode c++-mode java-mode clojure-mode scala-mode scheme-mode ocaml-mode tuareg-mode perl-mode cperl-mode python-mode ruby-mode ecmascript-mode javascript-mode js-mode js2-mode php-mode css-mode makefile-mode sh-mode fortran-mode f90-mode ada-mode xml-mode sgml-mode python-mode)))
  '(auto-insert t)
  '(ecb-options-version "2.40")
  '(indent-tabs-mode nil)
@@ -158,7 +160,7 @@
  '(semantic-idle-scheduler-idle-time 25)
  '(tab-always-indent t)
  '(tab-width 3)
- '(template-default-directories (quote ("/usr/share/emacs/site-lisp/template/templates" "~/.emacs.d/templates")))
+ '(template-default-directories (quote ("/usr/share/emacs/site-lisp/template/templates" "~/.emacs.d/templates")) t)
  '(undo-limit 500000)
  '(use-file-dialog nil)
  '(woman-fill-column (- (window-width) 5))
