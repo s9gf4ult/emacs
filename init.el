@@ -18,7 +18,7 @@
 (tool-bar-mode -1)
 (desktop-save-mode 1)
 (global-set-key (kbd "<RET>") (lambda () (interactive)
-                                (reindent-then-newline-and-indent)))
+                                (newline-and-indent)))
 
 (global-set-key (kbd "C-S-c") 'copy-region-as-kill)
                                 ;(my-recenter)))
