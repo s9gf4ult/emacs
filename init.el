@@ -135,6 +135,12 @@
 ;; slime for ;;
 ;;;;;;;;;;;;;;;
 
+(add-to-list 'load-path "~/emacs/slime/")  ; your SLIME directory
+;(require 'slime)
+(require 'slime-autoloads)
+(slime-setup '(slime-fancy))
+
+
 (setq slime-net-coding-system 'utf-8-unix)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;
@@ -158,6 +164,7 @@
  '(scheme-program-name "sci")
  '(scroll-preserve-screen-position t)
  '(semantic-idle-scheduler-idle-time 25)
+ '(slime-auto-connect (quote ask))
  '(tab-always-indent t)
  '(tab-width 3)
  '(template-default-directories (quote ("/usr/share/emacs/site-lisp/template/templates" "~/.emacs.d/templates")) t)
