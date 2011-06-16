@@ -156,7 +156,7 @@
  '(auto-insert t)
  '(ecb-options-version "2.40")
  '(indent-tabs-mode nil)
- '(inferior-lisp-program "/usr/bin/sbcl --noinform")
+ '(inferior-lisp-program "/usr/bin/sbcl --noinform --dynamic-space-size 600")
  '(org-agenda-files (quote ("~/org/work.org")))
  '(org-remember-clock-out-on-exit t)
  '(quack-default-program "csi")
