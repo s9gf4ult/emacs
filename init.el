@@ -153,7 +153,7 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  '(ac-modes (quote (emacs-lisp-mode lisp-interaction-mode c-mode cc-mode c++-mode java-mode clojure-mode scala-mode scheme-mode ocaml-mode tuareg-mode perl-mode cperl-mode python-mode ruby-mode ecmascript-mode javascript-mode js-mode js2-mode php-mode css-mode makefile-mode sh-mode fortran-mode f90-mode ada-mode xml-mode sgml-mode python-mode)))
- '(auto-insert t)
+ '(auto-insert t t)
  '(ecb-options-version "2.40")
  '(indent-tabs-mode nil)
  '(inferior-lisp-program "/usr/bin/sbcl --noinform --dynamic-space-size 600")
@@ -161,8 +161,10 @@
  '(org-remember-clock-out-on-exit t)
  '(quack-default-program "csi")
  '(quack-fontify-style nil)
+ '(safe-local-variable-values (quote ((Syntax . ANSI-Common-Lisp))))
  '(scheme-program-name "sci")
  '(scroll-preserve-screen-position t)
+ '(semantic-c-dependency-system-include-path (quote ("/usr/include" "/usr/include/gtk-2.0" "/usr/include/gtk-2.0/gtk" "/usr/include/gtk-2.0/gdk" "/usr/include/atk-1.0" "/usr/include/cairo" "/usr/include/qt4" "/usr/include/libdrm" "/usr/include/glib-2.0" "/usr/lib/glib-2.0/include" "/usr/include/libpng14")))
  '(semantic-idle-scheduler-idle-time 25)
  '(slime-auto-connect (quote ask))
  '(tab-always-indent t)

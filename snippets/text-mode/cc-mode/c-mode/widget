@@ -1,0 +1,5 @@
+#mode snippet
+#name : widget
+# --
+GtkWidget *$1 = GTK_WIDGET($2($3));
+$0
