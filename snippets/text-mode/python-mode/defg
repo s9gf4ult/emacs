@@ -4,9 +4,7 @@
 # contributor: s9gf4ult
 # --
 def get_${1:name}(self):
-    """${1:$(format "Getter for property %s" text)}
-    $2
+    """${1:$(format "\\\\brief Getter for property %s" text)}
     """
-    $3
     ${1:$(format "return self._%s" text)}
     $0

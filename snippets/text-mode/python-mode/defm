@@ -3,7 +3,7 @@
 # contributor: Yasser Gonz¨¢lez Fern¨¢ndez <yglez@uh.cu>
 # --
 def ${1:name}(self, $2):
-    """$3
+    """\brief $3
     ${2:$
     (let* ((indent
             (concat "\n" (make-string (current-column) 32)))
@@ -11,8 +11,7 @@ def ${1:name}(self, $2):
             (mapconcat
              '(lambda (x)
                 (if (not (string= (nth 0 x) ""))
-                    (concat "- " (char-to-string 96) (nth 0 x)
-                            (char-to-string 96) ":")))
+                    (concat "\\\\param " (nth 0 x) )))
              (mapcar
               '(lambda (x)
                  (mapcar
@@ -27,7 +26,7 @@ def ${1:name}(self, $2):
           (make-string 3 34)
         (mapconcat
          'identity
-         (list "" "Arguments:" args (make-string 3 34))
+         (list args (make-string 3 34))
          indent)))
     }
     $0
