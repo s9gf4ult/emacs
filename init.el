@@ -58,6 +58,9 @@
 (global-set-key (kbd "<C-f6>") 'next-multiframe-window)
 (global-set-key (kbd "C-c , v") 'semantic-decoration-include-visit)
 (global-set-key (kbd "<M-tab>") 'auto-complete)
+(global-set-key (kbd "C-c j") 'senator-jump)
+
+
 (blink-cursor-mode -1)
 (scroll-bar-mode -1)
 
