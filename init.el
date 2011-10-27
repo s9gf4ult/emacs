@@ -142,9 +142,14 @@
 ;(require 'slime)
 (require 'slime-autoloads)
 (slime-setup '(slime-fancy))
-
-
 (setq slime-net-coding-system 'utf-8-unix)
+
+;;;;;;;;;;;;;;;
+;; magit for ;;
+;;;;;;;;;;;;;;;
+
+(add-to-list 'load-path "~/emacs/magit/")
+(require 'magit)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;
 ;; customize settings ;;
