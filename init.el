@@ -3,16 +3,20 @@
 ;; prologue ;;
 ;;;;;;;;;;;;;;
 
-(defun my-recenter ()
-  (recenter-top-bottom (/ (window-height) 2)))
+;; (defun my-recenter ()
+;;   (recenter-top-bottom (/ (window-height) 2)))
 
-(load-file "~/emacs/cedet/common/cedet.el")
-(require 'semantic-ia)
-(pymacs-load "ropemacs" "rope-")
+;; (load-file "~/emacs/cedet/common/cedet.el")
+;; (require 'semantic-ia)
+;; (pymacs-load "ropemacs" "rope-")
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; global settings ;;
 ;;;;;;;;;;;;;;;;;;;;;
+(add-to-list 'load-path "~/.emacs.d/el-get/")
+(require 'el-get)
+
+
 (show-paren-mode)
 (ido-mode)
 (tool-bar-mode -1)
@@ -102,13 +106,10 @@
 
 ;;;;;;;;;;;;;;
 ;; requires ;;
-;;;;;;;;;;;;;;
-(require 'yasnippet)
-(require 'semantic-gcc)
-
-
+;;;;;;;;;;;;;; 
 
 (yas/load-directory (concat dotfiles-dir "snippets/text-mode"))
+(require 'auto-complete)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; loading custom files ;;
@@ -148,8 +149,6 @@
 ;; magit for ;;
 ;;;;;;;;;;;;;;;
 
-(add-to-list 'load-path "~/emacs/magit/")
-(require 'magit)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;
 ;; customize settings ;;
