@@ -1,4 +1,4 @@
-;;; init.el --- configuration init file
+;;; s9g-el-get.el --- el-get packages configuration
 
 ;; Copyright (C) 2011  
 
@@ -24,17 +24,9 @@
 
 ;;; Code:
 
-(setq dotfiles-dir (file-name-directory
-		    (or (buffer-file-name)
-			load-file-name)))
-
-(add-to-list 'load-path dotfiles-dir)
-(add-to-list 'load-path (concat dotfiles-dir "el-get/"))
-
 (require 'el-get)
-(require 's9g-el-get)
-(require 's9g-set-hooks)
 
-(require 's9g-configs)
 
-;;; init.el ends here
+
+(provide 's9g-el-get)
+;;; s9g-el-get.el ends here
