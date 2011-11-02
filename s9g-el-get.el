@@ -26,7 +26,11 @@
 
 (require 'el-get)
 
+(setq s9g-package-names
+      '(magit python ropemacs))
 
+(el-get 'sync s9g-package-names)
+(require 'ropemacs)
 
 (provide 's9g-el-get)
 ;;; s9g-el-get.el ends here
