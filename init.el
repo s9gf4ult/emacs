@@ -29,10 +29,12 @@
 			load-file-name)))
 
 (add-to-list 'load-path dotfiles-dir)
-(add-to-list 'load-path (concat dotfiles-dir "el-get/"))
 
 (require 's9g-set-hooks)
 
+
+
+(setq custom-file (concat dotfiles-dir "s9g-configs.el"))
 (require 's9g-configs)
 
 ;;; init.el ends here

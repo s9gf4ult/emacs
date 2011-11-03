@@ -26,6 +26,5 @@
 
 
 
-
 (provide 's9g-set-hooks)
 ;;; s9g-set-hooks.el ends here
