@@ -33,22 +33,12 @@
  '(ac-modes (quote (emacs-lisp-mode lisp-interaction-mode c-mode cc-mode c++-mode java-mode clojure-mode scala-mode scheme-mode ocaml-mode tuareg-mode perl-mode cperl-mode python-mode ruby-mode ecmascript-mode javascript-mode js-mode js2-mode php-mode css-mode makefile-mode sh-mode fortran-mode f90-mode ada-mode xml-mode sgml-mode python-mode)))
  '(auto-insert t t)
  '(ecb-options-version "2.40")
-; '(global-semantic-tag-folding-mode nil nil (semantic-util-modes))
  '(indent-tabs-mode nil)
- ;;'(inferior-lisp-program "/usr/bin/sbcl --noinform --dynamic-space-size 600")
  '(org-agenda-files (quote ("~/org/work.org")))
  '(org-remember-clock-out-on-exit t)
- ;;'(quack-default-program "csi")
- ;;'(quack-fontify-style nil)
  '(safe-local-variable-values (quote ((Syntax . ANSI-Common-Lisp))))
- ;;'(scheme-program-name "sci")
  '(scroll-preserve-screen-position t)
- ;;'(semantic-c-dependency-system-include-path (quote ("/usr/include" "/usr/include/gtk-2.0" "/usr/include/gtk-2.0/gtk" "/usr/include/gtk-2.0/gdk" "/usr/include/atk-1.0" "/usr/include/cairo" "/usr/include/qt4" "/usr/include/libdrm" "/usr/include/glib-2.0" "/usr/lib/glib-2.0/include" "/usr/include/libpng14")))
- ;;'(semantic-idle-scheduler-idle-time 25)
- ;;'(slime-auto-connect (quote ask))
- ;;'(tab-always-indent t)
  '(tab-width 4)
- ;;'(template-default-directories (quote ("/usr/share/emacs/site-lisp/template/templates" "~/.emacs.d/templates")) t)
  '(undo-limit 500000)
  '(use-file-dialog nil)
  '(woman-fill-column (- (window-width) 5))
@@ -71,3 +61,9 @@
 
 (provide 's9g-configs)
 ;;; s9g-configs.el ends here
+(custom-set-faces
+  ;; custom-set-faces was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ '(default ((t (:inherit nil :stipple nil :background "#202020" :foreground "White" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 172 :width normal :foundry "xos4" :family "terminus")))))
