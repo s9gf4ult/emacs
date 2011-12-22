@@ -32,13 +32,18 @@
   ;; If there is more than one, they won't work right.
  '(ac-modes (quote (emacs-lisp-mode lisp-interaction-mode c-mode cc-mode c++-mode java-mode clojure-mode scala-mode scheme-mode ocaml-mode tuareg-mode perl-mode cperl-mode python-mode ruby-mode ecmascript-mode javascript-mode js-mode js2-mode php-mode css-mode makefile-mode sh-mode fortran-mode f90-mode ada-mode xml-mode sgml-mode python-mode)))
  '(auto-insert t t)
+ '(blink-cursor-mode nil)
+ '(desktop-save-mode t)
  '(ecb-options-version "2.40")
  '(indent-tabs-mode nil)
  '(org-agenda-files (quote ("~/org/work.org")))
  '(org-remember-clock-out-on-exit t)
  '(safe-local-variable-values (quote ((Syntax . ANSI-Common-Lisp))))
+ '(scroll-bar-mode nil)
  '(scroll-preserve-screen-position t)
+ '(show-paren-mode t)
  '(tab-width 4)
+ '(tool-bar-mode nil)
  '(undo-limit 500000)
  '(use-file-dialog nil)
  '(woman-fill-column (- (window-width) 5))
@@ -66,4 +71,5 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#202020" :foreground "White" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 172 :width normal :foundry "xos4" :family "terminus")))))
+ '(default ((t (:inherit nil :stipple nil :background "#202020" :foreground "White" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 172 :width normal :foundry "xos4" :family "terminus"))))
+ '(cursor ((t (:background "white")))))
