@@ -31,7 +31,9 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  '(ac-modes (quote (emacs-lisp-mode lisp-interaction-mode c-mode cc-mode c++-mode java-mode clojure-mode scala-mode scheme-mode ocaml-mode tuareg-mode perl-mode cperl-mode python-mode ruby-mode ecmascript-mode javascript-mode js-mode js2-mode php-mode css-mode makefile-mode sh-mode fortran-mode f90-mode ada-mode xml-mode sgml-mode python-mode)))
- '(auto-insert t t)
+ '(auto-insert t)
+ '(auto-insert-directory "~/.emacs.d/auto-insert")
+ '(auto-insert-mode t)
  '(blink-cursor-mode nil)
  '(desktop-save-mode t)
  '(ecb-options-version "2.40")
@@ -72,4 +74,7 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :stipple nil :background "#202020" :foreground "White" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 172 :width normal :foundry "xos4" :family "terminus"))))
- '(cursor ((t (:background "white")))))
+ '(cursor ((t (:background "white"))))
+ '(highlight ((((class color) (min-colors 88) (background dark)) (:background "gray25"))))
+ '(magit-diff-add ((t (:inherit diff-added :foreground "green"))))
+ '(magit-diff-del ((t (:inherit diff-removed :foreground "red")))))

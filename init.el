@@ -29,8 +29,13 @@
                         load-file-name)))
 
 (add-to-list 'load-path dotfiles-dir)
+(add-to-list 'load-path (concat dotfiles-dir "slime"))
+(add-to-list 'load-path (concat dotfiles-dir "magit"))
 
-(require 's9g-set-global-keys.el)
+(require 'slime)
+(require 'magit)
+
+(require 's9g-set-global-keys)
 (require 's9g-set-hooks)
 
 

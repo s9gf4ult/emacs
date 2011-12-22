@@ -24,21 +24,54 @@
 
 ;;; Code:
 
-(global-set-key (kbd "C-S-k") (lambda (&optional lines-count) (interactive)
+(global-set-key (kbd "C-S-k") (lambda (&optional lines-count) (interactive "p")
                                 (if mark-active
                                     (delete-region (region-beginning)
                                                    (region-end))
                                   (kill-whole-line lines-count))))
-)(global-set-key (kbd "C-o")
-                (lambda () (interactive)
+(global-set-key (kbd "C-o")
+                (lambda (&optional arg) (interactive "p")
                   (end-of-line)
-                  (newline-and-indent)))
+                  (let ((lines (or arg
+                                   1)))
+                    (dotimes (none lines)
+                      (newline-and-indent)))))
  
 (global-set-key (kbd "C-S-o")
-                (lambda () (interactive)
+                (lambda (&optional arg) (interactive "p")
                   (beginning-of-line)
                   (open-line 1)
-                  (indent-for-tab-command)))
+                  (indent-for-tab-command)
+                  (when (and arg
+                             (> arg 1))
+                    (save-excursion
+                      (dotimes (none (- arg 1))
+                        (newline-and-indent)))
+                    (indent-for-tab-command))))
+
+(global-set-key (kbd "RET")
+                #'newline-and-indent)
+
+(global-set-key (kbd "C-S-c")
+                #'(lambda (&optional arg) (interactive "p")
+                    (if mark-active
+                        (copy-region-as-kill (mark) (point))
+                      (save-excursion
+                        (beginning-of-line)
+                        (push-mark)
+                        (when (and arg
+                                   (> arg 1))
+                          (forward-line (- arg 1)))
+                        (end-of-line)
+                        (copy-region-as-kill (mark) (point))
+                        (pop-mark)))))
+
+(global-set-key (kbd "C-S-y")
+                #'(lambda () (interactive)
+                    (end-of-line)
+                    (newline)
+                    (yank)))
+                  
 
 (provide 's9g-set-global-keys)
 ;;; s9g-set-global-keys.el ends here
