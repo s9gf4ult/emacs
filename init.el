@@ -31,15 +31,15 @@
 (add-to-list 'load-path dotfiles-dir)
 (add-to-list 'load-path (concat dotfiles-dir "slime"))
 (add-to-list 'load-path (concat dotfiles-dir "magit"))
+(add-to-list 'load-path (concat dotfiles-dir "auto-complete"))
 
 (require 'slime)
 (slime-setup '(slime-fancy))
 (require 'magit)
+(require 'auto-complete)
 
 (require 's9g-set-global-keys)
 (require 's9g-set-hooks)
-
-
 
 (setq custom-file (concat dotfiles-dir "s9g-configs.el"))
 (require 's9g-configs)

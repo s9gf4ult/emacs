@@ -24,6 +24,11 @@
 
 ;;; Code:
 
+(add-hook 'lisp-mode-hook
+          #'(lambda ()
+              (local-set-key (kbd "TAB")
+                             #'slime-indent-and-complete-symbol)))
+
 
 (provide 's9g-lisp)
 ;;; s9g-lisp.el ends here

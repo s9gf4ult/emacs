@@ -4,6 +4,8 @@ MAGIT_REPO='http://github.com/magit/magit.git'
 MAGIT_DIRECTORY='magit'
 SLIME_REPO='http://github.com/nablaone/slime.git'
 SLIME_DIRECTORY='slime'
+AUTOCOMPLETE_DIR='auto-complete'
+AUTOCOMPLETE_REPO='https://github.com/m2ym/auto-complete.git'
 GIT_PULL_COMMAND='git pull'
 GIT_CLONE_COMMAND='git clone'
 
@@ -45,6 +47,25 @@ install_slime() {
     $GIT_CLONE_COMMAND $SLIME_REPO
 }
 
+check_autocomplete() {
+    if [[ -d $AUTOCOMPLETE_DIR ]];then
+        update_autocomplete
+    else
+        install_autocomplete
+    fi
+}
+
+update_autocomplete() {
+    pushd $AUTOCOMPLETE_DIR
+    $GIT_PULL_COMMAND
+    popd
+}
+
+install_autocomplete() {
+    $GIT_CLONE_COMMAND $AUTOCOMPLETE_REPO
+}
+
 
 check_slime
 check_magit
+check_autocomplete
