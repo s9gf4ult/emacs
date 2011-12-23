@@ -28,7 +28,7 @@ check_magit() {
 }
 
 check_slime() {
-    if [[ -d SLIME_DIRECTORY ]];then
+    if [[ -d $SLIME_DIRECTORY ]];then
         update_slime
     else
         install_slime
