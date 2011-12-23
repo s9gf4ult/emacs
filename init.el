@@ -33,6 +33,7 @@
 (add-to-list 'load-path (concat dotfiles-dir "magit"))
 
 (require 'slime)
+(slime-setup '(slime-fancy))
 (require 'magit)
 
 (require 's9g-set-global-keys)
