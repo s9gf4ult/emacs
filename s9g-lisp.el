@@ -1,8 +1,8 @@
-;;; s9g-set-hooks.el --- set all mode hooks
+;;; s9g-lisp.el --- 
 
 ;; Copyright (C) 2011  
 
-;; Author:  <razor@calculate.local>
+;; Author:  <s9gf4ult@gmail.com>
 ;; Keywords: 
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -24,8 +24,6 @@
 
 ;;; Code:
 
-(require 's9g-elisp)
-(require 's9g-lisp)
 
-(provide 's9g-set-hooks)
-;;; s9g-set-hooks.el ends here
+(provide 's9g-lisp)
+;;; s9g-lisp.el ends here
