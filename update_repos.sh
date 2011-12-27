@@ -2,7 +2,7 @@
 
 MAGIT_REPO='http://github.com/magit/magit.git'
 MAGIT_DIRECTORY='magit'
-SLIME_REPO='http://github.com/nablaone/slime.git'
+SLIME_REPO='https://github.com/archimag/slime-archimag.git'
 SLIME_DIRECTORY='slime'
 AUTOCOMPLETE_DIR='auto-complete'
 AUTOCOMPLETE_REPO='https://github.com/m2ym/auto-complete.git'
@@ -45,6 +45,7 @@ update_slime() {
 
 install_slime() {
     $GIT_CLONE_COMMAND $SLIME_REPO
+    mv slime-archimag slime
 }
 
 check_autocomplete() {
