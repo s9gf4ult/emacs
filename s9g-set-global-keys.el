@@ -50,7 +50,10 @@
                     (indent-for-tab-command))))
 
 (global-set-key (kbd "RET")
-                #'newline-and-indent)
+                #'reindent-then-newline-and-indent)
+
+(global-set-key (kbd "<S-return>")
+                #'newline)
 
 (global-set-key (kbd "C-S-c")
                 #'(lambda (&optional arg) (interactive "p")
@@ -71,7 +74,25 @@
                     (end-of-line)
                     (newline)
                     (yank)))
-                  
+
+(global-set-key (kbd "C-j")
+                #'(lambda (&optional arg) (interactive "p")
+                    (if mark-active
+                        (let ((bl (line-number-at-pos (region-beginning)))
+                              (el (line-number-at-pos (region-end))))
+                          (when (> el bl)
+                            (goto-line bl)
+                            (dotimes (none (- el bl))
+                              (join-line 1))))
+                      (let ((cnt (or arg 1)))
+                        (dotimes (none cnt)
+                          (join-line 1))))))
+
+(global-set-key (kbd "C-S-j")
+                #'(lambda (&optional arg) (interactive "p")
+                    (let ((cnt (or arg 1)))
+                      (dotimes (none cnt)
+                        (join-line)))))
 
 (provide 's9g-set-global-keys)
 ;;; s9g-set-global-keys.el ends here
