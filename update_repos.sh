@@ -6,9 +6,12 @@ SLIME_REPO='https://github.com/archimag/slime-archimag.git'
 SLIME_DIRECTORY='slime'
 AUTOCOMPLETE_DIR='auto-complete'
 AUTOCOMPLETE_REPO='https://github.com/m2ym/auto-complete.git'
+CEDET_REPOSITORY='bzr://cedet.bzr.sourceforge.net/bzrroot/cedet/code/trunk'
+CEDET_DIRECTORY='cedet'
 GIT_PULL_COMMAND='git pull'
 GIT_CLONE_COMMAND='git clone'
-
+BZR_CHECKOUT_COMMAND='bzr checkout'
+BZR_UPDATE_COMMAND='bzr update'
 
 
 update_magit() {
@@ -66,7 +69,30 @@ install_autocomplete() {
     $GIT_CLONE_COMMAND $AUTOCOMPLETE_REPO
 }
 
+check_cedet() {
+    if [[ -d $CEDET_DIRECTORY ]];then
+        update_cedet
+    else
+        install_cedet
+    fi
+}
+
+update_cedet() {
+    pushd $CEDET_DIRECTORY
+    $BZR_UPDATE_COMMAND
+    make all
+    popd
+}
+
+install_cedet() {
+    $BZR_CHECKOUT_COMMAND $CEDET_REPOSITORY $CEDET_DIRECTORY
+    pushd $CEDET_DIRECTORY
+    make all
+    popd
+}
+
 
 check_slime
 check_magit
 check_autocomplete
+check_cedet

@@ -32,11 +32,15 @@
 (add-to-list 'load-path (concat dotfiles-dir "slime"))
 (add-to-list 'load-path (concat dotfiles-dir "magit"))
 (add-to-list 'load-path (concat dotfiles-dir "auto-complete"))
+(add-to-list 'load-path (concat dotfiles-dir "cedet/common"))
+(add-to-list 'load-path (concat dotfiles-dir "cedet/semantic"))
 
 (require 'slime)
 (slime-setup '(slime-fancy))
 (require 'magit)
 (require 'auto-complete)
+(require 'cedet)
+(require 'semantic-ia)
 
 (require 's9g-set-global-keys)
 (require 's9g-set-hooks)
