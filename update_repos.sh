@@ -8,6 +8,8 @@ AUTOCOMPLETE_DIR='auto-complete'
 AUTOCOMPLETE_REPO='https://github.com/m2ym/auto-complete.git'
 CEDET_REPOSITORY='bzr://cedet.bzr.sourceforge.net/bzrroot/cedet/code/trunk'
 CEDET_DIRECTORY='cedet'
+YASNIPPET_REPOSITORY='https://github.com/capitaomorte/yasnippet.git'
+YASNIPPET_DIRECTORY='yasnippet'
 GIT_PULL_COMMAND='git pull'
 GIT_CLONE_COMMAND='git clone'
 BZR_CHECKOUT_COMMAND='bzr checkout'
@@ -91,8 +93,26 @@ install_cedet() {
     popd
 }
 
+check_yasnippet() {
+    if [[ -d $YASNIPPET_DIRECTORY ]];then
+        update_yasnippet
+    else
+        install_yasnippet
+    fi
+}
+
+update_yasnippet() {
+    pushd $YASNIPPET_DIRECTORY
+    $GIT_PULL_COMMAND
+    popd
+}
+
+install_yasnippet() {
+    $GIT_CLONE_COMMAND $YASNIPPET_REPOSITORY
+}
 
 check_slime
 check_magit
 check_autocomplete
 check_cedet
+check_yasnippet

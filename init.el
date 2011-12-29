@@ -34,6 +34,7 @@
 (add-to-list 'load-path (concat dotfiles-dir "auto-complete"))
 (add-to-list 'load-path (concat dotfiles-dir "cedet/common"))
 (add-to-list 'load-path (concat dotfiles-dir "cedet/semantic"))
+(add-to-list 'load-path (concat dotfiles-dir "yasnippet"))
 
 (require 'slime)
 (slime-setup '(slime-fancy))
@@ -41,6 +42,7 @@
 (require 'auto-complete)
 (require 'cedet)
 (require 'semantic-ia)
+(require 'yasnippet)
 
 (require 's9g-set-global-keys)
 (require 's9g-set-hooks)
