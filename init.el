@@ -43,6 +43,7 @@
 (require 'cedet)
 (require 'semantic-ia)
 (require 'yasnippet)
+(yas/initialize)
 
 (require 's9g-set-global-keys)
 (require 's9g-set-hooks)
