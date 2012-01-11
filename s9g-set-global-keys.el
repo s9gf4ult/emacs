@@ -94,5 +94,8 @@
                       (dotimes (none cnt)
                         (join-line)))))
 
+(global-set-key (kbd "M-/")
+                #'hippie-expand)
+
 (provide 's9g-set-global-keys)
 ;;; s9g-set-global-keys.el ends here
