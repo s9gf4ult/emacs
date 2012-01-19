@@ -103,8 +103,7 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#202020" :foreground "White" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 172 :width normal :foundry "xos4" :family "terminus"))))
- '(cursor ((t (:background "white"))))
- '(highlight ((((class color) (min-colors 88) (background dark)) (:background "gray25"))))
- '(magit-diff-add ((t (:inherit diff-added :foreground "green"))))
- '(magit-diff-del ((t (:inherit diff-removed :foreground "red")))))
+ '(diff-added ((t (:background "#38633A"))))
+ '(header-line ((t (:background "#002720" :foreground "#A2A2A2"))))
+ '(magit-diff-add ((t (:inherit diff-added))))
+ '(magit-diff-del ((t (:inherit diff-removed)))))

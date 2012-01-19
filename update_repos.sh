@@ -10,6 +10,8 @@ CEDET_REPOSITORY='bzr://cedet.bzr.sourceforge.net/bzrroot/cedet/code/trunk'
 CEDET_DIRECTORY='cedet'
 YASNIPPET_REPOSITORY='https://github.com/capitaomorte/yasnippet.git'
 YASNIPPET_DIRECTORY='yasnippet'
+SOLARIZED_DIRECTORY="emacs-color-theme-solarized"
+SOLARIZED_REPOSITORY="https://github.com/sellout/emacs-color-theme-solarized.git"
 GIT_PULL_COMMAND='git pull'
 GIT_CLONE_COMMAND='git clone'
 BZR_CHECKOUT_COMMAND='bzr checkout'
@@ -111,8 +113,27 @@ install_yasnippet() {
     $GIT_CLONE_COMMAND $YASNIPPET_REPOSITORY
 }
 
+check_solarized() {
+    if [[ -d $SOLARIZED_DIRECTORY ]];then
+        update_solarized
+    else
+        install_solarized
+    fi
+}
+
+update_solarized() {
+    pushd $SOLARIZED_DIRECTORY
+    $GIT_PULL_COMMAND origin
+    popd
+}
+
+install_solarized() {
+    $GIT_CLONE_COMMAND "$SOLARIZED_REPOSITORY"
+}
+
 check_slime
 check_magit
 check_autocomplete
 check_cedet
 check_yasnippet
+check_solarized

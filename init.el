@@ -35,6 +35,8 @@
 (add-to-list 'load-path (concat dotfiles-dir "cedet/common"))
 (add-to-list 'load-path (concat dotfiles-dir "cedet/semantic"))
 (add-to-list 'load-path (concat dotfiles-dir "yasnippet"))
+(add-to-list 'load-path (concat dotfiles-dir "color-theme"))
+(add-to-list 'load-path (concat dotfiles-dir "emacs-color-theme-solarized"))
 
 (require 'slime)
 (slime-setup '(slime-fancy))
@@ -50,5 +52,8 @@
 
 (setq custom-file (concat dotfiles-dir "s9g-configs.el"))
 (require 's9g-configs)
+
+(require 'color-theme-solarized)
+(enable-theme 'solarized-dark)
 
 ;;; init.el ends here
