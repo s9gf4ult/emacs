@@ -11,7 +11,7 @@ CEDET_DIRECTORY='cedet'
 YASNIPPET_REPOSITORY='https://github.com/capitaomorte/yasnippet.git'
 YASNIPPET_DIRECTORY='yasnippet'
 SOLARIZED_DIRECTORY="emacs-color-theme-solarized"
-SOLARIZED_REPOSITORY="https://github.com/sellout/emacs-color-theme-solarized.git"
+SOLARIZED_REPOSITORY="git@github.com:s9gf4ult/emacs-color-theme-solarized.git"
 GIT_PULL_COMMAND='git pull'
 GIT_CLONE_COMMAND='git clone'
 BZR_CHECKOUT_COMMAND='bzr checkout'
@@ -131,9 +131,16 @@ install_solarized() {
     $GIT_CLONE_COMMAND "$SOLARIZED_REPOSITORY"
 }
 
+update_themes() {
+    pushd color-theme
+    make all
+    popd
+}
+
 check_slime
 check_magit
 check_autocomplete
 check_cedet
 check_yasnippet
 check_solarized
+update_themes

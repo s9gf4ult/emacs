@@ -105,7 +105,11 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  '(diff-added ((t (:background "#38633A"))))
+ '(diff-changed ((t (:foreground "#594004"))))
+ '(diff-removed ((t (:background "#3D0002"))))
  '(header-line ((t (:background "#002720" :foreground "#A2A2A2"))))
- '(magit-diff-add ((t (:background "#0A400D"))))
- '(magit-diff-del ((t (:background "#4C0000"))))
+ '(magit-diff-add ((t (:inherit diff-added :background "#0A400D"))))
+ '(magit-diff-del ((t (:inherit diff-removed :background "#4C0000"))))
+ '(magit-item-highlight ((t nil)))
+ '(semantic-decoration-on-unknown-includes ((((class color) (background dark)) (:background "#420000"))))
  '(semantic-decoration-on-unparsed-includes ((((class color) (background dark)) (:background "#3A1E00")))))
