@@ -105,5 +105,6 @@
   ;; If there is more than one, they won't work right.
  '(diff-added ((t (:background "#38633A"))))
  '(header-line ((t (:background "#002720" :foreground "#A2A2A2"))))
- '(magit-diff-add ((t (:inherit diff-added))))
- '(magit-diff-del ((t (:inherit diff-removed)))))
+ '(magit-diff-add ((t (:background "#0A400D"))))
+ '(magit-diff-del ((t (:background "#4C0000"))))
+ '(semantic-decoration-on-unparsed-includes ((((class color) (background dark)) (:background "#3A1E00")))))
