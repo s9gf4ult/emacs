@@ -4,4 +4,6 @@ cedet
 slime
 auto-complete
 magit
-yasnippet
+yasnippet*.elc
+emacs-color-theme-solarized
+semanticdb
