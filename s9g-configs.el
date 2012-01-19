@@ -39,6 +39,7 @@
  '(desktop-save-mode t)
  '(ecb-options-version "2.40")
  '(emacs-lisp-mode-hook (quote (turn-on-eldoc-mode (lambda nil (local-set-key (kbd "TAB") (function (lambda nil (interactive) (if mark-active (indent-region (region-beginning) (region-end)) (if (looking-at "\\_>") (completion-at-point) (indent-for-tab-command))))))))))
+ '(global-hl-line-mode t)
  '(global-semantic-decoration-mode t nil (semantic-decorate-mode))
  '(global-semantic-highlight-edits-mode nil nil (semantic-util-modes))
  '(global-semantic-highlight-func-mode t nil (semantic-util-modes))
