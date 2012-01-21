@@ -53,7 +53,5 @@
 (setq custom-file (concat dotfiles-dir "s9g-configs.el"))
 (require 's9g-configs)
 
-(require 'color-theme-solarized)
-(enable-theme 'solarized-dark)
 
 ;;; init.el ends here
