@@ -53,5 +53,8 @@
 (setq custom-file (concat dotfiles-dir "s9g-configs.el"))
 (require 's9g-configs)
 
+(require 'color-theme)
+(load-file (concat dotfiles-dir "color-theme/themes/color-theme-library.el"))
+(color-theme-xemacs)
 
 ;;; init.el ends here
