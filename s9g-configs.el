@@ -55,7 +55,7 @@
  '(ido-file-extensions-order (quote (".lisp" ".asd" ".css" ".yas")))
  '(ido-mode (quote both) nil (ido))
  '(indent-tabs-mode nil)
- '(inferior-lisp-program "/usr/bin/sbcl")
+ '(inferior-lisp-program "/usr/bin/sbcl --control-stack-size 20")
  '(org-agenda-files (quote ("~/org/work.org")))
  '(org-remember-clock-out-on-exit t)
  '(safe-local-variable-values (quote ((Syntax . ANSI-Common-Lisp))))
@@ -104,4 +104,5 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(magit-item-highlight ((t nil))))
+ '(magit-item-highlight ((t nil)))
+ '(sldb-restartable-frame-line-face ((t (:foreground "#005904")))))
