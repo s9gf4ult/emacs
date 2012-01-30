@@ -47,6 +47,7 @@
 (require 'semantic-ia)
 (require 'yasnippet)
 (require 'haskell-mode)
+(require 'inf-haskell)
 (yas/initialize)
 
 (require 's9g-set-global-keys)
