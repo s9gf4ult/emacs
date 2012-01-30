@@ -37,6 +37,7 @@
 (add-to-list 'load-path (concat dotfiles-dir "yasnippet"))
 (add-to-list 'load-path (concat dotfiles-dir "color-theme"))
 (add-to-list 'load-path (concat dotfiles-dir "emacs-color-theme-solarized"))
+(add-to-list 'load-path (concat dotfiles-dir "haskell-mode"))
 
 (require 'slime)
 (slime-setup '(slime-fancy))
@@ -45,6 +46,7 @@
 (require 'cedet)
 (require 'semantic-ia)
 (require 'yasnippet)
+(require 'haskell-mode)
 (yas/initialize)
 
 (require 's9g-set-global-keys)
