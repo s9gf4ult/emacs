@@ -110,4 +110,4 @@
  '(diff-removed ((t (:background "#2B1617"))))
  '(highlight ((default (:background "#2B2B2B")) (nil nil)))
  '(magit-item-highlight ((t nil)))
- '(sldb-restartable-frame-line-face ((t (:foreground "#005904")))))
+ '(sldb-restartable-frame-line-face ((t (:foreground "#00CC09")))))
