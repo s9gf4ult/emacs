@@ -49,6 +49,7 @@
 
 (require 's9g-set-global-keys)
 (require 's9g-set-hooks)
+(require 's9g-defuns)
 
 (setq custom-file (concat dotfiles-dir "s9g-configs.el"))
 (require 's9g-configs)
