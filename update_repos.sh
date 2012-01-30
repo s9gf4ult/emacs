@@ -137,6 +137,17 @@ update_themes() {
     popd
 }
 
+check_haskell() {
+    if [[ -d haskell-mode ]];then
+        echo 'haskellmode installed'
+    else
+        wget 'http://projects.haskell.org/haskellmode-emacs/haskell-mode-2.8.0.tar.gz'
+        tar -xzvf haskell-mode-2.8.0.tar.gz
+        mv haskell-mode-2.8.0 haskell-mode
+    fi
+}
+
+
 check_slime
 check_magit
 check_autocomplete
@@ -144,3 +155,4 @@ check_cedet
 check_yasnippet
 check_solarized
 update_themes
+check_haskell
