@@ -24,9 +24,15 @@
 
 ;;; Code:
 
-(add-hook 'haskell-mode-hook
-          (lambda ()
-            (local-set-key (kbd "<return>") #'newline-and-indent ))) 
+(require 'haskell-mode)
+
+(add-hook 'literate-haskell-mode
+          #'(lambda ()
+              (local-set-key (kbd "<return>") #'newline-and-indent)
+              (local-set-key (kdb "<f5>") #'inferior-haskell-load-file)
+              (auto-complete-mode t)))
+
+(setq auto-mode-alist (cons '("\\.hs" . haskell-mode) auto-mode-alist))
 
 (provide 's9g-haskell)
 ;;; s9g-haskell.el ends here
