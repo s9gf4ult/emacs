@@ -29,6 +29,7 @@
 (add-hook 'python-mode-hook
           (lambda ()
             (local-set-key (kbd "<tab>") #'smart-python-tab)
+            (local-set-key (kbd "<return>") #'newline-and-indent)
             (yas/minor-mode)
             (auto-complete-mode)))
 
