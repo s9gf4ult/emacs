@@ -45,10 +45,9 @@
 (require 'auto-complete)
 (require 'cedet)
 (require 'semantic-ia)
-(require 'yasnippet)
+(require 's9g-yasnippet)
 (require 'haskell-mode)
 (require 'inf-haskell)
-(yas/initialize)
 
 (require 's9g-set-global-keys)
 (require 's9g-set-hooks)

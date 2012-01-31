@@ -1,8 +1,8 @@
-;;; s9g-set-hooks.el --- set all mode hooks
+;;; s9g-yasnippet.el --- 
 
-;; Copyright (C) 2011  
+;; Copyright (C) 2012  
 
-;; Author:  <razor@calculate.local>
+;; Author:  <razor@localhost>
 ;; Keywords: 
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -24,9 +24,18 @@
 
 ;;; Code:
 
-(require 's9g-elisp)
-(require 's9g-lisp)
-(require 's9g-python)
+(require 'yasnippet)
 
-(provide 's9g-set-hooks)
-;;; s9g-set-hooks.el ends here
+(add-hook 'yas/minor-mode-hook
+          #'(lambda ()
+              (local-set-key (kbd "<C-tab>")
+                             #'(lambda ()
+                                 (interactive)
+                                 (if (yas/snippets-at-point)
+                                     (yas/next-field)
+                                   (yas/expand))))))
+
+
+
+(provide 's9g-yasnippet)
+;;; s9g-yasnippet.el ends here

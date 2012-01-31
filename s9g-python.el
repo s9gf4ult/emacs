@@ -28,7 +28,9 @@
 
 (add-hook 'python-mode-hook
           (lambda ()
-            (local-set-key (kbd "<tab>") #'smart-python-tab)))
+            (local-set-key (kbd "<tab>") #'smart-python-tab)
+            (yas/minor-mode)
+            (auto-complete-mode)))
 
 (provide 's9g-python)
 ;;; s9g-python.el ends here

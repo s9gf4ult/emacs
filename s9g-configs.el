@@ -77,10 +77,9 @@
  '(use-file-dialog nil)
  '(woman-fill-column (- (window-width) 5))
  '(woman-use-own-frame nil)
- '(yas/global-mode t nil (yasnippet))
- '(yas/next-field-key (quote ("<C-tab>")))
- '(yas/snippet-dirs (quote ("~/.emacs.d/snippets")) nil (yasnippet))
- '(yas/trigger-key "<C-tab>"))
+ '(yas/global-mode nil nil (yasnippet))
+ '(yas/next-field-key nil)
+ '(yas/snippet-dirs (quote ("~/.emacs.d/yasnippet/snippets")) nil (yasnippet)))
 
 
 
