@@ -139,11 +139,15 @@ update_themes() {
 
 check_haskell() {
     if [[ -d haskell-mode ]];then
-        echo 'haskellmode installed'
+    	pushd haskell-mode
+	git pull origin
+	make all
+	popd
     else
-        wget 'http://projects.haskell.org/haskellmode-emacs/haskell-mode-2.8.0.tar.gz'
-        tar -xzvf haskell-mode-2.8.0.tar.gz
-        mv haskell-mode-2.8.0 haskell-mode
+    	git clone 'https://github.com/pheaver/haskell-mode.git'
+	pushd haskell-mode
+	make all
+	popd
     fi
 }
 
