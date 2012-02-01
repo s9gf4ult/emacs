@@ -26,12 +26,12 @@
 
 (require 'haskell-mode)
 
-(add-hook 'literate-haskell-mode
-          #'(lambda ()
-              (local-set-key (kbd "<return>") #'newline-and-indent)
-              (local-set-key (kdb "<f5>") #'inferior-haskell-load-file)
-              (auto-complete-mode t)))
+(defun haskell-hook ()
+  (local-set-key (kbd "<return>") #'newline-and-indent)
+  (local-set-key (kbd "<f5>") #'inferior-haskell-load-file)
+  (auto-complete-mode t))
 
+(add-hook 'haskell-mode-hook #'haskell-hook)
 (setq auto-mode-alist (cons '("\\.hs" . haskell-mode) auto-mode-alist))
 
 (provide 's9g-haskell)
