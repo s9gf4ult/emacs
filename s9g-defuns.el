@@ -1,9 +1,9 @@
 ;;; s9g-defuns.el --- function definitions
 
-;; Copyright (C) 2011  
+;; Copyright (C) 2011
 
 ;; Author:  <razor@localhost>
-;; Keywords: 
+;; Keywords:
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -20,7 +20,7 @@
 
 ;;; Commentary:
 
-;; 
+;;
 
 ;;; Code:
 
@@ -64,6 +64,26 @@ If `buffers-to-kill' is nil or t then kills buffers from `(buffer-list)'"
           when (string-match regexp (buffer-name var))
           do (kill-buffer var))))
 
+(defmacro def-insert-something(name field)
+  `(defun ,name() (interactive)
+     (comment-dwim nil)
+     (if  (looking-at ,(format "%s: " field))
+         (progn
+           (delete-trailing-whitespace)
+           (end-of-line)
+           (insert " "))
+       (progn
+         (insert ,(format " %s: " field))
+         (delete-trailing-whitespace)
+         (end-of-line)
+         (insert " ")))))
+
+(def-insert-something insert-fixme "FIXME")
+(def-insert-something insert-note "NOTE")
+
+(defun end-of-non-blank-line() (interactive)
+  (delete-trailing-whitespace)
+  (end-of-line))
 
 (provide 's9g-defuns)
-;;; s9g-defuns.el ends here
+

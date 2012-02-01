@@ -1,9 +1,9 @@
 ;;; s9g-set-global-keys.el --- set all global keys for comfortable editing of everything
 
-;; Copyright (C) 2011  
+;; Copyright (C) 2011
 
 ;; Author:  <razor@calculate.local>
-;; Keywords: 
+;; Keywords:
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -20,7 +20,7 @@
 
 ;;; Commentary:
 
-;; 
+;;
 
 ;;; Code:
 
@@ -36,7 +36,7 @@
                                    1)))
                     (dotimes (none lines)
                       (newline-and-indent)))))
- 
+
 (global-set-key (kbd "C-S-o")
                 (lambda (&optional arg) (interactive "p")
                   (beginning-of-line)
@@ -96,6 +96,18 @@
 
 (global-set-key (kbd "M-/")
                 #'hippie-expand)
+
+(global-set-key (kbd "C-S-f")
+                #'insert-fixme)
+
+(global-set-key (kbd "C-S-n")
+                #'insert-note)
+
+(global-set-key (kbd "C-S-d")
+                #'delete-trailing-whitespace)
+
+(global-set-key (kbd "C-'")
+                #'end-of-non-blank-line)
 
 (provide 's9g-set-global-keys)
 ;;; s9g-set-global-keys.el ends here
