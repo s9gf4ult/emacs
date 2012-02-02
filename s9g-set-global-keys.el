@@ -109,5 +109,14 @@
 (global-set-key (kbd "C-'")
                 #'end-of-non-blank-line)
 
+(global-set-key (kbd "C-c k")
+                #'comment-kill)
+
+(global-set-key (kbd "M-;")
+                #'comment-dwim)
+
+(global-set-key (kbd "C-;")
+                #'comment-dwim-line)
+
 (provide 's9g-set-global-keys)
 ;;; s9g-set-global-keys.el ends here
