@@ -44,7 +44,7 @@
       (indent-region (region-beginning)
                      (region-end))
     (if (looking-at "\\_>")
-        (dabbrev-expand nil)
+        (auto-complete)
       (indent-for-tab-command))))
 
 (defun add-subdir-to-load-path (subdir)
