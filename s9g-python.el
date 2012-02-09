@@ -25,11 +25,13 @@
 ;;; Code:
 
 (require 's9g-defuns)
+(require 'cedet)
 
 (add-hook 'python-mode-hook
           #'(lambda ()
               (local-set-key (kbd "<tab>") #'smart-python-tab)
               (local-set-key (kbd "<return>") #'newline-and-indent)
+              (local-set-key (kbd "C-c j") #'senator-jump)
               (yas/minor-mode)
               (auto-complete-mode)))
 
