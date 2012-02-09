@@ -118,5 +118,15 @@
 (global-set-key (kbd "C-;")
                 #'comment-dwim-line)
 
+(global-set-key (kbd "C-x 2")
+                #'(lambda () (interactive)
+                    (split-window-vertically (round (/ (window-height) 1.618)))
+                    ;; (switch-to-buffer-other-window (second (buffer-list)))
+                    ))
+
+(global-set-key (kbd "C-x 3")
+                #'(lambda () (interactive)
+                    (split-window-horizontally (round (/ (window-width) 1.618)))))
+
 (provide 's9g-set-global-keys)
 ;;; s9g-set-global-keys.el ends here
