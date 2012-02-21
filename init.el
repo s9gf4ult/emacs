@@ -56,9 +56,18 @@
 (setq custom-file (concat dotfiles-dir "s9g-configs.el"))
 (require 's9g-configs)
 
+(put 'narrow-to-region 'disabled nil)
+
+(loop
+  for from across "йцукенгшщзхъфывапролджэячсмитьбюЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖ\ЭЯЧСМИТЬБЮ№"
+  for to   across "qwertyuiop[]asdfghjkl;'zxcvbnm,.QWERTYUIOP{}ASDFGHJKL:\"ZXCVBNM<>#"
+  do
+  (eval `(define-key key-translation-map (kbd ,(concat "C-" (string from))) (kbd ,(concat "C-" (string to)))))
+  (eval `(define-key key-translation-map (kbd ,(concat "M-" (string from))) (kbd ,(concat "M-" (string to))))))
+
+
 ;; (require 'color-theme)
 ;; (load-file (concat dotfiles-dir "color-theme/themes/color-theme-library.el"))
 ;; (color-theme-xemacs)
 
 ;;; init.el ends here
-(put 'narrow-to-region 'disabled nil)
