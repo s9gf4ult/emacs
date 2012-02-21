@@ -33,7 +33,8 @@
               (local-set-key (kbd "<return>") #'newline-and-indent)
               (local-set-key (kbd "C-c j") #'senator-jump)
               (yas/minor-mode)
-              (auto-complete-mode)))
+              (auto-complete-mode)
+              (local-set-key (kbd "M-I") #'semantic-ia-show-summary)))
 
 (provide 's9g-python)
 ;;; s9g-python.el ends here
