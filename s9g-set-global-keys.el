@@ -128,5 +128,8 @@
                 #'(lambda () (interactive)
                     (split-window-horizontally (round (/ (window-width) 1.618)))))
 
+(global-set-key (kbd "M-N") #'next-multiframe-window)
+(global-set-key (kbd "M-P") #'previous-multiframe-window)
+
 (provide 's9g-set-global-keys)
 ;;; s9g-set-global-keys.el ends here
