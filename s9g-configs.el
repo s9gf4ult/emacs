@@ -52,6 +52,7 @@
  '(global-semantic-stickyfunc-mode t nil (semantic-util-modes))
  '(global-senator-minor-mode t nil (senator))
  '(global-visual-line-mode t)
+ '(haskell-font-lock-symbols (quote unicode))
  '(ido-enable-flex-matching t)
  '(ido-file-extensions-order (quote (".lisp" ".asd" ".css" ".yas")))
  '(ido-mode (quote both) nil (ido))
