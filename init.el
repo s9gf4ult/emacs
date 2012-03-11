@@ -48,6 +48,7 @@
 (require 's9g-yasnippet)
 (require 'haskell-mode)
 (require 'inf-haskell)
+(require 'fixme-mode)
 
 (require 's9g-set-global-keys)
 (require 's9g-set-hooks)
