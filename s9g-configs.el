@@ -65,7 +65,7 @@
  '(scroll-bar-mode nil)
  '(scroll-margin 5)
  '(scroll-preserve-screen-position t)
- '(scroll-step 12)
+ '(scroll-step 1)
  '(scroll-up-aggressively nil)
  '(semantic-complete-inline-analyzer-displayor-class (quote semantic-displayor-traditional-with-focus-highlight))
  '(semantic-completion-displayor-format-tag-function (quote semantic-format-tag-prototype))
