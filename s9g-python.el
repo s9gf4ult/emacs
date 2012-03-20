@@ -34,7 +34,10 @@
               (local-set-key (kbd "C-c j") #'senator-jump)
               (yas/minor-mode)
               (auto-complete-mode)
-              (local-set-key (kbd "M-I") #'semantic-ia-show-summary)))
+              (auto-fill-mode t)
+              (set (make-local-variable 'comment-auto-fill-only-comments) t)
+              (local-set-key (kbd "M-I") #'semantic-ia-show-summary)
+              (local-set-key (kbd "M-D") #'semantic-ia-show-doc)))
 
 (provide 's9g-python)
 ;;; s9g-python.el ends here

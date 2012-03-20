@@ -130,7 +130,6 @@
 
 (global-set-key (kbd "M-N") #'next-multiframe-window)
 (global-set-key (kbd "M-P") #'previous-multiframe-window)
-(global-set-key (kbd "M-D") #'semantic-ia-show-doc)
 
 (provide 's9g-set-global-keys)
 ;;; s9g-set-global-keys.el ends here

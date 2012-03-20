@@ -22,13 +22,15 @@
 
 ;; 
 
-;;; Code:
+;;; Code:sh
 
 (require 'haskell-mode)
 
 (defun haskell-hook ()
   (local-set-key (kbd "<return>") #'newline-and-indent)
   (local-set-key (kbd "<f5>") #'inferior-haskell-load-file)
+  (local-set-key (kbd "M-I") #'inferior-haskell-info)
+  (local-set-key (kbd "M-D") #'inferior-haskell-type)
   (turn-on-haskell-decl-scan)
   (turn-on-haskell-doc-mode)
   (turn-on-haskell-indentation)
