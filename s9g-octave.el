@@ -1,8 +1,8 @@
-;;; s9g-set-hooks.el --- set all mode hooks
+;;; s9g-octave.el --- 
 
-;; Copyright (C) 2011  
+;; Copyright (C) 2012  
 
-;; Author:  <razor@calculate.local>
+;; Author:  <razor@localhost>
 ;; Keywords: 
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -24,12 +24,9 @@
 
 ;;; Code:
 
-(require 's9g-elisp)
-(require 's9g-lisp)
-(require 's9g-python)
-(require 's9g-haskell)
-(require 's9g-rest)
-(require 's9g-octave)
+(setq auto-mode-alist (cons (cons "\\.m" 'octave-mode) auto-mode-alist))
 
-(provide 's9g-set-hooks)
-;;; s9g-set-hooks.el ends here
+
+
+(provide 's9g-octave)
+;;; s9g-octave.el ends here
