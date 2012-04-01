@@ -77,7 +77,6 @@
  '(senator-completion-menu-summary-function (quote semantic-format-tag-prototype))
  '(show-paren-mode t)
  '(slime-net-coding-system (quote utf-8-unix))
- '(split-window-keep-point nil)
  '(tab-width 4)
  '(tool-bar-mode nil)
  '(undo-limit 500000)
