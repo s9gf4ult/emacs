@@ -30,6 +30,7 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
+ '(ac-ignore-case nil)
  '(ac-modes (quote (emacs-lisp-mode lisp-interaction-mode c-mode cc-mode c++-mode java-mode clojure-mode scala-mode scheme-mode ocaml-mode tuareg-mode perl-mode cperl-mode python-mode ruby-mode ecmascript-mode javascript-mode js-mode js2-mode php-mode css-mode makefile-mode sh-mode fortran-mode f90-mode ada-mode xml-mode sgml-mode python-mode)))
  '(auto-insert t)
  '(auto-insert-directory "~/.emacs.d/auto-insert")
@@ -41,6 +42,8 @@
  '(emacs-lisp-mode-hook (quote (turn-on-eldoc-mode (lambda nil (local-set-key (kbd "TAB") (function (lambda nil (interactive) (if mark-active (indent-region (region-beginning) (region-end)) (if (looking-at "\\_>") (completion-at-point) (indent-for-tab-command))))))))))
  '(even-window-heights nil)
  '(fill-column 80)
+ '(fixme-foreground-color "#CC0019")
+ '(fixme-highlighted-words (quote ("FIXME" "TODO" "BUG" "KLUDGE")))
  '(global-hl-line-mode nil)
  '(global-semantic-decoration-mode t nil (semantic-decorate-mode))
  '(global-semantic-highlight-edits-mode nil nil (semantic-util-modes))
@@ -61,6 +64,7 @@
  '(inferior-lisp-program "/usr/bin/sbcl --control-stack-size 20")
  '(org-agenda-files (quote ("~/org/work.org")))
  '(org-remember-clock-out-on-exit t)
+ '(rst-level-face-base-color "goldenrod4")
  '(safe-local-variable-values (quote ((Syntax . ANSI-Common-Lisp))))
  '(scroll-bar-mode nil)
  '(scroll-margin 5)
