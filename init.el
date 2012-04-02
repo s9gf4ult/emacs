@@ -38,6 +38,7 @@
 (add-to-list 'load-path (concat dotfiles-dir "color-theme"))
 (add-to-list 'load-path (concat dotfiles-dir "emacs-color-theme-solarized"))
 (add-to-list 'load-path (concat dotfiles-dir "haskell-mode"))
+(add-to-list 'load-path (concat dotfiles-dir "popup-el"))
 
 (require 'slime)
 (slime-setup '(slime-fancy))

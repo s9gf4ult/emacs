@@ -151,6 +151,17 @@ check_haskell() {
     fi
 }
 
+check_popup () {
+    if [[ -d popup-el ]];then
+        pushd popup-el
+        git pull origin
+        popd
+    else
+        git clone 'https://github.com/m2ym/popup-el.git'
+    fi
+}
+
+
 
 check_slime
 check_magit
@@ -160,3 +171,4 @@ check_yasnippet
 check_solarized
 update_themes
 check_haskell
+check_popup
