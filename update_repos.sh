@@ -10,8 +10,8 @@ CEDET_REPOSITORY='bzr://cedet.bzr.sourceforge.net/bzrroot/cedet/code/trunk'
 CEDET_DIRECTORY='cedet'
 YASNIPPET_REPOSITORY='https://github.com/capitaomorte/yasnippet.git'
 YASNIPPET_DIRECTORY='yasnippet'
-SOLARIZED_DIRECTORY="emacs-color-theme-solarized"
-SOLARIZED_REPOSITORY="git@github.com:s9gf4ult/emacs-color-theme-solarized.git"
+# SOLARIZED_DIRECTORY="emacs-color-theme-solarized"
+# SOLARIZED_REPOSITORY="git@github.com:s9gf4ult/emacs-color-theme-solarized.git"
 GIT_PULL_COMMAND='git pull'
 GIT_CLONE_COMMAND='git clone'
 BZR_CHECKOUT_COMMAND='bzr checkout'
@@ -113,28 +113,28 @@ install_yasnippet() {
     $GIT_CLONE_COMMAND $YASNIPPET_REPOSITORY
 }
 
-check_solarized() {
-    if [[ -d $SOLARIZED_DIRECTORY ]];then
-        update_solarized
-    else
-        install_solarized
-    fi
-}
+# check_solarized() {
+#     if [[ -d $SOLARIZED_DIRECTORY ]];then
+#         update_solarized
+#     else
+#         install_solarized
+#     fi
+# }
 
-update_solarized() {
-    pushd $SOLARIZED_DIRECTORY
-    $GIT_PULL_COMMAND origin
-    popd
-}
+# update_solarized() {
+#     pushd $SOLARIZED_DIRECTORY
+#     $GIT_PULL_COMMAND origin
+#     popd
+# }
 
-install_solarized() {
-    $GIT_CLONE_COMMAND "$SOLARIZED_REPOSITORY"
-}
+# install_solarized() {
+#     $GIT_CLONE_COMMAND "$SOLARIZED_REPOSITORY"
+# }
 
-update_themes() {
-    pushd color-theme
-    make all
-    popd
+# update_themes() {
+#     pushd color-theme
+#     make all
+#     popd
 }
 
 check_haskell() {
@@ -151,12 +151,24 @@ check_haskell() {
     fi
 }
 
+check_popup () {
+    if [[ -d popup-el ]];then
+        pushd popup-el
+        git pull origin
+        popd
+    else
+        git clone 'https://github.com/m2ym/popup-el.git'
+    fi
+}
+
+
 
 check_slime
 check_magit
 check_autocomplete
 check_cedet
 check_yasnippet
-check_solarized
-update_themes
+# check_solarized
+# update_themes
 check_haskell
+check_popup
