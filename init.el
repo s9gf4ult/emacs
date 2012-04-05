@@ -35,8 +35,8 @@
 (add-to-list 'load-path (concat dotfiles-dir "cedet/common"))
 (add-to-list 'load-path (concat dotfiles-dir "cedet/semantic"))
 (add-to-list 'load-path (concat dotfiles-dir "yasnippet"))
-(add-to-list 'load-path (concat dotfiles-dir "color-theme"))
-(add-to-list 'load-path (concat dotfiles-dir "emacs-color-theme-solarized"))
+;; (add-to-list 'load-path (concat dotfiles-dir "color-theme"))
+;; (add-to-list 'load-path (concat dotfiles-dir "emacs-color-theme-solarized"))
 (add-to-list 'load-path (concat dotfiles-dir "haskell-mode"))
 (add-to-list 'load-path (concat dotfiles-dir "popup-el"))
 
