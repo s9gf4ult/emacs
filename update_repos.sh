@@ -135,7 +135,7 @@ install_yasnippet() {
 #     pushd color-theme
 #     make all
 #     popd
-}
+#}
 
 check_haskell() {
     if [[ -d haskell-mode ]];then
