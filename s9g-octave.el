@@ -25,8 +25,10 @@
 ;;; Code:
 
 (setq auto-mode-alist (cons (cons "\\.m" 'octave-mode) auto-mode-alist))
-
-
+(add-hook
+ 'octave-mode-hook
+ #'(lambda ()
+     (auto-complete-mode t)))
 
 (provide 's9g-octave)
 ;;; s9g-octave.el ends here
