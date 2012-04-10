@@ -140,6 +140,7 @@ install_yasnippet() {
 check_haskell() {
     if [[ -d haskell-mode ]];then
     	pushd haskell-mode
+	git checkout -f master
 	git pull origin
 	make all
 	popd
