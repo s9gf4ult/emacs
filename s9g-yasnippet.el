@@ -25,6 +25,9 @@
 ;;; Code:
 
 (require 'yasnippet)
+(yas/global-mode 1)
+
+
 
 (add-hook 'yas/minor-mode-hook
           #'(lambda ()
