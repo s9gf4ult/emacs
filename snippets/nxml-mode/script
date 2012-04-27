@@ -1,0 +1,4 @@
+# -*- mode: snippet -*-
+# name: script
+# --
+<script type="${1:text/javascript}" language="${2:JavaScript}" src="${3:}"></script>
