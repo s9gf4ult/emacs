@@ -91,9 +91,10 @@
  '(woman-fill-column (- (window-width) 5))
  '(woman-use-own-frame nil)
  '(yas/global-mode nil nil (yasnippet))
- '(yas/next-field-key nil)
- '(yas/snippet-dirs (quote ("~/.emacs.d/yasnippet/snippets")) nil (yasnippet))
- '(yas/trigger-key "<C-tab>"))
+ '(yas/next-field-key (quote ("<tab>")))
+ '(yas/snippet-dirs (quote ("~/.emacs.d/yasnippet/snippets" "~/.emacs.d/snippets")) nil (yasnippet))
+ '(yas/trigger-key "<C-tab>")
+ '(yas/triggers-in-field t))
 
 
 
