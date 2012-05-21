@@ -14,6 +14,8 @@
   (local-set-key (kbd "C-c d") 'semantic-ia-show-doc)
   (local-set-key (kbd "<C-return>") 'semantic-ia-fast-jump)
   (local-set-key (kbd "<C-f1>") 'pop-mark)
+  (set (make-local-variable 'comment-auto-fill-only-comments) 1)
+  (auto-fill-mode 1)
   (local-set-key (kbd "<C-f2>") 'pop-global-mark))
 (add-hook 'c-mode-hook 'my-c-mode-hook)
 (add-hook 'c++-mode-hook 'my-c-mode-hook)
