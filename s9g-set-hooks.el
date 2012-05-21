@@ -31,6 +31,7 @@
 (require 's9g-rest)
 (require 's9g-octave)
 (require 's9g-javascript)
+(require 's9g-c)
 
 (provide 's9g-set-hooks)
 ;;; s9g-set-hooks.el ends here
