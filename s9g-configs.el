@@ -26,10 +26,10 @@
 
 
 (custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(ac-comphist-threshold 0.7)
  '(ac-delay 0.1)
  '(ac-dwim t)
@@ -64,6 +64,7 @@
  '(global-senator-minor-mode t nil (senator))
  '(global-visual-line-mode t)
  '(haskell-font-lock-symbols (quote unicode))
+ '(haskell-program-name "ghci")
  '(ido-enable-flex-matching t)
  '(ido-file-extensions-order (quote (".lisp" ".asd" ".css" ".yas")))
  '(ido-mode (quote both) nil (ido))
@@ -94,11 +95,11 @@
  '(use-file-dialog nil)
  '(woman-fill-column (- (window-width) 5))
  '(woman-use-own-frame nil)
- '(yas/global-mode nil nil (yasnippet))
- '(yas/next-field-key (quote ("<tab>")))
- '(yas/snippet-dirs (quote ("~/.emacs.d/yasnippet/snippets" "~/.emacs.d/snippets")) nil (yasnippet))
- '(yas/trigger-key "<C-tab>")
- '(yas/triggers-in-field t))
+ '(yas-global-mode nil nil (yasnippet))
+ '(yas-next-field-key (quote ("<tab>")))
+ '(yas-snippet-dirs (quote ("~/.emacs.d/yasnippet/snippets" "~/.emacs.d/snippets")) nil (yasnippet))
+ '(yas-trigger-key "<C-tab>")
+ '(yas-triggers-in-field t))
 
 
 
@@ -118,10 +119,10 @@
 (provide 's9g-configs)
 ;;; s9g-configs.el ends here
 (custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(cursor ((t (:background "white"))))
  '(diff-added ((t (:background "#162B16"))))
  '(diff-changed ((nil (:background "#2B2A16"))))

@@ -47,6 +47,7 @@
 (require 'auto-complete)
 (require 's9g-yasnippet)
 (require 'haskell-mode)
+(require 'haskell-cabal)
 (require 'inf-haskell)
 (require 'fixme-mode)
 

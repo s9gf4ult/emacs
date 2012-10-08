@@ -145,7 +145,7 @@ check_haskell() {
 	make all
 	popd
     else
-    	git clone 'https://github.com/pheaver/haskell-mode.git'
+    	git clone 'git://github.com/haskell/haskell-mode.git'
 	pushd haskell-mode
 	make all
 	popd

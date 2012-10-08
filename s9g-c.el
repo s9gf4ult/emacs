@@ -10,7 +10,7 @@
   ;;                (lambda () (interactive)
   ;;                  (indent-for-tab-command)
   ;;                  (semantic-complete-analyze-inline)))
-  (local-set-key (kbd "<M-tab>") 'semantic-complete-analyze-inline)
+  (local-set-key (kbd "<M-tab>") 'senator-complete-symbol)
   (local-set-key (kbd "C-c d") 'semantic-ia-show-doc)
   (local-set-key (kbd "<C-return>") 'semantic-ia-fast-jump)
   (local-set-key (kbd "<C-f1>") 'pop-mark)
