@@ -10,12 +10,12 @@ CEDET_REPOSITORY='bzr://cedet.bzr.sourceforge.net/bzrroot/cedet/code/trunk'
 CEDET_DIRECTORY='cedet'
 YASNIPPET_REPOSITORY='https://github.com/capitaomorte/yasnippet.git'
 YASNIPPET_DIRECTORY='yasnippet'
-# SOLARIZED_DIRECTORY="emacs-color-theme-solarized"
-# SOLARIZED_REPOSITORY="git@github.com:s9gf4ult/emacs-color-theme-solarized.git"
 GIT_PULL_COMMAND='git pull'
 GIT_CLONE_COMMAND='git clone'
 BZR_CHECKOUT_COMMAND='bzr checkout'
 BZR_UPDATE_COMMAND='bzr update'
+MARKDOWN_DIR="markdown-mode"
+MARKDOWN_REPO="git://jblevins.org/git/markdown-mode.git"
 
 
 update_magit() {
@@ -113,30 +113,6 @@ install_yasnippet() {
     $GIT_CLONE_COMMAND $YASNIPPET_REPOSITORY
 }
 
-# check_solarized() {
-#     if [[ -d $SOLARIZED_DIRECTORY ]];then
-#         update_solarized
-#     else
-#         install_solarized
-#     fi
-# }
-
-# update_solarized() {
-#     pushd $SOLARIZED_DIRECTORY
-#     $GIT_PULL_COMMAND origin
-#     popd
-# }
-
-# install_solarized() {
-#     $GIT_CLONE_COMMAND "$SOLARIZED_REPOSITORY"
-# }
-
-# update_themes() {
-#     pushd color-theme
-#     make all
-#     popd
-#}
-
 check_haskell() {
     if [[ -d haskell-mode ]];then
     	pushd haskell-mode
@@ -162,6 +138,15 @@ check_popup () {
     fi
 }
 
+check_markdown () {
+    if [[ -d $MARKDOWN_DIR ]]; then
+        pushd $MARKDOWN_DIR
+        $GIT_PULL_COMMAND
+        popd
+    else
+        $GIT_CLONE_COMMAND $MARKDOWN_REPO
+    fi
+}
 
 
 check_slime
@@ -169,7 +154,6 @@ check_magit
 check_autocomplete
 check_cedet
 check_yasnippet
-# check_solarized
-# update_themes
 check_haskell
 check_popup
+check_markdown

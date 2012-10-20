@@ -38,6 +38,7 @@
 ;; (add-to-list 'load-path (concat dotfiles-dir "emacs-color-theme-solarized"))
 (add-to-list 'load-path (concat dotfiles-dir "haskell-mode"))
 (add-to-list 'load-path (concat dotfiles-dir "popup-el"))
+(add-to-list 'load-path (concat dotfiles-dir "markdown-mode"))
 
 (load-file (concat dotfiles-dir "cedet/common/cedet.el"))
 
@@ -50,6 +51,7 @@
 (require 'haskell-cabal)
 (require 'inf-haskell)
 (require 'fixme-mode)
+(require 'markdown-mode)
 
 (require 's9g-set-global-keys)
 (require 's9g-set-hooks)
