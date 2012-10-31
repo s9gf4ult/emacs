@@ -59,6 +59,7 @@
 
 (setq custom-file (concat dotfiles-dir "s9g-configs.el"))
 (require 's9g-configs)
+(require 's9g-modalist)
 
 (put 'narrow-to-region 'disabled nil)
 

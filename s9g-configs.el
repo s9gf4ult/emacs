@@ -72,6 +72,7 @@
  '(inferior-lisp-program "/usr/bin/sbcl --control-stack-size 20")
  '(org-agenda-files (quote ("~/org/work.org")))
  '(org-remember-clock-out-on-exit t)
+ '(rng-nxml-auto-validate-flag nil)
  '(rst-level-face-base-color "goldenrod4")
  '(safe-local-variable-values (quote ((Syntax . ANSI-Common-Lisp))))
  '(scroll-bar-mode nil)
