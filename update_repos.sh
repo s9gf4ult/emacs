@@ -5,7 +5,7 @@ MAGIT_DIRECTORY='magit'
 SLIME_REPO='https://github.com/archimag/slime-archimag.git'
 SLIME_DIRECTORY='slime'
 AUTOCOMPLETE_DIR='auto-complete'
-AUTOCOMPLETE_REPO='https://github.com/m2ym/auto-complete.git'
+AUTOCOMPLETE_REPO='git://github.com/auto-complete/auto-complete.git'
 CEDET_REPOSITORY='bzr://cedet.bzr.sourceforge.net/bzrroot/cedet/code/trunk'
 CEDET_DIRECTORY='cedet'
 YASNIPPET_REPOSITORY='https://github.com/capitaomorte/yasnippet.git'
@@ -18,9 +18,9 @@ MARKDOWN_DIR="markdown-mode"
 MARKDOWN_REPO="git://jblevins.org/git/markdown-mode.git"
 YAML_REPO="git://github.com/yoshiki/yaml-mode.git"
 YAML_DIR="yaml-mode"
-POPUP_REPO='https://github.com/m2ym/popup-el.git'
+POPUP_REPO='git://github.com/auto-complete/popup-el.git'
 POPUP_DIR="popup-el"
-
+HASKELL_REPO='git://github.com/haskell/haskell-mode.git'
 
 check_slime() {
     if [[ -d $SLIME_DIRECTORY ]];then
@@ -32,7 +32,7 @@ check_slime() {
 
 update_slime() {
     pushd $SLIME_DIRECTORY
-    $GIT_PULL_COMMAND origin
+    git_reset "$SLIME_REPO"
     popd
 }
 
@@ -66,24 +66,34 @@ install_cedet() {
 check_haskell() {
     if [[ -d haskell-mode ]];then
     	pushd haskell-mode
-	git checkout -f master
-	git pull origin
-	make all
-	popd
+        git_reset "$HASKELL_REPO"
+	    make all
+	    popd
     else
-    	git clone 'git://github.com/haskell/haskell-mode.git'
-	pushd haskell-mode
-	make all
-	popd
+    	git clone "$HASKELL_REPO"
+	    pushd haskell-mode
+	    make all
+	    popd
     fi
 }
+
+git_reset () {
+    repo=$1
+    git config remote.origin.url $repo # works even when repo url was changed
+    git fetch origin
+    git checkout -f master
+    git reset origin/master
+    git checkout -f master
+    git clean -df
+}
+    
 
 check_git () {
     dir=$1
     repo=$2
     if [[ -d $dir ]];then
         pushd $dir
-        $GIT_PULL_COMMAND
+        git_reset $repo
         popd
     else
         $GIT_CLONE_COMMAND $repo
