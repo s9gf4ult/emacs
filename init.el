@@ -39,6 +39,7 @@
 (add-to-list 'load-path (concat dotfiles-dir "haskell-mode"))
 (add-to-list 'load-path (concat dotfiles-dir "popup-el"))
 (add-to-list 'load-path (concat dotfiles-dir "markdown-mode"))
+(add-to-list 'load-path (concat dotfiles-dir "yaml-mode"))
 
 (load-file (concat dotfiles-dir "cedet/common/cedet.el"))
 
@@ -52,6 +53,7 @@
 (require 'inf-haskell)
 (require 'fixme-mode)
 (require 'markdown-mode)
+(require 'yaml-mode)
 
 (require 's9g-set-global-keys)
 (require 's9g-set-hooks)

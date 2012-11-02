@@ -16,25 +16,11 @@ BZR_CHECKOUT_COMMAND='bzr checkout'
 BZR_UPDATE_COMMAND='bzr update'
 MARKDOWN_DIR="markdown-mode"
 MARKDOWN_REPO="git://jblevins.org/git/markdown-mode.git"
+YAML_REPO="git://github.com/yoshiki/yaml-mode.git"
+YAML_DIR="yaml-mode"
+POPUP_REPO='https://github.com/m2ym/popup-el.git'
+POPUP_DIR="popup-el"
 
-
-update_magit() {
-    pushd $MAGIT_DIRECTORY
-    $GIT_PULL_COMMAND origin
-    popd
-}
-
-install_magit() {
-    $GIT_CLONE_COMMAND $MAGIT_REPO
-}
-
-check_magit() {
-    if [[ -d $MAGIT_DIRECTORY ]];then
-        update_magit
-    else
-        install_magit
-    fi
-}
 
 check_slime() {
     if [[ -d $SLIME_DIRECTORY ]];then
@@ -52,25 +38,7 @@ update_slime() {
 
 install_slime() {
     $GIT_CLONE_COMMAND $SLIME_REPO
-    mv slime-archimag slime
-}
-
-check_autocomplete() {
-    if [[ -d $AUTOCOMPLETE_DIR ]];then
-        update_autocomplete
-    else
-        install_autocomplete
-    fi
-}
-
-update_autocomplete() {
-    pushd $AUTOCOMPLETE_DIR
-    $GIT_PULL_COMMAND
-    popd
-}
-
-install_autocomplete() {
-    $GIT_CLONE_COMMAND $AUTOCOMPLETE_REPO
+    mv slime-archimag $SLIME_DIRECTORY
 }
 
 check_cedet() {
@@ -95,24 +63,6 @@ install_cedet() {
     popd
 }
 
-check_yasnippet() {
-    if [[ -d $YASNIPPET_DIRECTORY ]];then
-        update_yasnippet
-    else
-        install_yasnippet
-    fi
-}
-
-update_yasnippet() {
-    pushd $YASNIPPET_DIRECTORY
-    $GIT_PULL_COMMAND
-    popd
-}
-
-install_yasnippet() {
-    $GIT_CLONE_COMMAND $YASNIPPET_REPOSITORY
-}
-
 check_haskell() {
     if [[ -d haskell-mode ]];then
     	pushd haskell-mode
@@ -128,32 +78,24 @@ check_haskell() {
     fi
 }
 
-check_popup () {
-    if [[ -d popup-el ]];then
-        pushd popup-el
-        git pull origin
-        popd
-    else
-        git clone 'https://github.com/m2ym/popup-el.git'
-    fi
-}
-
-check_markdown () {
-    if [[ -d $MARKDOWN_DIR ]]; then
-        pushd $MARKDOWN_DIR
+check_git () {
+    dir=$1
+    repo=$2
+    if [[ -d $dir ]];then
+        pushd $dir
         $GIT_PULL_COMMAND
         popd
     else
-        $GIT_CLONE_COMMAND $MARKDOWN_REPO
+        $GIT_CLONE_COMMAND $repo
     fi
 }
 
-
 check_slime
-check_magit
-check_autocomplete
+check_git "$MAGIT_DIRECTORY" "$MAGIT_REPO"
+check_git "$AUTOCOMPLETE_DIR" "$AUTOCOMPLETE_REPO"
 check_cedet
-check_yasnippet
+check_git "$YASNIPPET_DIRECTORY" "$YASNIPPET_REPOSITORY"
 check_haskell
-check_popup
-check_markdown
+check_git "$POPUP_DIR" "$POPUP_REPO"
+check_git "$MARKDOWN_DIR" "$MARKDOWN_REPO"
+check_git "$YAML_DIR" "$YAML_REPO"
