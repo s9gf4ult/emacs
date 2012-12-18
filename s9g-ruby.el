@@ -24,7 +24,7 @@
 
 ;;; Code:
 (defun my-ruby-mode-hook()
-  (local-set-key (kbd "<return>") #'newline-and-indent)
+  (local-set-key (kbd "<return>") #'reindent-then-newline-and-indent)
   (auto-complete-mode 1))
 
 (add-hook 'ruby-mode-hook #'my-ruby-mode-hook)
