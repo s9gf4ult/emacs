@@ -133,5 +133,18 @@
 
 (global-set-key (kbd "C-c j") #'senator-jump)
 
+;;;;;;;;;;;;;;;;;;;;;
+;; maigit keybinds ;;
+;;;;;;;;;;;;;;;;;;;;;
+
+
+(global-set-key (kbd "C-x g g") #'magit-status)
+(global-set-key (kbd "C-x g c") #'magit-checkout)
+(global-set-key (kbd "C-x g l") #'magit-log)
+(global-set-key (kbd "C-x g u") #'magit-pull)
+(global-set-key (kbd "C-x g p") #'magit-push)
+(global-set-key (kbd "C-x g f") #'magit-fetch)
+
 (provide 's9g-set-global-keys)
 ;;; s9g-set-global-keys.el ends here
+
