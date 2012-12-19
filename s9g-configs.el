@@ -64,7 +64,7 @@
  '(global-senator-minor-mode t nil (senator))
  '(global-visual-line-mode t)
  '(haskell-font-lock-symbols (quote unicode))
- '(haskell-program-name "ghci")
+ '(haskell-program-name "cabal-dev ghci")
  '(ido-enable-flex-matching t)
  '(ido-file-extensions-order (quote (".lisp" ".asd" ".css" ".yas")))
  '(ido-mode (quote both) nil (ido))
