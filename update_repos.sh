@@ -1,14 +1,14 @@
 #!/bin/bash
 
-MAGIT_REPO='http://github.com/magit/magit.git'
+MAGIT_REPO='git://github.com/magit/magit.git'
 MAGIT_DIRECTORY='magit'
-SLIME_REPO='https://github.com/archimag/slime-archimag.git'
+SLIME_REPO='git://github.com/archimag/slime-archimag.git'
 SLIME_DIRECTORY='slime'
 AUTOCOMPLETE_DIR='auto-complete'
 AUTOCOMPLETE_REPO='git://github.com/auto-complete/auto-complete.git'
 CEDET_REPOSITORY='bzr://cedet.bzr.sourceforge.net/bzrroot/cedet/code/trunk'
 CEDET_DIRECTORY='cedet'
-YASNIPPET_REPOSITORY='https://github.com/capitaomorte/yasnippet.git'
+YASNIPPET_REPOSITORY='git://github.com/capitaomorte/yasnippet.git'
 YASNIPPET_DIRECTORY='yasnippet'
 GIT_PULL_COMMAND='git pull'
 GIT_CLONE_COMMAND='git clone'
