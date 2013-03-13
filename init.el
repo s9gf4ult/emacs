@@ -23,6 +23,7 @@
 ;; 
 
 ;;; Code:
+(require 'cl)
 
 (setq dotfiles-dir (file-name-directory
                     (or (buffer-file-name)
@@ -30,16 +31,9 @@
 
 (add-to-list 'load-path dotfiles-dir)
 
-;; (require 'magit)
-;; (require 'auto-complete)
-;; (require 's9g-yasnippet)
-;; (require 'haskell-mode)
-;; (require 'haskell-cabal)
-;; (require 'inf-haskell)
-;; (require 'fixme-mode)
-;; (require 'markdown-mode)
-;; (require 'yaml-mode)
-(require 'cl)
+(loop
+ for file in (directory-files-and-attributes (concat dotfiles-dir 
+
 
 (require 's9g-set-global-keys)
 (require 's9g-set-hooks)
@@ -58,11 +52,5 @@
   (eval `(define-key key-translation-map (kbd ,(concat "C-" (string from))) (kbd ,(concat "C-" (string to)))))
   (eval `(define-key key-translation-map (kbd ,(concat "M-" (string from))) (kbd ,(concat "M-" (string to)))))
   (eval `(define-key key-translation-map (kbd ,(concat "C-M-" (string from))) (kbd ,(concat "C-M-" (string to))))))
-  
-
-
-;; (require 'color-theme)
-;; (load-file (concat dotfiles-dir "color-theme/themes/color-theme-library.el"))
-;; (color-theme-xemacs)
 
 ;;; init.el ends here
