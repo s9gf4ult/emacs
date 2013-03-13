@@ -31,17 +31,29 @@
 
 (add-to-list 'load-path dotfiles-dir)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; load all directories from ~/.emacs.d/packages/ ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (loop
- for file in (directory-files-and-attributes (concat dotfiles-dir 
+ for file in (directory-files-and-attributes (concat dotfiles-dir "packages") t)
+ if (second file)
+ do (let ((fname (first file)))
+      (add-to-list 'load-path fname)))
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; change default confgis location ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(require 's9g-set-global-keys)
-(require 's9g-set-hooks)
-(require 's9g-defuns)
-
-(setq custom-file (concat dotfiles-dir "s9g-configs.el"))
 (require 's9g-configs)
+(setq custom-file (concat dotfiles-dir "s9g-configs.el"))
+
+
+(require 's9g-defuns)
+(require 's9g-configure-modes)
+(require 's9g-set-global-keys)
 (require 's9g-modalist)
+
 
 (put 'narrow-to-region 'disabled nil)
 

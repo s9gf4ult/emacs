@@ -34,5 +34,5 @@
 (require 's9g-c)
 (require 's9g-ruby)
 
-(provide 's9g-set-hooks)
+(provide 's9g-configure-modes)
 ;;; s9g-set-hooks.el ends here
