@@ -24,6 +24,8 @@
 
 ;;; Code:
 
+(require 'rst)
+
 (add-hook
  'rst-mode-hook
  #'(lambda ()

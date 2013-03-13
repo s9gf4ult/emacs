@@ -1,3 +1,6 @@
 [submodule "packages/auto-complete"]
 	path = packages/auto-complete
 	url = git://github.com/auto-complete/auto-complete.git
+[submodule "packages/popup"]
+	path = packages/popup
+	url = git://github.com/auto-complete/popup-el.git
