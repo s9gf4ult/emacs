@@ -16,3 +16,6 @@
 [submodule "packages/nxhtml"]
 	path = packages/nxhtml
 	url = git://github.com/emacsmirror/nxhtml.git
+[submodule "packages/ggtags"]
+	path = packages/ggtags
+	url = git://github.com/emacsmirror/ggtags.git

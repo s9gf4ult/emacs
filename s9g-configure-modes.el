@@ -38,6 +38,7 @@
 ;; (require 's9g-php-mode)
 (require 's9g-web-mode)
 ;; (require 's9g-nxhtml)
+(require 's9g-ggtags)
 
 (provide 's9g-configure-modes)
 ;;; s9g-set-hooks.el ends here
