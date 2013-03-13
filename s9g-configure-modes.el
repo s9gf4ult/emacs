@@ -35,6 +35,7 @@
 (require 's9g-ruby)
 (require 's9g-auto-complete)
 (require 's9g-magit)
+(require 's9g-php-mode)
 
 (provide 's9g-configure-modes)
 ;;; s9g-set-hooks.el ends here

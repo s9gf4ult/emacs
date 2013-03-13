@@ -7,3 +7,6 @@
 [submodule "packages/magit"]
 	path = packages/magit
 	url = git://github.com/magit/magit.git
+[submodule "packages/php-mode"]
+	path = packages/php-mode
+	url = git://github.com/ejmr/php-mode.git
