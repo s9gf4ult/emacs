@@ -1,5 +1,0 @@
-# -*- coding: utf-8 -*-
-# name: isinst
-# contributor: s9gf4ult
-# --
-assert(isinstance(${1:name}, ${2:class}))$0

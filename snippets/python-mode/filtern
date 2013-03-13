@@ -1,5 +1,0 @@
-# -*- coding: utf-8 -*-
-# name: filtern
-# contributor: s9gf4ult
-# --
-filter(lambda $1: ${1:$(format "%s != None" text)}, ${2:seq}) $0

@@ -1,6 +1,0 @@
-# -*- coding: utf-8 -*-
-# name: case
-# contributor: s9gf4ult
-# key: case
-# --
-(${2:affirmative} if ${1:condition} else ${3:None})$0
