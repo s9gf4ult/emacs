@@ -34,6 +34,7 @@
 (require 's9g-c)
 (require 's9g-ruby)
 (require 's9g-auto-complete)
+(require 's9g-magit)
 
 (provide 's9g-configure-modes)
 ;;; s9g-set-hooks.el ends here
