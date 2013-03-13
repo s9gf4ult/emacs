@@ -10,3 +10,9 @@
 [submodule "packages/php-mode"]
 	path = packages/php-mode
 	url = git://github.com/ejmr/php-mode.git
+[submodule "packages/web-mode"]
+	path = packages/web-mode
+	url = git://github.com/fxbois/web-mode.git
+[submodule "packages/nxhtml"]
+	path = packages/nxhtml
+	url = git://github.com/emacsmirror/nxhtml.git
