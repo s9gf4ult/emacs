@@ -19,3 +19,6 @@
 [submodule "packages/ggtags"]
 	path = packages/ggtags
 	url = git://github.com/emacsmirror/ggtags.git
+[submodule "packages/python-mode"]
+	path = packages/python-mode
+	url = git://github.com/emacsmirror/python-mode.git

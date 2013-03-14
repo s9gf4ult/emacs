@@ -26,7 +26,6 @@
 
 (require 's9g-defuns)
 (require 'python-mode)
-(require 'cedet)
 
 (add-hook 'python-mode-hook
           #'(lambda ()

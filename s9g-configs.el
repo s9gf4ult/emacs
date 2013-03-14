@@ -39,9 +39,6 @@
  '(ac-use-comphist t)
  '(ac-use-fuzzy nil)
  '(ac-use-menu-map t)
- ;; '(auto-insert t)
- ;; '(auto-insert-directory "~/.emacs.d/auto-insert")
- ;; '(auto-insert-mode t)
  '(blink-cursor-mode nil)
  '(column-number-mode t)
  '(desktop-save-mode t)
@@ -52,16 +49,6 @@
  '(fixme-foreground-color "#CC0019")
  '(fixme-highlighted-words (quote ("FIXME" "TODO" "BUG" "KLUDGE")))
  '(global-hl-line-mode nil)
- ;; '(global-semantic-decoration-mode t nil (semantic-decorate-mode))
- ;; '(global-semantic-highlight-edits-mode nil nil (semantic-util-modes))
- ;; '(global-semantic-highlight-func-mode t nil (semantic-util-modes))
- ;; '(global-semantic-idle-completions-mode nil nil (semantic-idle))
- ;; '(global-semantic-idle-local-symbol-highlight-mode t nil (semantic-idle))
- ;; '(global-semantic-idle-scheduler-mode t nil (semantic-idle))
- ;; '(global-semantic-idle-summary-mode t nil (semantic-idle))
- ;; '(global-semantic-mru-bookmark-mode t nil (semantic-util-modes))
- ;; '(global-semantic-stickyfunc-mode t nil (semantic-util-modes))
- ;; '(global-senator-minor-mode t nil (senator))
  '(global-visual-line-mode t)
  '(haskell-font-lock-symbols (quote unicode))
  '(haskell-program-name "cabal-dev ghci")
@@ -89,7 +76,6 @@
  '(semantic-idle-work-parse-neighboring-files-flag t)
  '(semantic-idle-work-update-headers-flag t)
  '(semantic-mode t)
- ;; '(semanticdb-global-mode t nil (semanticdb))
  '(senator-completion-menu-summary-function (quote semantic-format-tag-prototype))
  '(show-paren-mode t)
  '(slime-net-coding-system (quote utf-8-unix))
@@ -99,26 +85,7 @@
  '(undo-limit 500000)
  '(use-file-dialog nil)
  '(woman-fill-column (- (window-width) 5))
- '(woman-use-own-frame nil)
- ;; '(yas-global-mode nil nil (yasnippet))
- ;; '(yas-next-field-key (quote ("<tab>")))
- ;; '(yas-snippet-dirs (quote ("~/.emacs.d/yasnippet/snippets" "~/.emacs.d/snippets")) nil (yasnippet))
- ;; '(yas-trigger-key "<C-tab>")
- ;; '(yas-triggers-in-field t))
-
-
-
-;;(custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- ;;'(magit-diff-add ((t (:background "gray8" :foreground "green3"))))
- ;;'(magit-diff-del ((t (:background "gray8" :foreground "red3"))))
- ;;'(magit-diff-file-header ((t (:inherit magit-header :background "gray8"))))
- ;;'(magit-diff-hunk-header ((t (:inherit magit-header :background "gray8" :foreground "orange" :slant italic))))
- ;;'(magit-item-highlight ((((class color) (background dark)) (:background "gray15"))))
- )
+ '(woman-use-own-frame nil))
 (put 'set-goal-column 'disabled nil)
 
 
@@ -136,4 +103,6 @@
  '(diff-removed ((t (:background "#2B1617"))))
  '(highlight ((default (:background "#2B2B2B")) (nil nil)))
  '(magit-item-highlight ((t nil)))
+ '(mumamo-background-chunk-major ((t nil)))
+ '(mumamo-background-chunk-submode1 ((t (:background "gray15"))))
  '(sldb-restartable-frame-line-face ((t (:foreground "#00CC09")))))

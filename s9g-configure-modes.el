@@ -35,7 +35,7 @@
 (require 's9g-ruby)
 (require 's9g-auto-complete)
 (require 's9g-magit)
-;; (require 's9g-php-mode)
+(require 's9g-php-mode)
 (require 's9g-web-mode)
 ;; (require 's9g-nxhtml)
 (require 's9g-ggtags)
