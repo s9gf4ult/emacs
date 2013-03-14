@@ -37,7 +37,9 @@
   (auto-complete-mode t))
 
 (add-hook 'haskell-mode-hook #'haskell-hook)
-(setq auto-mode-alist (cons '("\\.hs" . haskell-mode) auto-mode-alist))
+
+(add-to-list 'auto-mode-alist '("\\.hs\\'" . haskell-mode))
+(add-to-list 'auto-mode-alist '("\\.hsc\\'" . haskell-mode))
 
 (provide 's9g-haskell)
 ;;; s9g-haskell.el ends here

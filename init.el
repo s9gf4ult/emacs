@@ -45,15 +45,13 @@
 ;; change default confgis location ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(require 's9g-configs)
-(setq custom-file (concat dotfiles-dir "s9g-configs.el"))
-
-
 (require 's9g-defuns)
 (require 's9g-configure-modes)
 (require 's9g-set-global-keys)
 (require 's9g-modalist)
 
+(require 's9g-configs)
+(setq custom-file (concat dotfiles-dir "s9g-configs.el"))
 
 (put 'narrow-to-region 'disabled nil)
 
