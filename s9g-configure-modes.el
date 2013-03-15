@@ -39,6 +39,8 @@
 (require 's9g-web-mode)
 ;; (require 's9g-nxhtml)
 (require 's9g-ggtags)
+(require 's9g-org-mode)
+(require 's9g-mmm-mode)
 
 (provide 's9g-configure-modes)
 ;;; s9g-set-hooks.el ends here

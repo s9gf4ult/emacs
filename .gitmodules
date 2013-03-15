@@ -25,3 +25,9 @@
 [submodule "packages/haskell-mode"]
 	path = packages/haskell-mode
 	url = git://github.com/haskell/haskell-mode.git
+[submodule "packages/mmm-mode"]
+	path = packages/mmm-mode
+	url = git://github.com/purcell/mmm-mode.git
+[submodule "packages/cedet"]
+	path = packages/cedet
+	url = git://github.com/emacsmirror/cedet.git
