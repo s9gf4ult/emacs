@@ -25,6 +25,7 @@
 ;;; Code:sh
 
 (require 'haskell-mode)
+(require 'haskell-cabal)
 
 (defun haskell-hook ()
   (local-set-key (kbd "<return>") #'newline-and-indent)
@@ -40,6 +41,7 @@
 
 (add-to-list 'auto-mode-alist '("\\.hs\\'" . haskell-mode))
 (add-to-list 'auto-mode-alist '("\\.hsc\\'" . haskell-mode))
+(add-to-list 'auto-mode-alist '("\\.cabal\\'" . haskell-cabal-mode))
 
 (provide 's9g-haskell)
 ;;; s9g-haskell.el ends here
