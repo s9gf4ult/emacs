@@ -85,6 +85,7 @@
  '(tool-bar-mode nil)
  '(undo-limit 500000)
  '(use-file-dialog nil)
+ '(warning-minimum-level :error)
  '(woman-fill-column (- (window-width) 5))
  '(woman-use-own-frame nil))
 (put 'set-goal-column 'disabled nil)
