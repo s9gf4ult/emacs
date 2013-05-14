@@ -26,10 +26,10 @@
 
 
 (custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
+  ;; custom-set-variables was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
  '(ac-comphist-threshold 0.7)
  '(ac-delay 0.1)
  '(ac-dwim t)
@@ -65,7 +65,7 @@
  '(org-remember-clock-out-on-exit t)
  '(rng-nxml-auto-validate-flag nil)
  '(rst-level-face-base-color "goldenrod4")
- '(safe-local-variable-values (quote ((Syntax . ANSI-Common-Lisp))))
+ '(safe-local-variable-values (quote ((encoding . utf-8) (Syntax . ANSI-Common-Lisp))))
  '(scroll-bar-mode nil)
  '(scroll-margin 5)
  '(scroll-preserve-screen-position t)
@@ -94,11 +94,11 @@
 (provide 's9g-configs)
 ;;; s9g-configs.el ends here
 (custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#202020" :foreground "White" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 150 :width normal :foundry "xos4" :family "Droid Sans Mono Dotted:size=12"))))
+  ;; custom-set-faces was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ '(default ((t (:inherit nil :stipple nil :background "#202020" :foreground "White" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 160 :foundry "xos4" :family "Terminus"))))
  '(cursor ((t (:background "white"))))
  '(diff-added ((t (:background "#162B16"))))
  '(diff-changed ((nil (:background "#2B2A16"))))
