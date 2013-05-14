@@ -41,6 +41,7 @@
 ; (require 's9g-ggtags)
 (require 's9g-org-mode)
 (require 's9g-mmm-mode)
+(require 's9g-tcl-mode)
 
 (provide 's9g-configure-modes)
 ;;; s9g-set-hooks.el ends here
