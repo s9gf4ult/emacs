@@ -40,6 +40,7 @@
  '(ac-use-fuzzy nil)
  '(ac-use-menu-map t)
  '(blink-cursor-mode nil)
+ '(case-fold-search nil)
  '(column-number-mode t)
  '(comment-auto-fill-only-comments t)
  '(desktop-save-mode t)
