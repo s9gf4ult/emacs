@@ -41,9 +41,25 @@
 
 (loop
  for file in (directory-files-and-attributes (concat dotfiles-dir "packages") t)
- if (second file)
+ if (and (second file)
+         (let ((fn (file-name-base (first file))))
+           (and 
+            (not (string-equal "." fn))
+            (not (string-equal ".." fn)))))
  do (let ((fname (first file)))
       (add-to-list 'load-path fname)))
+
+
+(loop
+ for file in (directory-files-and-attributes (concat dotfiles-dir "themes") t)
+ if (and (second file)
+         (let ((fn (file-name-base (first file))))
+           (and 
+            (not (string-equal "." fn))
+            (not (string-equal ".." fn)))))
+ do (let ((fname (first file)))
+      (add-to-list 'custom-theme-load-path fname)))
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; change default confgis location ;;
