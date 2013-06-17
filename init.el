@@ -70,6 +70,8 @@
 (require 's9g-set-global-keys)
 (require 's9g-modalist)
 
+(load-theme 'solarized-light t)
+
 (require 's9g-configs)
 (setq custom-file (concat dotfiles-dir "s9g-configs.el"))
 
