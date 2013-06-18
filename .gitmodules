@@ -37,3 +37,6 @@
 [submodule "packages/flymake-easy"]
 	path = packages/flymake-easy
 	url = git://github.com/purcell/flymake-easy.git
+[submodule "themes/emacs-color-theme-solarized"]
+	path = themes/emacs-color-theme-solarized
+	url = git@github.com:s9gf4ult/emacs-color-theme-solarized.git
