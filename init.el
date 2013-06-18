@@ -41,25 +41,9 @@
 
 (loop
  for file in (directory-files-and-attributes (concat dotfiles-dir "packages") t)
- if (and (second file)
-         (let ((fn (file-name-base (first file))))
-           (and 
-            (not (string-equal "." fn))
-            (not (string-equal ".." fn)))))
+ if (second file)
  do (let ((fname (first file)))
       (add-to-list 'load-path fname)))
-
-
-(loop
- for file in (directory-files-and-attributes (concat dotfiles-dir "themes") t)
- if (and (second file)
-         (let ((fn (file-name-base (first file))))
-           (and 
-            (not (string-equal "." fn))
-            (not (string-equal ".." fn)))))
- do (let ((fname (first file)))
-      (add-to-list 'custom-theme-load-path fname)))
-
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; change default confgis location ;;
@@ -70,7 +54,8 @@
 (require 's9g-set-global-keys)
 (require 's9g-modalist)
 
-(load-theme 'solarized-light t)
+(require 'color-theme-solarized)
+(color-theme-solarized-light)
 
 (require 's9g-configs)
 (setq custom-file (concat dotfiles-dir "s9g-configs.el"))
