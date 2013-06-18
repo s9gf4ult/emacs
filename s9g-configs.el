@@ -80,6 +80,9 @@
  '(senator-completion-menu-summary-function (quote semantic-format-tag-prototype))
  '(show-paren-mode t)
  '(slime-net-coding-system (quote utf-8-unix))
+ '(solarized-bold nil)
+ '(solarized-italic nil)
+ '(solarized-underline nil)
  '(standard-indent 2)
  '(tab-width 4)
  '(tool-bar-mode nil)
@@ -91,20 +94,15 @@
 (put 'set-goal-column 'disabled nil)
 
 
-(provide 's9g-configs)
-;;; s9g-configs.el ends here
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#202020" :foreground "White" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 150 :width normal :foundry "xos4" :family "Droid Sans Mono Dotted:size=12"))))
- '(cursor ((t (:background "white"))))
- '(diff-added ((t (:background "#162B16"))))
- '(diff-changed ((nil (:background "#2B2A16"))))
- '(diff-removed ((t (:background "#2B1617"))))
- '(highlight ((default (:background "#2B2B2B")) (nil nil)))
- '(magit-item-highlight ((t nil)))
- '(mumamo-background-chunk-major ((t nil)))
- '(mumamo-background-chunk-submode1 ((t (:background "gray15"))))
- '(sldb-restartable-frame-line-face ((t (:foreground "#00CC09")))))
+ '(default ((t (:slant normal :weight bold :height 150 :width normal :foundry "xos4" :family "terminus"))))
+ '(diff-added ((t (:background "SeaGreen1"))))
+ '(diff-removed ((t (:background "#FFC4C4"))))
+ '(magit-item-highlight ((t nil))))
+
+
+(provide 's9g-configs)
