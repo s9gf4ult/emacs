@@ -83,6 +83,7 @@
  '(solarized-bold nil)
  '(solarized-italic nil)
  '(solarized-underline nil)
+ '(split-width-threshold 80)
  '(standard-indent 2)
  '(tab-width 4)
  '(tool-bar-mode nil)
@@ -99,7 +100,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:slant normal :weight bold :height 150 :width normal :foundry "xos4" :family "terminus"))))
+ '(default ((t (:inherit nil :stipple nil :background "#fdf6e3" :foreground "#657b83" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 147 :width normal :foundry "unknown" :family "DejaVu Sans Mono"))))
  '(diff-added ((t (:background "SeaGreen1"))))
  '(diff-removed ((t (:background "#FFC4C4"))))
  '(magit-item-highlight ((t nil))))
