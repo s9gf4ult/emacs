@@ -5,7 +5,7 @@
   ;; (require 'semantic-ia)
   ;; (require 'semantic-gcc)
 ;  (semantic-load-enable-excessive-code-helpers)
-  (semantic-load-enable-code-helpers)
+  ;; (semantic-load-enable-code-helpers)
   ;; (local-set-key (kbd "<tab>")
   ;;                (lambda () (interactive)
   ;;                  (indent-for-tab-command)

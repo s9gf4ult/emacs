@@ -29,7 +29,8 @@
                         load-file-name)))
 (add-to-list 'load-path dotfiles-dir)
 
-(require 's9g-cedet)
+(require 'xcscope)
+;; (require 's9g-cedet)
 
 
 

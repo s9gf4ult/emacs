@@ -59,6 +59,7 @@
  '(ido-enter-matching-directory (quote first))
  '(ido-file-extensions-order (quote (".lisp" ".asd" ".css" ".yas")))
  '(ido-ignore-files (quote ("\\`CVS/" "\\`#" "\\`.#" "\\`\\.\\./" "\\`\\./" "\\`~/")))
+ '(ido-max-directory-size 100000)
  '(ido-mode (quote both) nil (ido))
  '(indent-tabs-mode nil)
  '(inferior-lisp-program "/usr/bin/sbcl --control-stack-size 20")
@@ -84,8 +85,10 @@
  '(solarized-bold nil)
  '(solarized-italic nil)
  '(solarized-underline nil)
- '(standard-indent 2)
- '(tab-width 4)
+ '(split-width-threshold 80)
+ '(standard-indent 4)
+ '(tab-width 8)
+ '(tags-table-list (quote ("/home/cyberstep/work/linuxcnc/TAGS")))
  '(tool-bar-mode nil)
  '(undo-limit 500000)
  '(use-file-dialog nil)
@@ -96,11 +99,11 @@
 
 
 (custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:slant normal :weight bold :height 150 :width normal :foundry "xos4" :family "terminus"))))
+  ;; custom-set-faces was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ '(default ((t (:inherit nil :stipple nil :background "#fdf6e3" :foreground "#657b83" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 135 :width normal :foundry "unknown" :family "Liberation Mono"))))
  '(diff-added ((t (:background "SeaGreen1"))))
  '(diff-removed ((t (:background "#FFC4C4"))))
  '(magit-item-highlight ((t nil))))
