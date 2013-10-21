@@ -43,3 +43,6 @@
 [submodule "packages/git-modes"]
 	path = packages/git-modes
 	url = https://github.com/magit/git-modes.git
+[submodule "packages/haml-mode"]
+	path = packages/haml-mode
+	url = https://github.com/nex3/haml-mode.git

@@ -29,6 +29,8 @@
 
 (add-hook 'ruby-mode-hook #'my-ruby-mode-hook)
 
+(add-to-list 'auto-mode-alist '("\\.builder\\'" . ruby-mode))
+
 
 (provide 's9g-ruby)
 ;;; s9g-ruby.el ends here
