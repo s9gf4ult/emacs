@@ -116,5 +116,11 @@ BEG and END (region to sort)."
             (replace-match "" nil nil))
           (goto-char next-line))))))
 
-(provide 's9g-defuns)
+(defun uniq-sort-lines (beg end)
+  (interactive "r")
+  (save-excursion
+    (sort-lines () beg end)
+    (uniq-lines beg end)))
 
+
+(provide 's9g-defuns)
