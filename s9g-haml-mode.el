@@ -1,8 +1,8 @@
-;;; s9g-set-hooks.el --- set all mode hooks
+;;; s9g-haml-mode.el --- 
 
-;; Copyright (C) 2011  
+;; Copyright (C) 2013  
 
-;; Author:  <razor@calculate.local>
+;; Author:  <>
 ;; Keywords: 
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -24,25 +24,9 @@
 
 ;;; Code:
 
-(require 's9g-elisp)
-(require 's9g-lisp)
-(require 's9g-python)
-(require 's9g-haskell)
-(require 's9g-rest)
-(require 's9g-octave)
-(require 's9g-javascript)
-(require 's9g-c)
-(require 's9g-ruby)
-(require 's9g-auto-complete)
-(require 's9g-magit)
-(require 's9g-php-mode)
-(require 's9g-web-mode)
-(require 's9g-nxhtml)
-; (require 's9g-ggtags)
-(require 's9g-org-mode)
-(require 's9g-mmm-mode)
-(require 's9g-tcl-mode)
-(require 's9g-haml-mode)
+(require 'haml-mode)
 
-(provide 's9g-configure-modes)
-;;; s9g-set-hooks.el ends here
+(add-to-list 'auto-mode-alist '("\\.haml" . haml-mode))
+
+(provide 's9g-haml-mode)
+;;; s9g-haml-mode.el ends here
