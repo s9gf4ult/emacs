@@ -43,6 +43,7 @@
 (require 's9g-mmm-mode)
 (require 's9g-tcl-mode)
 (require 's9g-haml-mode)
+(require 'yaml-mode)
 
 (provide 's9g-configure-modes)
 ;;; s9g-set-hooks.el ends here
