@@ -133,6 +133,10 @@
 
 (global-set-key (kbd "C-c j") #'senator-jump)
 
+(global-set-key (kbd "C-S-m") #'mark-paragraph)
+
+(global-set-key (kbd "C-S-u") #'uniq-sort-lines)
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; maigit keybinds ;;
 ;;;;;;;;;;;;;;;;;;;;;
