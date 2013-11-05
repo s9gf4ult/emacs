@@ -72,3 +72,5 @@
   (eval `(define-key key-translation-map (kbd ,(concat "C-M-" (string from))) (kbd ,(concat "C-M-" (string to))))))
 
 ;;; init.el ends here
+
+(put 'downcase-region 'disabled nil)

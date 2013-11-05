@@ -43,5 +43,8 @@
 (require 's9g-mmm-mode)
 (require 's9g-tcl-mode)
 
+(require 'move-text)
+(move-text-default-bindings)
+
 (provide 's9g-configure-modes)
 ;;; s9g-set-hooks.el ends here
