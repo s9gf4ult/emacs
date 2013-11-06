@@ -26,6 +26,13 @@
 
 (require 'haml-mode)
 
+(add-hook
+ 'haml-mode-hook
+ #'(lambda ()
+     (interactive)
+     (local-set-key (kbd "RET")
+                    #'newline-and-indent)))
+
 
 (provide 's9g-haml-mode)
 ;;; s9g-haml-mode.el ends here
