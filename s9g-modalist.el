@@ -24,8 +24,6 @@
 
 ;;; Code:
 
-(add-to-list 'auto-mode-alist '("\\.\\(erb\\|html\\)" . nxml-mode))
-
 
 
 (provide 's9g-modalist)

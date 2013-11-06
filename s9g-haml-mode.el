@@ -26,7 +26,6 @@
 
 (require 'haml-mode)
 
-(add-to-list 'auto-mode-alist '("\\.haml" . haml-mode))
 
 (provide 's9g-haml-mode)
 ;;; s9g-haml-mode.el ends here
