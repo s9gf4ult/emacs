@@ -49,3 +49,6 @@
 [submodule "packages/yaml-mode"]
 	path = packages/yaml-mode
 	url = https://github.com/yoshiki/yaml-mode.git
+[submodule "packages/move-text"]
+	path = packages/move-text
+	url = https://github.com/emacsmirror/move-text.git
