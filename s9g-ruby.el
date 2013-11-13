@@ -30,6 +30,8 @@
 (add-hook 'ruby-mode-hook #'my-ruby-mode-hook)
 
 (add-to-list 'auto-mode-alist '("\\.builder\\'" . ruby-mode))
+(add-to-list 'auto-mode-alist '("^Gemfile" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.rake\\'" . ruby-mode))
 
 
 (provide 's9g-ruby)
