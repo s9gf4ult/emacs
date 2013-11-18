@@ -1,9 +1,9 @@
-;;; s9g-haml-mode.el --- 
+;;; s9g-haml-mode.el ---
 
-;; Copyright (C) 2013  
+;; Copyright (C) 2013
 
 ;; Author:  <>
-;; Keywords: 
+;; Keywords:
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -20,7 +20,7 @@
 
 ;;; Commentary:
 
-;; 
+;;
 
 ;;; Code:
 
@@ -31,7 +31,8 @@
  #'(lambda ()
      (interactive)
      (local-set-key (kbd "RET")
-                    #'newline-and-indent)))
+                    #'newline-and-indent)
+     (auto-complete-mode 1)))
 
 
 (provide 's9g-haml-mode)
