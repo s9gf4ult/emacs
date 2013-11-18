@@ -1,9 +1,9 @@
 ;;; init.el --- configuration init file
 
-;; Copyright (C) 2011  
+;; Copyright (C) 2011
 
 ;; Author:  <s9gf4ult@gmail.com>
-;; Keywords: 
+;; Keywords:
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -20,7 +20,7 @@
 
 ;;; Commentary:
 
-;; 
+;;
 
 ;;; Code:
 
@@ -43,7 +43,7 @@
  for file in (directory-files-and-attributes (concat dotfiles-dir "packages") t)
  if (and (second file)
          (let ((fn (file-name-base (first file))))
-           (and 
+           (and
             (not (string-equal "." fn))
             (not (string-equal ".." fn)))))
  do (let ((fname (first file)))
@@ -54,7 +54,7 @@
  for file in (directory-files-and-attributes (concat dotfiles-dir "themes") t)
  if (and (second file)
          (let ((fn (file-name-base (first file))))
-           (and 
+           (and
             (not (string-equal "." fn))
             (not (string-equal ".." fn)))))
  do (let ((fname (first file)))
@@ -76,6 +76,7 @@
 (setq custom-file (concat dotfiles-dir "s9g-configs.el"))
 
 (put 'narrow-to-region 'disabled nil)
+(put 'downcase-region 'disabled nil)
 
 (loop
   for from across "йцукенгшщзхъфывапролджэячсмитьбюЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖ\ЭЯЧСМИТЬБЮ№"
@@ -85,5 +86,6 @@
   (eval `(define-key key-translation-map (kbd ,(concat "M-" (string from))) (kbd ,(concat "M-" (string to)))))
   (eval `(define-key key-translation-map (kbd ,(concat "C-M-" (string from))) (kbd ,(concat "C-M-" (string to))))))
 
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
 ;;; init.el ends here
-(put 'downcase-region 'disabled nil)
