@@ -1,9 +1,9 @@
-;;; s9g-haskell.el --- 
+;;; s9g-haskell.el ---
 
-;; Copyright (C) 2012  
+;; Copyright (C) 2012
 
 ;; Author:  <razor@localhost>
-;; Keywords: 
+;; Keywords:
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -20,12 +20,13 @@
 
 ;;; Commentary:
 
-;; 
+;;
 
 ;;; Code:sh
 
-(require 'haskell-mode)
-(require 'haskell-cabal)
+(require 'haskell-mode-autoloads)
+
+(add-to-list 'Info-default-directory-list "~/.emacs.d/packages/haskell-mode/")
 
 (defun haskell-hook ()
   (local-set-key (kbd "<return>") #'newline-and-indent)
