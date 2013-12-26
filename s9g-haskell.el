@@ -29,14 +29,12 @@
 (add-to-list 'Info-default-directory-list "~/.emacs.d/packages/haskell-mode/")
 
 (defun haskell-hook ()
-  (local-set-key (kbd "<return>") #'newline-and-indent)
-  (local-set-key (kbd "<f5>") #'inferior-haskell-load-file)
-  (local-set-key (kbd "M-I") #'inferior-haskell-info)
-  (local-set-key (kbd "M-D") #'inferior-haskell-type)
-  (turn-on-haskell-decl-scan)
-  (turn-on-haskell-doc-mode)
-  (turn-on-haskell-indentation)
-  (auto-complete-mode t))
+	(local-set-key (kbd "<return>") #'newline-and-indent)
+	(local-set-key (kbd "<f5>") #'haskell-compile)
+	(local-set-key (kbd "<f9>") #'(lambda ()
+																	(interactive)
+																	(haskell-cabal-visit-file t)))
+	(auto-complete-mode t))
 
 (add-hook 'haskell-mode-hook #'haskell-hook)
 
