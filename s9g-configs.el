@@ -52,7 +52,7 @@
  '(global-hl-line-mode nil)
  '(global-visual-line-mode t)
  '(haskell-font-lock-symbols (quote unicode))
- '(haskell-mode-hook (quote (turn-on-haskell-simple-indent haskell-hook)))
+ '(haskell-mode-hook (quote (turn-on-haskell-indentation haskell-hook)))
  '(haskell-program-name "cabal-dev ghci")
  '(ido-auto-merge-delay-time 2)
  '(ido-enable-flex-matching nil)
