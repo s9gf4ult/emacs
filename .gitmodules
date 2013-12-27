@@ -52,3 +52,12 @@
 [submodule "packages/move-text"]
 	path = packages/move-text
 	url = https://github.com/emacsmirror/move-text.git
+[submodule "packages/hamlet-mode"]
+	path = packages/hamlet-mode
+	url = https://github.com/lightquake/hamlet-mode.git
+[submodule "packages/dash"]
+	path = packages/dash
+	url = https://github.com/magnars/dash.el.git
+[submodule "packages/s"]
+	path = packages/s
+	url = https://github.com/magnars/s.el.git

@@ -28,6 +28,7 @@
 (require 's9g-lisp)
 (require 's9g-python)
 (require 's9g-haskell)
+(require 'hamlet-mode)
 (require 's9g-rest)
 (require 's9g-octave)
 (require 's9g-javascript)
