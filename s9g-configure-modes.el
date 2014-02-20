@@ -46,6 +46,7 @@
 (require 's9g-haml-mode)
 (require 's9g-yaml-mode)
 (require 's9g-move-text-mode)
+(require 'coffee-mode)
 
 (provide 's9g-configure-modes)
 ;;; s9g-set-hooks.el ends here

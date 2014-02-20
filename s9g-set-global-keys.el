@@ -24,6 +24,14 @@
 
 ;;; Code:
 
+(global-set-key
+ (kbd "<f7>")
+ #'ido-switch-buffer)
+
+(global-set-key
+ (kbd "<f8>")
+ #'ido-switch-buffer-other-window)
+
 (global-set-key (kbd "C-S-k") (lambda (&optional lines-count) (interactive "p")
                                 (if mark-active
                                     (delete-region (region-beginning)
@@ -151,4 +159,3 @@
 
 (provide 's9g-set-global-keys)
 ;;; s9g-set-global-keys.el ends here
-

@@ -61,3 +61,6 @@
 [submodule "packages/s"]
 	path = packages/s
 	url = https://github.com/magnars/s.el.git
+[submodule "packages/coffe-mode"]
+	path = packages/coffe-mode
+	url = https://github.com/defunkt/coffee-mode.git
