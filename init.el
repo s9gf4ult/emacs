@@ -71,6 +71,8 @@
   (eval `(define-key key-translation-map (kbd ,(concat "M-" (string from))) (kbd ,(concat "M-" (string to)))))
   (eval `(define-key key-translation-map (kbd ,(concat "C-M-" (string from))) (kbd ,(concat "C-M-" (string to))))))
 
-;;; init.el ends here
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
 
 (put 'downcase-region 'disabled nil)
+;;; init.el ends here
