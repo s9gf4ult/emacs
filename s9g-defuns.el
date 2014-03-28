@@ -24,6 +24,26 @@
 
 ;;; Code:
 
+(defmacro save-lined-selection (&rest body)
+  (let ((start (gensym))
+        (end (gensym))
+        (beg-line (gensym))
+        (end-line (gensym)))
+    `(if (region-active-p)
+         (let* ((,start (region-beginning))
+                (,end (region-end))
+                (,beg-line (line-number-at-pos ,start))
+                (,end-line (line-number-at-pos ,end)))
+           (prog1
+               (progn ,@body)
+             (goto-char ,start)
+             (move-beginning-of-line nil)
+             (set-mark-command nil)
+             (forward-line (- ,end-line ,beg-line))
+             (move-end-of-line nil)
+             (setq deactivate-mark nil)))
+       (progn
+         ,@body))))
 
 (defun smart-tab ()
   "This smart tab is minibuffer compliant: it acts as usual in
@@ -121,6 +141,27 @@ BEG and END (region to sort)."
   (save-excursion
     (sort-lines () beg end)
     (uniq-lines beg end)))
+
+
+
+
+(defun s9g-indent-up ()
+  (interactive)
+  (if (region-active-p)
+      (save-lined-selection
+       (indent-code-rigidly
+        (region-beginning)
+        (region-end)
+        tab-width))))
+
+(defun s9g-indent-down ()
+  (interactive)
+  (if (region-active-p)
+      (save-lined-selection
+       (indent-code-rigidly
+        (region-beginning)
+        (region-end)
+        (- tab-width)))))
 
 
 (provide 's9g-defuns)
