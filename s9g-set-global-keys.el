@@ -24,6 +24,8 @@
 
 ;;; Code:
 
+(require 's9g-defuns)
+
 (global-set-key
  (kbd "<f7>")
  #'ido-switch-buffer)
@@ -156,6 +158,13 @@
 (global-set-key (kbd "C-x g u") #'magit-pull)
 (global-set-key (kbd "C-x g p") #'magit-push)
 (global-set-key (kbd "C-x g f") #'magit-fetch)
+
+;;;;;;;;;;;;;;;
+;; indenting ;;
+;;;;;;;;;;;;;;;
+
+(global-set-key (kbd "<C-tab>") #'s9g-indent-up)
+(global-set-key (kbd "<C-S-iso-lefttab>") #'s9g-indent-down)
 
 (provide 's9g-set-global-keys)
 ;;; s9g-set-global-keys.el ends here
