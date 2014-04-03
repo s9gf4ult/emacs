@@ -1,0 +1,58 @@
+1. What
+
+Nagios-mode is an Emacs mode for editing Nagios[1] configuration
+files. You probably already know that, or you wouldn't be reading
+this. But maybe you just love Emacs, and you go around looking for
+things that end in -mode. Then you README them.
+
+So, Nagios is monitoring software that is configured via plain-text
+(*.cfg) files. They have a C-like syntax, and a bunch of special
+keywords. Nagios mode will apply syntax highlighting to these
+configuration files, possibly alerting you to the fact that you have
+done something stupid. Moreover, the buffers will look prettier.
+
+[1] http://www.nagios.org/
+
+
+2. Where
+
+Stick nagios-mode.el somewhere, and add that place to your Emacs load
+path. For example,
+
+  (setq load-path
+    (append (list "~/.home/emacs/modes/nagios-mode/")			
+      load-path))
+
+is how I do it. With that in your load path, you just have to add
+nagios-mode to your auto-load list,
+
+  (autoload 'nagios-mode "nagios-mode" nil t)
+
+And tell Emacs to use it automatically when editing *.cfg files,
+
+  (setq auto-mode-alist
+    (append (list '("\\.cfg$" . nagios-mode))
+      auto-mode-alist))
+
+which is great as long as you don't have other *.cfg files with a
+different syntax. That case is left as an exercise for the reader.
+
+
+3. How
+
+The macros and object definitions are parsed from the Nagios source
+code. Object definitions are found within xdata/xodtemplate.h, while
+the macros are cleverly hidden within include/macros.h. Once they have
+been parsed, they are cuth and pasteth in to nagios-mode.
+
+The directives (or variables) are another story. There is no obvious
+way to parse the object variables from the source code. So, it's done
+the old-fashioned way: I use nagios-mode until I notice that one of my
+variables isn't highlighted. Then I add it. You can mail me these and
+I will probably add them.
+
+
+4. When
+
+No seriously, I'm running out of words to use as headings. Send bug
+reports and feature requests to michael@orlitzky.com.
