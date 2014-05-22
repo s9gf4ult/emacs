@@ -1,9 +1,9 @@
 ;;; s9g-configs.el --- customize master configurations
 
-;; Copyright (C) 2011  
+;; Copyright (C) 2011
 
 ;; Author:  <s9gf4ult@gmail.com>
-;; Keywords: 
+;; Keywords:
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -20,7 +20,7 @@
 
 ;;; Commentary:
 
-;; 
+;;
 
 ;;; Code:
 
@@ -49,7 +49,7 @@
  '(even-window-heights nil)
  '(fill-column 80)
  '(fixme-foreground-color "#CC0019")
- '(fixme-highlighted-words (quote ("FIXME" "TODO" "BUG" "KLUDGE")))
+ '(fixme-highlighted-words (quote ("FIXME" "TODO" "BUG" "KLUDGE" "FIXME:")))
  '(global-hl-line-mode nil)
  '(global-visual-line-mode t)
  '(haskell-font-lock-symbols (quote unicode))

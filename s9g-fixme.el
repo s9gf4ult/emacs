@@ -1,8 +1,8 @@
-;;; s9g-set-hooks.el --- set all mode hooks
+;;; s9g-fixme.el ---
 
-;; Copyright (C) 2011
+;; Copyright (C) 2014  cyberstep
 
-;; Author:  <razor@calculate.local>
+;; Author: cyberstep <cyberstep@cyberstep-cnc>
 ;; Keywords:
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -24,28 +24,11 @@
 
 ;;; Code:
 
-(require 's9g-elisp)
-(require 's9g-lisp)
-(require 's9g-python)
-(require 's9g-haskell)
-(require 's9g-rest)
-(require 's9g-octave)
-(require 's9g-javascript)
-(require 's9g-c)
-(require 's9g-ruby)
-(require 's9g-auto-complete)
-(require 's9g-magit)
-(require 's9g-php-mode)
-(require 's9g-web-mode)
-(require 's9g-nxhtml)
-; (require 's9g-ggtags)
-(require 's9g-org-mode)
-(require 's9g-mmm-mode)
-(require 's9g-tcl-mode)
-(require 's9g-fixme)
+(require 'fixme-mode)
 
-(require 'move-text)
-(move-text-default-bindings)
+(global-set-key (kbd "M-n") 'fixme-next)
+(global-set-key (kbd "M-p") 'fixme-prev)
 
-(provide 's9g-configure-modes)
-;;; s9g-set-hooks.el ends here
+
+(provide 's9g-fixme)
+;;; s9g-fixme.el ends here

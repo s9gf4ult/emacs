@@ -16,6 +16,7 @@
   (local-set-key (kbd "<C-f1>") 'pop-mark)
   (local-set-key (kbd "<C-f2>") 'pop-global-mark)
   (local-set-key (kbd "<f5>") 'compile)
+  (local-set-key (kbd "<return>") 'align-newline-and-indent)
   (set (make-local-variable 'comment-auto-fill-only-comments) 1)
   (auto-fill-mode 1))
 (add-hook 'c-mode-hook 'my-c-mode-hook)
