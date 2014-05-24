@@ -64,3 +64,6 @@
 [submodule "packages/coffe-mode"]
 	path = packages/coffe-mode
 	url = https://github.com/defunkt/coffee-mode.git
+[submodule "packages/markdown-mode"]
+	path = packages/markdown-mode
+	url = https://github.com/defunkt/markdown-mode.git
