@@ -44,6 +44,7 @@
 (require 's9g-mmm-mode)
 (require 's9g-tcl-mode)
 (require 's9g-haml-mode)
+(require 's9g-slim-mode)
 (require 's9g-yaml-mode)
 (require 's9g-move-text-mode)
 (require 's9g-coffe-mode)

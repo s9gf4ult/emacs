@@ -67,3 +67,6 @@
 [submodule "packages/markdown-mode"]
 	path = packages/markdown-mode
 	url = https://github.com/defunkt/markdown-mode.git
+[submodule "packages/slim-mode"]
+	path = packages/slim-mode
+	url = https://github.com/slim-template/emacs-slim.git

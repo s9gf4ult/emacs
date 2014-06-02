@@ -165,6 +165,7 @@
 
 (global-set-key (kbd "<C-tab>") #'s9g-indent-up)
 (global-set-key (kbd "<C-S-iso-lefttab>") #'s9g-indent-down)
+(global-set-key (kbd "M-\"") #'align-current)
 
 (provide 's9g-set-global-keys)
 ;;; s9g-set-global-keys.el ends here
