@@ -24,23 +24,67 @@
 
 ;;; Code:sh
 
-(require 'haskell-mode)
+(require 'haskell-mode-autoloads)
 
-;; (add-to-list 'Info-default-directory-list "~/.emacs.d/packages/haskell-mode/")
+(add-to-list 'Info-default-directory-list "~/.emacs.d/packages/haskell-mode/")
 
-(defun haskell-hook ()
-  (local-set-key (kbd "<return>") #'newline-and-indent)
-  ;; (local-set-key (kbd "<f5>") #'haskell-compile)
-  ;; (local-set-key (kbd "<f9>") #'(lambda ()
-  ;;   			  (interactive)
-  ;;   			  (haskell-cabal-visit-file t)))
+(defun s9g-haskell-hook ()
+
+  ;; (add-to-list 'align-rules-list
+  ;;              '(haskell-types
+  ;;                (regexp . "\\(\\s-+\\)\\(::\\|∷\\)\\s-+")
+  ;;                (modes quote (haskell-mode literate-haskell-mode))))
+  ;; (add-to-list 'align-rules-list
+  ;;              '(haskell-assignment
+  ;;                (regexp . "\\(\\s-+\\)=\\s-+")
+  ;;                (modes quote (haskell-mode literate-haskell-mode))))
+  ;; (add-to-list 'align-rules-list
+  ;;              '(haskell-arrows
+  ;;                (regexp . "\\(\\s-+\\)\\(->\\|→\\)\\s-+")
+  ;;                (modes quote (haskell-mode literate-haskell-mode))))
+  ;; (add-to-list 'align-rules-list
+  ;;              '(haskell-left-arrows
+  ;;                (regexp . "\\(\\s-+\\)\\(<-\\|←\\)\\s-+")
+  ;;                (modes quote (haskell-mode literate-haskell-mode))))
+
+  ;; (local-set-key (kbd "<return>") #'newline-and-indent)
+  (local-set-key (kbd "<f5>") #'haskell-compile)
+
+  (local-set-key
+   (kbd "<f9>")
+   #'(lambda ()
+       (interactive)
+       (haskell-cabal-visit-file t)))
+
+  (local-set-key
+   (kbd "C-c c") #'haskell-interactive-switch)
+
+  (local-set-key
+   (kbd "C-c l") #'haskell-process-load-or-reload)
+
+  (local-set-key
+   (kbd "C-c t") #'(haskell-process-do-type))
+
+  (local-set-key
+   (kbd "C-c i") #'(haskell-process-do-info))
+
+  (local-set-key
+   (kbd "C-c s") #'haskell-sort-imports)
+
+  (local-set-key
+   (kbd "M-p") #'haskell-navigate-imports)
+
+  (setq tab-width 4
+        haskell-indentation-layout-offset 4
+        haskell-indentation-left-offset 4
+        haskell-indentation-ifte-offset 4)
   (auto-complete-mode t))
 
-(add-hook 'haskell-mode-hook #'haskell-hook)
+(add-hook 'haskell-mode-hook #'s9g-haskell-hook)
 
-(add-to-list 'auto-mode-alist '("\\.hs\\'" . haskell-mode))
-(add-to-list 'auto-mode-alist '("\\.hsc\\'" . haskell-mode))
-(add-to-list 'auto-mode-alist '("\\.cabal\\'" . haskell-cabal-mode))
+;; (add-to-list 'auto-mode-alist '("\\.hs\\'" . haskell-mode))
+;; (add-to-list 'auto-mode-alist '("\\.hsc\\'" . haskell-mode))
+;; (add-to-list 'auto-mode-alist '("\\.cabal\\'" . haskell-cabal-mode))
 
 (provide 's9g-haskell)
 ;;; s9g-haskell.el ends here
