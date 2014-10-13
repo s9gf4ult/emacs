@@ -50,6 +50,7 @@
 (require 's9g-coffe-mode)
 (require 'nagios-mode)
 (require 'markdown-mode)
+(require 'yasnippet)
 
 (provide 's9g-configure-modes)
 ;;; s9g-set-hooks.el ends here

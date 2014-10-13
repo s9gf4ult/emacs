@@ -28,24 +28,12 @@
 
 (add-to-list 'Info-default-directory-list "~/.emacs.d/packages/haskell-mode/")
 
-(defun s9g-haskell-hook ()
+(defun s9g-haskell-set-buffer-name ()
+  (let ((modname (haskell-guess-module-name)))
+    (unless (string-equal "" modname)
+      (rename-buffer modname))))
 
-  ;; (add-to-list 'align-rules-list
-  ;;              '(haskell-types
-  ;;                (regexp . "\\(\\s-+\\)\\(::\\|∷\\)\\s-+")
-  ;;                (modes quote (haskell-mode literate-haskell-mode))))
-  ;; (add-to-list 'align-rules-list
-  ;;              '(haskell-assignment
-  ;;                (regexp . "\\(\\s-+\\)=\\s-+")
-  ;;                (modes quote (haskell-mode literate-haskell-mode))))
-  ;; (add-to-list 'align-rules-list
-  ;;              '(haskell-arrows
-  ;;                (regexp . "\\(\\s-+\\)\\(->\\|→\\)\\s-+")
-  ;;                (modes quote (haskell-mode literate-haskell-mode))))
-  ;; (add-to-list 'align-rules-list
-  ;;              '(haskell-left-arrows
-  ;;                (regexp . "\\(\\s-+\\)\\(<-\\|←\\)\\s-+")
-  ;;                (modes quote (haskell-mode literate-haskell-mode))))
+(defun s9g-haskell-hook ()
 
   ;; (local-set-key (kbd "<return>") #'newline-and-indent)
   (local-set-key (kbd "<f5>") #'haskell-compile)
@@ -63,10 +51,10 @@
    (kbd "C-c l") #'haskell-process-load-or-reload)
 
   (local-set-key
-   (kbd "C-c t") #'(haskell-process-do-type))
+   (kbd "C-c t") #'haskell-process-do-type)
 
   (local-set-key
-   (kbd "C-c i") #'(haskell-process-do-info))
+   (kbd "C-c i") #'haskell-process-do-info)
 
   (local-set-key
    (kbd "C-c s") #'haskell-sort-imports)
@@ -78,7 +66,8 @@
         haskell-indentation-layout-offset 4
         haskell-indentation-left-offset 4
         haskell-indentation-ifte-offset 4)
-  (auto-complete-mode t))
+  (auto-complete-mode t)
+  (s9g-haskell-set-buffer-name))
 
 (add-hook 'haskell-mode-hook #'s9g-haskell-hook)
 

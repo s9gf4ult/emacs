@@ -34,6 +34,10 @@
  (kbd "<f8>")
  #'ido-switch-buffer-other-window)
 
+;;;;;;;;;;;;;;
+;; Editing  ;;
+;;;;;;;;;;;;;;
+
 (global-set-key (kbd "C-S-k") (lambda (&optional lines-count) (interactive "p")
                                 (if mark-active
                                     (delete-region (region-beginning)
@@ -128,6 +132,14 @@
 (global-set-key (kbd "C-;")
                 #'comment-dwim-line)
 
+(global-set-key (kbd "C-S-m") #'mark-paragraph)
+
+(global-set-key (kbd "C-S-u") #'uniq-sort-lines)
+
+;;;;;;;;;;;;;;;;;
+;; Navigating  ;;
+;;;;;;;;;;;;;;;;;
+
 (global-set-key (kbd "C-x 2")
                 #'(lambda () (interactive)
                     (split-window-vertically (round (/ (window-height) 1.618)))
@@ -143,9 +155,7 @@
 
 (global-set-key (kbd "C-c j") #'senator-jump)
 
-(global-set-key (kbd "C-S-m") #'mark-paragraph)
-
-(global-set-key (kbd "C-S-u") #'uniq-sort-lines)
+(global-set-key (kbd "C-.") #'find-tag-other-window)
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; maigit keybinds ;;
