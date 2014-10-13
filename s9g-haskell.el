@@ -31,7 +31,7 @@
 (defun s9g-haskell-set-buffer-name ()
   (let ((modname (haskell-guess-module-name)))
     (unless (string-equal "" modname)
-      (rename-buffer modname))))
+      (rename-buffer modname t))))
 
 (defun s9g-haskell-hook ()
 
