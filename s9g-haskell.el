@@ -66,8 +66,8 @@
         haskell-indentation-layout-offset 4
         haskell-indentation-left-offset 4
         haskell-indentation-ifte-offset 4)
-  (auto-complete-mode t)
-  (s9g-haskell-set-buffer-name))
+  (s9g-haskell-set-buffer-name)
+  (auto-complete-mode t))
 
 (add-hook 'haskell-mode-hook #'s9g-haskell-hook)
 

@@ -30,7 +30,7 @@
 (require 's9g-haskell)
 (require 's9g-hamlet-mode)
 (require 's9g-rest)
-(require 's9g-octave)
+; (require 's9g-octave)
 (require 's9g-javascript)
 (require 's9g-c)
 (require 's9g-ruby)
