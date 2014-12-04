@@ -163,5 +163,13 @@ BEG and END (region to sort)."
         (region-end)
         (- tab-width)))))
 
+;;;;;;;;;;;;;;;;;;;;;
+;; Haskell helpers ;;
+;;;;;;;;;;;;;;;;;;;;;
+
+(defun s9g-haskell-compile ()
+  (interactive)
+  (save-some-buffers t)
+  (haskell-compile))
 
 (provide 's9g-defuns)

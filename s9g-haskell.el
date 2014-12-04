@@ -33,10 +33,12 @@
     (unless (string-equal "" modname)
       (rename-buffer modname t))))
 
+
 (defun s9g-haskell-hook ()
 
   ;; (local-set-key (kbd "<return>") #'newline-and-indent)
-  (local-set-key (kbd "<f5>") #'haskell-compile)
+  (local-set-key
+   (kbd "<f5>") #'s9g-haskell-compile)
 
   (local-set-key
    (kbd "<f9>")
@@ -69,6 +71,10 @@
   (s9g-haskell-set-buffer-name)
   (auto-complete-mode t))
 
+(defun s9g-cabal-hook ()
+  (local-set-key (kbd "<f5>") #'s9g-haskell-compile))
+
+(add-hook 'haskell-cabal-mode-hook #'s9g-cabal-hook)
 (add-hook 'haskell-mode-hook #'s9g-haskell-hook)
 
 ;; (add-to-list 'auto-mode-alist '("\\.hs\\'" . haskell-mode))
