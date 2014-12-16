@@ -70,6 +70,8 @@
           haskell-indentation-ifte-offset 4)
     (auto-complete-mode t)
 
+    (auto-insert-mode t)
+
     (s9g-haskell-set-buffer-name)
 
     (ghc-init)))

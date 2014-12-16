@@ -1,9 +1,9 @@
-;;; s9g-yasnippet.el --- 
+;;; s9g-yasnippet.el ---
 
-;; Copyright (C) 2012  
+;; Copyright (C) 2012
 
 ;; Author:  <razor@localhost>
-;; Keywords: 
+;; Keywords:
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -20,24 +20,29 @@
 
 ;;; Commentary:
 
-;; 
+;;
 
 ;;; Code:
 
 (require 'yasnippet)
-(yas/global-mode 1)
 
+(yas-global-mode 1)
+(yas-reload-all)
 
+;; (add-hook
+;;  'yas-minor-mode-hook
+;;  #'(lambda ()
+;;      (local-set-key
+;;       (kbd "C-x C-g") #'yas-exit-all-snippets)
+;;      (local-set-key
+;;       (kbd "<M-tab>")
+;;       #'yas-expand)))
 
-(add-hook 'yas/minor-mode-hook
-          #'(lambda ()
-              (local-set-key (kbd "<C-tab>")
-                             #'(lambda ()
-                                 (interactive)
-                                 (if (yas/snippets-at-point)
-                                     (yas/next-field)
-                                   (yas/expand))))))
+(define-key yas-minor-mode-map (kbd "<tab>") nil)
+(define-key yas-minor-mode-map (kbd "TAB") nil)
+(define-key yas-minor-mode-map (kbd "<M-tab>") 'yas-expand)
 
+(define-key yas-minor-mode-map (kbd "C-x C-g") 'yas-exit-all-snippets)
 
 
 (provide 's9g-yasnippet)
