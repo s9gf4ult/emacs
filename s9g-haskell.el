@@ -35,41 +35,45 @@
 
 
 (defun s9g-haskell-hook ()
+  (when (buffer-file-name)              ; fix
+    ;; (local-set-key (kbd "<return>") #'newline-and-indent)
+    (local-set-key
+     (kbd "<f5>") #'s9g-haskell-compile)
 
-  ;; (local-set-key (kbd "<return>") #'newline-and-indent)
-  (local-set-key
-   (kbd "<f5>") #'s9g-haskell-compile)
+    (local-set-key
+     (kbd "<f9>")
+     #'(lambda ()
+         (interactive)
+         (haskell-cabal-visit-file t)))
 
-  (local-set-key
-   (kbd "<f9>")
-   #'(lambda ()
-       (interactive)
-       (haskell-cabal-visit-file t)))
+    (local-set-key
+     (kbd "C-c c") #'haskell-interactive-switch)
 
-  (local-set-key
-   (kbd "C-c c") #'haskell-interactive-switch)
+    (local-set-key
+     (kbd "C-c l") #'haskell-process-load-or-reload)
 
-  (local-set-key
-   (kbd "C-c l") #'haskell-process-load-or-reload)
+    (local-set-key
+     (kbd "C-c t") #'haskell-process-do-type)
 
-  (local-set-key
-   (kbd "C-c t") #'haskell-process-do-type)
+    (local-set-key
+     (kbd "C-c i") #'haskell-process-do-info)
 
-  (local-set-key
-   (kbd "C-c i") #'haskell-process-do-info)
+    (local-set-key
+     (kbd "C-c s") #'haskell-sort-imports)
 
-  (local-set-key
-   (kbd "C-c s") #'haskell-sort-imports)
+    (local-set-key
+     (kbd "M-p") #'haskell-navigate-imports)
 
-  (local-set-key
-   (kbd "M-p") #'haskell-navigate-imports)
+    (setq tab-width 4
+          haskell-indentation-layout-offset 4
+          haskell-indentation-left-offset 4
+          haskell-indentation-ifte-offset 4)
+    (auto-complete-mode t)
 
-  (setq tab-width 4
-        haskell-indentation-layout-offset 4
-        haskell-indentation-left-offset 4
-        haskell-indentation-ifte-offset 4)
-  (s9g-haskell-set-buffer-name)
-  (auto-complete-mode t))
+    (s9g-haskell-set-buffer-name)
+
+    (ghc-init)))
+
 
 (defun s9g-cabal-hook ()
   (local-set-key (kbd "<f5>") #'s9g-haskell-compile))
@@ -80,6 +84,13 @@
 ;; (add-to-list 'auto-mode-alist '("\\.hs\\'" . haskell-mode))
 ;; (add-to-list 'auto-mode-alist '("\\.hsc\\'" . haskell-mode))
 ;; (add-to-list 'auto-mode-alist '("\\.cabal\\'" . haskell-cabal-mode))
+
+(eval-after-load 'autoinsert
+  '(define-auto-insert
+    '(haskell-mode . "Haskell mode")
+    '("Description:"
+      "module " (haskell-guess-module-name) " where" "\n\n")))
+
 
 (provide 's9g-haskell)
 ;;; s9g-haskell.el ends here
