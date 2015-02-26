@@ -64,6 +64,9 @@
     (local-set-key
      (kbd "M-p") #'haskell-navigate-imports)
 
+    (local-set-key
+     (kbd "C-c g") #'haskell-rgrep)
+
     (setq tab-width 4
           haskell-indentation-layout-offset 4
           haskell-indentation-left-offset 4

@@ -73,3 +73,6 @@
 [submodule "packages/yasnippet"]
 	path = packages/yasnippet
 	url = git@github.com:capitaomorte/yasnippet.git
+[submodule "packages/icicles"]
+	path = packages/icicles
+	url = git@github.com:emacsmirror/icicles.git

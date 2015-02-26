@@ -163,6 +163,17 @@ BEG and END (region to sort)."
         (region-end)
         (- tab-width)))))
 
+(defun replace-word (tosearch toreplace)
+  (interactive "sSearch for word: \nsReplace with: ")
+  (save-excursion
+    (goto-char (point-min))
+    (let ((case-fold-search nil)
+          (count 0))
+      (while (re-search-forward (concat "\\b" tosearch "\\b") nil t)
+        (setq count (1+ count))
+        (replace-match toreplace 'fixedcase 'literal))
+      (message "Replaced %s match(es)" count))))
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Haskell helpers ;;
 ;;;;;;;;;;;;;;;;;;;;;
@@ -171,5 +182,36 @@ BEG and END (region to sort)."
   (interactive)
   (save-some-buffers t)
   (haskell-compile))
+
+(defun s9g-haskell-yesod-handler-name ()
+  (interactive)
+  (let* ((p1 (line-beginning-position))
+         (p2 (line-end-position))
+         (lval (buffer-substring-no-properties p1 p2))
+         (w (cdr (split-string lval)))  ; split to words and drop routes
+         (rname (car w))
+         (methods (cdr w)))
+    (if (> (length methods) 0)
+        (progn
+          (kill-whole-line)
+          (previous-line)
+          (loop for m in methods do
+                (let* ((name (concat (downcase m) rname))
+                       (l1 (concat name " :: Handler TypedContent"))
+                       (l2 (concat name " = error \"" name " not implemented\"")))
+                  (end-of-line)
+                  (newline)
+                  (insert l1) (newline)
+                  (insert l2) (newline)))))))
+
+(defun s9g-haskell-yesod-align-routes (begin end)
+  (interactive
+   (list (region-beginning) (region-end)))
+  (let ((pref "\\(\\s-*\\)"))
+    (align-regexp begin end (concat pref "\\ ") 1 align-default-spacing nil)
+    (align-regexp begin end (concat pref "\\ \\(GET\\|POST\\)") 1 align-default-spacing nil)))
+
+
+
 
 (provide 's9g-defuns)

@@ -169,6 +169,13 @@
 (global-set-key (kbd "C-x g p") #'magit-push)
 (global-set-key (kbd "C-x g f") #'magit-fetch)
 
+;;;;;;;;;;;;;;;;;;;;
+;; monky bindings ;;
+;;;;;;;;;;;;;;;;;;;;
+
+(global-unset-key (kbd "C-x h"))
+(global-set-key (kbd "C-x h h") #'monky-status)
+
 ;;;;;;;;;;;;;;;
 ;; indenting ;;
 ;;;;;;;;;;;;;;;

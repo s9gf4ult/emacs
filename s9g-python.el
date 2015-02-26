@@ -1,9 +1,9 @@
 ;;; s9g-python.el --- python mode hooks
 
-;; Copyright (C) 2011  
+;; Copyright (C) 2011
 
 ;; Author:  <razor@localhost>
-;; Keywords: 
+;; Keywords:
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -20,7 +20,7 @@
 
 ;;; Commentary:
 
-;; 
+;;
 
 ;;; Code:
 
@@ -29,6 +29,7 @@
 
 (add-hook 'python-mode-hook
           #'(lambda ()
+              (local-set-key (kbd "<C-backspace>") #'backward-kill-word)
               (local-set-key (kbd "<tab>") #'smart-python-tab)
               (local-set-key (kbd "<return>") #'newline-and-indent)
               (yas/minor-mode)

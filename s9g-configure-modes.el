@@ -51,6 +51,7 @@
 (require 'nagios-mode)
 (require 'markdown-mode)
 (require 's9g-yasnippet)
+(require 'monky)
 
 (provide 's9g-configure-modes)
 ;;; s9g-set-hooks.el ends here
