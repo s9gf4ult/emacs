@@ -76,3 +76,6 @@
 [submodule "packages/icicles"]
 	path = packages/icicles
 	url = git@github.com:emacsmirror/icicles.git
+[submodule "packages/monky"]
+	path = packages/monky
+	url = git@github.com:ananthakumaran/monky.git
