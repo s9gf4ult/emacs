@@ -211,7 +211,13 @@ BEG and END (region to sort)."
     (align-regexp begin end (concat pref "\\ ") 1 align-default-spacing nil)
     (align-regexp begin end (concat pref "\\ \\(GET\\|POST\\)") 1 align-default-spacing nil)))
 
-
-
+;; kill buffers which file does not exists
+(defun s9g-kill-orphan-buffers ()
+  (interactive)
+  (loop for buf in (buffer-list) do
+        (let ((bfn (buffer-file-name buf)))
+          (if (and bfn
+                   (not (file-exists-p bfn)))
+              (kill-buffer buf)))))
 
 (provide 's9g-defuns)

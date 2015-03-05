@@ -249,6 +249,7 @@
  '(coffee-tab-width 2)
  '(column-number-mode t)
  '(comment-auto-fill-only-comments t)
+ '(compilation-always-kill t)
  '(css-indent-offset 2)
  '(debug-on-error nil)
  '(desktop-save-mode t)
