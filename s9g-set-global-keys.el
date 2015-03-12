@@ -155,7 +155,10 @@
 
 (global-set-key (kbd "C-c j") #'senator-jump)
 
-(global-set-key (kbd "C-.") #'find-tag-other-window)
+(global-unset-key (kbd "M-."))
+(global-set-key (kbd "M-.") #'etags-select-find-tag)
+
+(global-set-key (kbd "C-.") #'etags-select-find-tag-other-window)
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; maigit keybinds ;;

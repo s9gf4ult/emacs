@@ -52,6 +52,7 @@
 (require 'markdown-mode)
 (require 's9g-yasnippet)
 (require 'monky)
+(require 'etags-select)
 
 (provide 's9g-configure-modes)
 ;;; s9g-set-hooks.el ends here
