@@ -33,6 +33,12 @@
     (unless (string-equal "" modname)
       (rename-buffer modname t))))
 
+(defun s9g-haskell-rgrep (regexp)
+  (interactive (list (grep-read-regexp)))
+     (if buffer-file-name
+         (let* ((cabal-file (haskell-cabal-find-file (file-name-directory buffer-file-name)))
+                (proj-dir (file-name-directory cabal-file)))
+           (rgrep regexp "*.hs" proj-dir))))
 
 (defun s9g-haskell-hook ()
   (when (buffer-file-name)              ; fix
@@ -65,7 +71,7 @@
      (kbd "M-p") #'haskell-navigate-imports)
 
     (local-set-key
-     (kbd "C-c g") #'haskell-rgrep)
+     (kbd "C-c g") #'s9g-haskell-rgrep)
 
     (setq tab-width 4
           haskell-indentation-layout-offset 4
