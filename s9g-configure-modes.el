@@ -53,6 +53,9 @@
 (require 's9g-yasnippet)
 (require 'monky)
 (require 'etags-select)
+(require 'async)
+(require 'helm-config)
+(require 'helm-dash)
 
 (provide 's9g-configure-modes)
 ;;; s9g-set-hooks.el ends here

@@ -79,3 +79,12 @@
 [submodule "packages/monky"]
 	path = packages/monky
 	url = git@github.com:ananthakumaran/monky.git
+[submodule "packages/helm"]
+	path = packages/helm
+	url = git@github.com:emacs-helm/helm.git
+[submodule "packages/emacs-async"]
+	path = packages/emacs-async
+	url = git@github.com:jwiegley/emacs-async.git
+[submodule "packages/helm-dash"]
+	path = packages/helm-dash
+	url = git@github.com:areina/helm-dash.git

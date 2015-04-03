@@ -187,5 +187,11 @@
 (global-set-key (kbd "<C-S-iso-lefttab>") #'s9g-indent-down)
 (global-set-key (kbd "M-\"") #'align-current)
 
+;;;;;;;;;;;;;;;
+;; helm-dash ;;
+;;;;;;;;;;;;;;;
+
+(global-set-key (kbd "C-c d") #'helm-dash-at-point)
+
 (provide 's9g-set-global-keys)
 ;;; s9g-set-global-keys.el ends here
