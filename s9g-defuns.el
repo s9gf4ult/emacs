@@ -220,4 +220,11 @@ BEG and END (region to sort)."
                    (not (file-exists-p bfn)))
               (kill-buffer buf)))))
 
+(defun aak/auto-mode-anywhere ()
+  (interactive)
+  (dolist (buffer (buffer-list))
+    (with-current-buffer buffer
+      (when (buffer-file-name)
+         (set-auto-mode)))))
+
 (provide 's9g-defuns)

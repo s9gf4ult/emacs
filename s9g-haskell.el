@@ -83,11 +83,18 @@
 
     (s9g-haskell-set-buffer-name)
 
-    (ghc-init)))
+    ;; (ghc-init)
+
+    (require 'haskell-indentation)
+    (haskell-indentation-mode 1)
+    (helm-dash-activate-docset "haddoc")
+    ))
 
 
 (defun s9g-cabal-hook ()
-  (local-set-key (kbd "<f5>") #'s9g-haskell-compile))
+  (local-set-key (kbd "<f5>") #'s9g-haskell-compile)
+  (local-set-key (kbd "C-c s") #'haskell-cabal-subsection-arrange-lines))
+
 
 (add-hook 'haskell-cabal-mode-hook #'s9g-cabal-hook)
 (add-hook 'haskell-mode-hook #'s9g-haskell-hook)

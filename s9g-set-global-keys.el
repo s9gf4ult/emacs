@@ -193,5 +193,11 @@
 
 (global-set-key (kbd "C-c d") #'helm-dash-at-point)
 
+;;;;;;;;;;;;
+;; stupid ;;
+;;;;;;;;;;;;
+
+(global-set-key (kbd "C-c n") #'normal-mode)
+
 (provide 's9g-set-global-keys)
 ;;; s9g-set-global-keys.el ends here
