@@ -88,3 +88,6 @@
 [submodule "packages/helm-dash"]
 	path = packages/helm-dash
 	url = git@github.com:areina/helm-dash.git
+[submodule "packages/ac-haskell-process"]
+	path = packages/ac-haskell-process
+	url = git@github.com:s9gf4ult/ac-haskell-process.git

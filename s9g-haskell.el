@@ -28,6 +28,13 @@
 
 (add-to-list 'Info-default-directory-list "~/.emacs.d/packages/haskell-mode/")
 
+(require 'ac-haskell-process)
+(add-hook 'interactive-haskell-mode-hook 'ac-haskell-process-setup)
+(add-hook 'haskell-interactive-mode-hook 'ac-haskell-process-setup)
+(eval-after-load "auto-complete"
+  '(add-to-list 'ac-modes 'haskell-interactive-mode))
+
+
 (defun s9g-haskell-set-buffer-name ()
   (let ((modname (haskell-guess-module-name)))
     (unless (string-equal "" modname)
@@ -77,6 +84,7 @@
           haskell-indentation-layout-offset 4
           haskell-indentation-left-offset 4
           haskell-indentation-ifte-offset 4)
+
     (auto-complete-mode t)
 
     (auto-insert-mode t)
