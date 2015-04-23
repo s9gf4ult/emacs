@@ -37,8 +37,9 @@
  '(ac-ignore-case nil)
  '(ac-modes
    (quote
-    (emacs-lisp-mode lisp-interaction-mode c-mode cc-mode c++-mode java-mode clojure-mode scala-mode scheme-mode ocaml-mode tuareg-mode perl-mode cperl-mode python-mode ruby-mode ecmascript-mode javascript-mode js-mode js2-mode php-mode css-mode makefile-mode sh-mode fortran-mode f90-mode ada-mode xml-mode sgml-mode python-mode octave-mode nxml-mode)))
+    (emacs-lisp-mode lisp-interaction-mode c-mode cc-mode c++-mode java-mode clojure-mode scala-mode scheme-mode ocaml-mode tuareg-mode perl-mode cperl-mode python-mode ruby-mode ecmascript-mode javascript-mode js-mode js2-mode php-mode css-mode makefile-mode sh-mode fortran-mode f90-mode ada-mode xml-mode sgml-mode python-mode octave-mode nxml-mode haskell-mode)))
  '(ac-use-comphist t)
+ '(ac-use-dictionary-as-stop-words nil)
  '(ac-use-fuzzy nil)
  '(ac-use-menu-map t)
  '(align-rules-list
@@ -298,8 +299,10 @@
  '(haskell-process-suggest-haskell-docs-imports nil)
  '(haskell-process-suggest-hoogle-imports t)
  '(haskell-process-suggest-remove-import-lines nil)
+ '(haskell-process-suggest-restart nil)
  '(haskell-process-type (quote cabal-repl))
  '(haskell-program-name "cabal-dev ghci")
+ '(haskell-stylish-on-save t)
  '(helm-autoresize-mode t)
  '(helm-dash-browser-func (quote eww))
  '(ido-auto-merge-delay-time 2)
