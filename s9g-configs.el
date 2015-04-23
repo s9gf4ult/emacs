@@ -302,7 +302,7 @@
  '(haskell-process-suggest-restart nil)
  '(haskell-process-type (quote cabal-repl))
  '(haskell-program-name "cabal-dev ghci")
- '(haskell-stylish-on-save t)
+ '(haskell-stylish-on-save nil)
  '(helm-autoresize-mode t)
  '(helm-dash-browser-func (quote eww))
  '(ido-auto-merge-delay-time 2)
