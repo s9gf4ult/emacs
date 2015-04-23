@@ -56,6 +56,7 @@
 (require 'async)
 (require 'helm-config)
 (require 'helm-dash)
+(require 'sql-indent)
 
 (provide 's9g-configure-modes)
 ;;; s9g-set-hooks.el ends here
