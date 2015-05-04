@@ -80,6 +80,9 @@
     (local-set-key
      (kbd "C-c g") #'s9g-haskell-rgrep)
 
+    (local-set-key
+     (kbd "C-c w") #'haskell-mode-stylish-buffer)
+
     (setq tab-width 4
           haskell-indentation-layout-offset 4
           haskell-indentation-left-offset 4
