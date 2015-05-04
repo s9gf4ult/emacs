@@ -124,7 +124,7 @@
                 #'end-of-non-blank-line)
 
 (global-set-key (kbd "C-c k")
-                #'comment-kill)
+                #'kill-comment-region)
 
 (global-set-key (kbd "M-;")
                 #'comment-dwim)

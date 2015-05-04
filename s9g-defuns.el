@@ -174,6 +174,17 @@ BEG and END (region to sort)."
         (replace-match toreplace 'fixedcase 'literal))
       (message "Replaced %s match(es)" count))))
 
+(defun kill-comment-region ()
+  (interactive)
+  (if (region-active-p)
+      (save-excursion
+        (let* ((beg (line-number-at-pos (region-beginning)))
+               (end (line-number-at-pos (region-end)))
+               (dif (- end beg)))
+          (goto-char (region-beginning))
+          (comment-kill dif)))
+    (comment-kill 1)))
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Haskell helpers ;;
 ;;;;;;;;;;;;;;;;;;;;;
