@@ -286,11 +286,11 @@
  '(haskell-font-lock-symbols nil)
  '(haskell-hoogle-command nil)
  '(haskell-indentation-ifte-offset 2)
- '(haskell-indentation-layout-offset 4)
- '(haskell-indentation-left-offset 4)
+ '(haskell-indentation-layout-offset 2)
+ '(haskell-indentation-left-offset 2)
  '(haskell-indentation-show-indentations nil)
  '(haskell-indentation-show-indentations-after-eol nil)
- '(haskell-indentation-starter-offset 4)
+ '(haskell-indentation-starter-offset 2)
  '(haskell-mode-hook
    (quote
     (turn-on-haskell-decl-scan turn-on-haskell-indentation s9g-haskell-hook)) t)

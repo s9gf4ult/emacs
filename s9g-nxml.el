@@ -45,7 +45,7 @@
 ;; optional key bindings, easier than hs defaults
 (define-key nxml-mode-map (kbd "<tab>") 'hs-toggle-hiding)
 (define-key nxml-mode-map (kbd "C-c s") 'hs-show-all)
-
+(define-key nxml-mode-map (kbd "C-c l") 'hs-hide-level)
 
 (provide 's9g-nxml)
 ;;; s9g-nxml.el ends here
