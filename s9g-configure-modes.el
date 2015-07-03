@@ -33,7 +33,7 @@
 (require 's9g-javascript)
 (require 's9g-c)
 (require 's9g-ruby)
-(require 's9g-company-mode)
+(require 'company)
 (require 's9g-magit)
 (require 's9g-web-mode)
 (require 's9g-nxml)
