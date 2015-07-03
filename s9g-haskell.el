@@ -28,12 +28,9 @@
 
 (add-to-list 'Info-default-directory-list "~/.emacs.d/packages/haskell-mode/")
 
-(require 'ac-haskell-process)
-(add-hook 'interactive-haskell-mode-hook 'ac-haskell-process-setup)
-(add-hook 'haskell-interactive-mode-hook 'ac-haskell-process-setup)
-(eval-after-load "auto-complete"
-  '(add-to-list 'ac-modes 'haskell-interactive-mode))
 
+(require 'flycheck)
+(require 'flycheck-hdevtools)
 
 (defun s9g-haskell-set-buffer-name ()
   (let ((modname (haskell-guess-module-name)))
@@ -83,18 +80,16 @@
     (local-set-key
      (kbd "C-c w") #'haskell-mode-stylish-buffer)
 
-    (setq tab-width 4)
-    ;;       haskell-indentation-layout-offset 4
-    ;;       haskell-indentation-left-offset 4
-    ;;       haskell-indentation-ifte-offset 4)
+    (local-set-key
+     (kbd "M-n") #'flycheck-next-error)
 
-    (auto-complete-mode t)
+    (setq tab-width 4)
 
     (auto-insert-mode t)
 
-    (s9g-haskell-set-buffer-name)
+    (flycheck-mode 1)
 
-    ;; (ghc-init)
+    (s9g-haskell-set-buffer-name)
 
     (require 'haskell-indentation)
     (haskell-indentation-mode 1)
