@@ -251,7 +251,7 @@
  '(column-number-mode t)
  '(comment-auto-fill-only-comments t)
  '(company-auto-complete-chars (quote (32 41)))
- '(company-global-modes nil)
+ '(company-global-modes (quote (haskell-mode)))
  '(company-idle-delay 0.1)
  '(compilation-always-kill t)
  '(css-indent-offset 2)
