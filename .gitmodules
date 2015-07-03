@@ -91,3 +91,12 @@
 [submodule "packages/ac-haskell-process"]
 	path = packages/ac-haskell-process
 	url = git@github.com:s9gf4ult/ac-haskell-process.git
+[submodule "packages/company-mode"]
+	path = packages/company-mode
+	url = https://github.com/company-mode/company-mode
+[submodule "packages/flycheck"]
+	path = packages/flycheck
+	url = git@github.com:flycheck/flycheck.git
+[submodule "packages/flycheck-hdevtools"]
+	path = packages/flycheck-hdevtools
+	url = git@github.com:flycheck/flycheck-hdevtools.git
