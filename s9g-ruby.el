@@ -1,9 +1,9 @@
 ;;; s9g-ruby.el --- ruby hooks
 
-;; Copyright (C) 2012  
+;; Copyright (C) 2012
 
 ;; Author:  <razor@localhost>
-;; Keywords: 
+;; Keywords:
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -20,12 +20,13 @@
 
 ;;; Commentary:
 
-;; 
+;;
 
 ;;; Code:
 (defun my-ruby-mode-hook()
   (local-set-key (kbd "<return>") #'reindent-then-newline-and-indent)
-  (auto-complete-mode 1))
+  ;; (auto-complete-mode 1))
+  )
 
 (add-hook 'ruby-mode-hook #'my-ruby-mode-hook)
 

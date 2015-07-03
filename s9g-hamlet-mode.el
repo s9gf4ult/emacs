@@ -31,7 +31,8 @@
  #'(lambda ()
      (local-set-key (kbd "<return>") #'newline-and-indent)
      (local-set-key (kbd "<f5>") #'s9g-haskell-compile)
-     (auto-complete-mode t)))
+     ;; (auto-complete-mode t)))
+     ))
 
 
 (provide 's9g-hamlet-mode)

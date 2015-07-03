@@ -33,7 +33,8 @@
      (interactive)
      (local-set-key (kbd "RET")
                     #'newline-and-indent)
-     (auto-complete-mode 1)))
+     ;; (auto-complete-mode 1)))
+     ))
 
 (provide 's9g-slim-mode)
 ;;; s9g-slim-mode.el ends here

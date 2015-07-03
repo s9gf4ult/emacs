@@ -29,7 +29,8 @@
 (add-hook
  'coffee-mode-hook
  #'(lambda ()
-     (auto-complete-mode t)))
+     ;; (auto-complete-mode t)))
+     ))
 
 
 (provide 's9g-coffe-mode)

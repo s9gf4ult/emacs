@@ -33,7 +33,7 @@
               (local-set-key (kbd "<tab>") #'smart-python-tab)
               (local-set-key (kbd "<return>") #'newline-and-indent)
               (yas/minor-mode)
-              (auto-complete-mode)
+              ;; (auto-complete-mode)
               (auto-fill-mode t)
               (set (make-local-variable 'comment-auto-fill-only-comments) t)
               (local-set-key (kbd "M-I") #'semantic-ia-show-summary)

@@ -1,9 +1,9 @@
-;;; s9g-octave.el --- 
+;;; s9g-octave.el ---
 
-;; Copyright (C) 2012  
+;; Copyright (C) 2012
 
 ;; Author:  <razor@localhost>
-;; Keywords: 
+;; Keywords:
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -20,7 +20,7 @@
 
 ;;; Commentary:
 
-;; 
+;;
 
 ;;; Code:
 (require 'octave-mod)
@@ -29,7 +29,8 @@
 (add-hook
  'octave-mode-hook
  #'(lambda ()
-     (auto-complete-mode t)))
+     ;; (auto-complete-mode t)))
+     ))
 
 (provide 's9g-octave)
 ;;; s9g-octave.el ends here

@@ -1,9 +1,9 @@
-;;; s9g-javascript.el --- 
+;;; s9g-javascript.el ---
 
-;; Copyright (C) 2012  
+;; Copyright (C) 2012
 
 ;; Author:  <razor@localhost>
-;; Keywords: 
+;; Keywords:
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -20,14 +20,15 @@
 
 ;;; Commentary:
 
-;; 
+;;
 
 ;;; Code:
 
 (add-hook
  'js-mode-hook
  #'(lambda ()
-     (auto-complete-mode 1)))
+     ;; (auto-complete-mode 1)
+     ))
 
 
 
