@@ -1,9 +1,3 @@
-[submodule "packages/auto-complete"]
-	path = packages/auto-complete
-	url = git://github.com/auto-complete/auto-complete.git
-[submodule "packages/popup"]
-	path = packages/popup
-	url = git://github.com/auto-complete/popup-el.git
 [submodule "packages/magit"]
 	path = packages/magit
 	url = git://github.com/magit/magit.git
@@ -31,12 +25,6 @@
 [submodule "packages/cedet"]
 	path = packages/cedet
 	url = git://github.com/emacsmirror/cedet.git
-[submodule "packages/flymake-css"]
-	path = packages/flymake-css
-	url = git://github.com/purcell/flymake-css.git
-[submodule "packages/flymake-easy"]
-	path = packages/flymake-easy
-	url = git://github.com/purcell/flymake-easy.git
 [submodule "themes/emacs-color-theme-solarized"]
 	path = themes/emacs-color-theme-solarized
 	url = git@github.com:s9gf4ult/emacs-color-theme-solarized.git
