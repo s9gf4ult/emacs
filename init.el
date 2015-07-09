@@ -88,6 +88,7 @@
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
+(put 'scroll-left 'disabled nil)
 
 ;; (require 'color-theme)
 ;; (color-theme-initialize)

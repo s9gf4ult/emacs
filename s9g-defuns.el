@@ -238,4 +238,13 @@ BEG and END (region to sort)."
       (when (buffer-file-name)
          (set-auto-mode)))))
 
+;;;;;;;;;;;;;;
+;; Movement ;;
+;;;;;;;;;;;;;;
+
+(defun s9g-hscroll-to-point ()
+  (interactive)
+  (let ((p (current-column)))
+    (scroll-left p)))
+
 (provide 's9g-defuns)

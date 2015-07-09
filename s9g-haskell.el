@@ -29,8 +29,8 @@
 (add-to-list 'Info-default-directory-list "~/.emacs.d/packages/haskell-mode/")
 
 
-(require 'flycheck)
-(require 'flycheck-hdevtools)
+;; (require 'flycheck)
+;; (require 'flycheck-hdevtools)
 
 (defun s9g-haskell-set-buffer-name ()
   (let ((modname (haskell-guess-module-name)))
@@ -80,14 +80,14 @@
     (local-set-key
      (kbd "C-c w") #'haskell-mode-stylish-buffer)
 
-    (local-set-key
-     (kbd "M-n") #'flycheck-next-error)
+    ;; (local-set-key
+    ;;  (kbd "M-n") #'flycheck-next-error)
 
     (setq tab-width 4)
 
     (auto-insert-mode t)
 
-    (flycheck-mode 1)
+    ;; (flycheck-mode 1)
 
     (s9g-haskell-set-buffer-name)
 
@@ -100,6 +100,7 @@
 (defun s9g-cabal-hook ()
   (local-set-key (kbd "<f5>") #'s9g-haskell-compile)
   (local-set-key (kbd "C-c s") #'haskell-cabal-subsection-arrange-lines))
+
 
 
 (add-hook 'haskell-cabal-mode-hook #'s9g-cabal-hook)
