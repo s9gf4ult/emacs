@@ -1,0 +1,15 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: soaprequest
+# key: soaprequest
+# binding: direct-keybinding
+# --
+instance SoapRequest ${1:type} where
+    type ReqResult $1 = ${2:type}
+
+    reqSoapAction = error "Not implemented: reqSoapAction"
+
+    reqHeader = error "Not implemented: reqHeader"
+
+    reqBody = error "Not implemented: reqBody"
+
+    reqParser = error "Not implemented: reqParser"

@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# key: new
+# name: newtype
+# expand-env: ((yas-indent-line 'fixed))
+# condition: (= (length "new") (current-column))
+# contributor: Luke Hoersten <luke@hoersten.org>
+# --
+newtype ${1:Type} = $1
+    { un$1 :: ${2:a}
+    } deriving ( Ord, Eq, Show, Typeable )
