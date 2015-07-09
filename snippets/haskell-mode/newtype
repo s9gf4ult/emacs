@@ -6,5 +6,5 @@
 # contributor: Luke Hoersten <luke@hoersten.org>
 # --
 newtype ${1:Type} = $1
-    { un$1 :: ${2:a}
-    } deriving ( Ord, Eq, Show, Typeable )
+  { un$1 :: ${2:a}
+  } deriving ( Ord, Eq, Show, Typeable )

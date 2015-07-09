@@ -83,7 +83,7 @@
     ;; (local-set-key
     ;;  (kbd "M-n") #'flycheck-next-error)
 
-    (setq tab-width 4)
+    (setq tab-width 2)
 
     (auto-insert-mode t)
 
