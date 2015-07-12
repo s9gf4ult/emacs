@@ -238,18 +238,49 @@ BEG and END (region to sort)."
       (when (buffer-file-name)
          (set-auto-mode)))))
 
-;;;;;;;;;;;;;;
-;; Movement ;;
-;;;;;;;;;;;;;;
 
-(defun s9g-hscroll-to-point ()
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; narrowing and friends ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+(defun s9g-hscroll-to-point (&optional point)
   (interactive)
   (let* ((hscroll-margin -1)
-         (cc (current-column))
+         (cc (or point
+                 (current-column)))
          (wc (window-hscroll))
          (s (if (> cc wc)
                 (- cc wc)
               (- cc wc))))
     (scroll-left s)))
+
+(defun s9g-narrow-scroll-region (&optional b e)
+  (interactive)
+  (let* ((beg (or b
+                  (region-beginning)))
+         (end (or e
+                  (region-end)))
+         (scrolpos
+          (save-excursion
+            (let (leftmost)
+              (goto-char beg)
+              (while (< (point) end)
+                (back-to-indentation)
+                (let ((p (current-column)))
+                  (setq leftmost
+                        (min (or leftmost p)
+                             p)))
+                (next-line))
+              leftmost))))
+    (narrow-to-region beg end)
+    (s9g-hscroll-to-point scrolpos)))
+
+(defun s9g-unnarrow ()
+  (interactive)
+  (save-excursion
+    (widen)
+    (scroll-left (- (window-hscroll)))))
+
 
 (provide 's9g-defuns)

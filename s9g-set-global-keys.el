@@ -165,7 +165,8 @@
 ;; narrowing and firends ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(global-set-key (kbd "C-c p") #'s9g-hscroll-to-point)
+(global-set-key (kbd "C-c p") #'s9g-narrow-scroll-region)
+(global-set-key (kbd "C-c u") #'s9g-unnarrow)
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; maigit keybinds ;;
