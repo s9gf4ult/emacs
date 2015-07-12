@@ -5,5 +5,5 @@
 # expand-env: ((yas-indent-line 'fixed))
 # --
 data ${1:Type} = $1
-  {
+  { $0
   } deriving ( Ord, Eq, Show, Typeable )
