@@ -271,7 +271,7 @@ BEG and END (region to sort)."
                   (setq leftmost
                         (min (or leftmost p)
                              p)))
-                (next-line))
+                (forward-line))
               leftmost))))
     (narrow-to-region beg end)
     (s9g-hscroll-to-point scrolpos)))
