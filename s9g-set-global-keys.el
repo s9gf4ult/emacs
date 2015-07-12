@@ -153,7 +153,6 @@
 (global-set-key (kbd "M-N") #'next-multiframe-window)
 (global-set-key (kbd "M-P") #'previous-multiframe-window)
 
-(global-set-key (kbd "C-c j") #'senator-jump)
 
 (global-unset-key (kbd "M-."))
 (global-set-key (kbd "M-.") #'etags-select-find-tag)
