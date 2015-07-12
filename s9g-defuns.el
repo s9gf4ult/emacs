@@ -244,7 +244,12 @@ BEG and END (region to sort)."
 
 (defun s9g-hscroll-to-point ()
   (interactive)
-  (let ((p (current-column)))
-    (scroll-left p)))
+  (let* ((hscroll-margin -1)
+         (cc (current-column))
+         (wc (window-hscroll))
+         (s (if (> cc wc)
+                (- cc wc)
+              (- cc wc))))
+    (scroll-left s)))
 
 (provide 's9g-defuns)

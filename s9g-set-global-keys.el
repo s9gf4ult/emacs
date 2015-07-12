@@ -160,6 +160,13 @@
 
 (global-set-key (kbd "C-.") #'etags-select-find-tag-other-window)
 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; narrowing and firends ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(global-set-key (kbd "C-c p") #'s9g-hscroll-to-point)
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; maigit keybinds ;;
 ;;;;;;;;;;;;;;;;;;;;;
