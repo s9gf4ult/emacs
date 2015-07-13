@@ -258,6 +258,9 @@
  '(compilation-always-kill t)
  '(css-indent-offset 2)
  '(debug-on-error nil)
+ '(desktop-globals-to-save
+   (quote
+    (desktop-missing-file-warning tags-file-name tags-table-list search-ring regexp-search-ring register-alist file-name-history)))
  '(desktop-save-mode t)
  '(ecb-options-version "2.40")
  '(electric-indent-mode nil)
@@ -328,6 +331,7 @@
  '(indent-tabs-mode nil)
  '(inferior-lisp-program "/usr/bin/sbcl --control-stack-size 20")
  '(js-indent-level 4)
+ '(layout-restore-after-switchbuffer nil)
  '(make-backup-files nil)
  '(menu-bar-mode nil)
  '(org-agenda-files (quote ("~/org/work.org")))

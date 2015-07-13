@@ -166,26 +166,38 @@ buffer correlated layout. Each element of this list is a list itself,
 it consists of 'active buffer of this layout', 'window-configuration
 of this layout', '(buffer . buffer-name) cons of this layout'.")
 
-(defvar layout-accept-buffer-by-name t
+(defcustom layout-accept-buffer-by-name t
   "This variable decide whether we'll accept a different buffer which have
 the same name in case we could find the original buffer. Useful when we want
-to keep a layout after close one of its buffer and reopen it.")
+to keep a layout after close one of its buffer and reopen it."
+  :options (list nil t)
+  :group 'layout-restore)
 
-(defvar layout-verbose t
-  "Print verbose message.")
+(defcustom layout-verbose t
+  "Print verbose message."
+  :options (list nil t)
+  :group 'layout-restore)
 
-(defvar layout-restore-old-window-point nil
-  "Restore the window point at the old place where layout recorded it.")
+(defcustom layout-restore-old-window-point nil
+  "Restore the window point at the old place where layout recorded it."
+  :options (list nil t)
+  :group 'layout-restore)
 
-(defvar layout-restore-after-switchbuffer t
-  "If we should restore layout after `switch-buffer'.")
+(defcustom layout-restore-after-switchbuffer t
+  "If we should restore layout after `switch-buffer'."
+  :options (list nil t)
+  :group 'layout-restore)
 
-(defvar layout-restore-after-killbuffer t
-  "If we should restore layout after `kill-buffer'.")
+(defcustom layout-restore-after-killbuffer t
+  "If we should restore layout after `kill-buffer'."
+  :options (list nil t)
+  :group 'layout-restore)
 
-(defvar layout-restore-after-otherwindow nil
+(defcustom layout-restore-after-otherwindow nil
   "If we should restore layout after `other-window', which normally invoked
-by C-x o.")
+by C-x o."
+  :options (list nil t)
+  :group 'layout-restore)
 
 
 (defun layout-save-current ()
@@ -209,7 +221,7 @@ layout-configuration-alist."
     (setq layout-configuration-alist
           (cons layoutcfg layout-configuration-alist)))
   (if layout-verbose (message "Current layout saved.")))
-  
+
 
 (defun layout-restore (&optional BUFFER)
   "Restore the layout related to the buffer BUFFER, if there is such a layout
@@ -233,7 +245,7 @@ saved in `layout-configuration-alist', and update the layout if necessary."
         (if (buffer-live-p (car bufcons))
             (if (not (string= (buffer-name (car bufcons))
                               (cdr bufcons)))
-                
+
                 (setq bufname-changed-p t
                       new-buffer-cons-list
                       (append new-buffer-cons-list
@@ -301,14 +313,14 @@ if there is an element list related to BUFFER."
         (let ((wlist (get-buffer-window-list BUFFER 0)))
           (dolist (window wlist)
             (set-window-point window (point))))))))
-        
+
 
 (defadvice switch-to-buffer (around layout-restore-after-switch-buffer (BUFFER))
   "Unique window point before `switch-to-buffer', and restore possible layout
 after `switch-to-buffer'."
   (layout-unique-point-in-same-buffer-windows)
   ad-do-it
-  (if layout-restore-after-switchbuffer 
+  (if layout-restore-after-switchbuffer
       (layout-restore)))
 
 (defadvice kill-buffer (after layout-restore-after-kill-buffer (BUFFER))
