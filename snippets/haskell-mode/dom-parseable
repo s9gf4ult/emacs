@@ -1,0 +1,10 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: dom-parseable
+# key: dprs
+# binding: direct-keybinding
+# expand-env: ((yas-indent-line 'fixed))
+# --
+instance DomParseable ${1:Type} where
+  domParser = do
+    $0
+    return $1{..}

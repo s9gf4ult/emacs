@@ -142,8 +142,11 @@ BEG and END (region to sort)."
     (sort-lines () beg end)
     (uniq-lines beg end)))
 
-
-
+(defun touch ()
+     "updates mtime on the file for the current buffer"
+     (interactive)
+     (shell-command (concat "touch " (shell-quote-argument (buffer-file-name))))
+     (clear-visited-file-modtime))
 
 (defun s9g-indent-up ()
   (interactive)

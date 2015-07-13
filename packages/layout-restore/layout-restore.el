@@ -183,23 +183,6 @@ to keep a layout after close one of its buffer and reopen it."
   :options (list nil t)
   :group 'layout-restore)
 
-(defcustom layout-restore-after-switchbuffer t
-  "If we should restore layout after `switch-buffer'."
-  :options (list nil t)
-  :group 'layout-restore)
-
-(defcustom layout-restore-after-killbuffer t
-  "If we should restore layout after `kill-buffer'."
-  :options (list nil t)
-  :group 'layout-restore)
-
-(defcustom layout-restore-after-otherwindow nil
-  "If we should restore layout after `other-window', which normally invoked
-by C-x o."
-  :options (list nil t)
-  :group 'layout-restore)
-
-
 (defun layout-save-current ()
   "Save the current layout, add a list of current layout to
 layout-configuration-alist."
@@ -315,27 +298,6 @@ if there is an element list related to BUFFER."
             (set-window-point window (point))))))))
 
 
-(defadvice switch-to-buffer (around layout-restore-after-switch-buffer (BUFFER))
-  "Unique window point before `switch-to-buffer', and restore possible layout
-after `switch-to-buffer'."
-  (layout-unique-point-in-same-buffer-windows)
-  ad-do-it
-  (if layout-restore-after-switchbuffer
-      (layout-restore)))
-
-(defadvice kill-buffer (after layout-restore-after-kill-buffer (BUFFER))
-  "Restore possible layout after `kill-buffer' funcall."
-  (if layout-restore-after-killbuffer
-      (layout-restore)))
-
-(defadvice other-window (after layout-restore-after-other-window (ARG))
-  "Restore possible layout after `other-window' funcall."
-  (if layout-restore-after-otherwindow
-      (layout-restore)))
-
-(ad-activate 'switch-to-buffer)
-(ad-activate 'kill-buffer)
-(ad-activate 'other-window)
 
 
 (provide 'layout-restore)

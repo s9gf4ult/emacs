@@ -331,6 +331,8 @@
  '(indent-tabs-mode nil)
  '(inferior-lisp-program "/usr/bin/sbcl --control-stack-size 20")
  '(js-indent-level 4)
+ '(layout-restore-after-killbuffer nil)
+ '(layout-restore-after-otherwindow nil)
  '(layout-restore-after-switchbuffer nil)
  '(make-backup-files nil)
  '(menu-bar-mode nil)
