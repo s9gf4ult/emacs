@@ -276,8 +276,11 @@ BEG and END (region to sort)."
                              p)))
                 (forward-line))
               leftmost))))
+    (deactivate-mark)
     (narrow-to-region beg end)
-    (s9g-hscroll-to-point scrolpos)))
+    (s9g-hscroll-to-point scrolpos)
+    (beginning-of-buffer)
+    (back-to-indentation)))
 
 (defun s9g-unnarrow ()
   (interactive)

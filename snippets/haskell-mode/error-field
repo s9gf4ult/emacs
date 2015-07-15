@@ -1,0 +1,8 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: error-field
+# key: erf
+# expand-env: ((yas-indent-line 'fixed))
+# binding: direct-keybinding
+# --
+${1:field_name} = error "Field $1 should not be calculated"
+$0
