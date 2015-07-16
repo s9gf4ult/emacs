@@ -38,9 +38,27 @@
                sgml-skip-tag-forward
                nil))
 
+(defun nxml-narrow-hscroll-tag ()
+  (interactive)
+  (save-excursion
+    (nxml-backward-up-element)
+    (beginning-of-line)
+    (set-mark-command nil)
+    (back-to-indentation)
+    (nxml-forward-element)
+    (end-of-line)
+    (s9g-narrow-scroll-region)))
+
 
 
 (add-hook 'nxml-mode-hook 'hs-minor-mode)
+(add-hook
+ 'nxml-mode-hook
+ #'(lambda ()
+     (interactive)
+     (local-set-key (kbd "C-c t") #'nxml-narrow-hscroll-tag)))
+
+
 
 ;; optional key bindings, easier than hs defaults
 (define-key nxml-mode-map (kbd "<tab>") 'hs-toggle-hiding)
