@@ -255,6 +255,7 @@
  '(company-dabbrev-ignore-case nil)
  '(company-global-modes (quote (haskell-mode haskell-cabal-mode git-commit-mode)))
  '(company-idle-delay 0.1)
+ '(company-show-numbers t)
  '(compilation-always-kill t)
  '(css-indent-offset 2)
  '(debug-on-error nil)
@@ -292,7 +293,7 @@
  '(global-company-mode t)
  '(global-flycheck-mode nil)
  '(global-hl-line-mode nil)
- '(global-visual-line-mode t)
+ '(global-visual-line-mode nil)
  '(haskell-ask-also-kill-buffers nil)
  '(haskell-compile-cabal-build-command
    "cd %s && LANG=C cabal build --ghc-option=-ferror-spans -j2")
@@ -391,7 +392,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "gray80" :foreground "gray17" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 150 :width normal :foundry "unknown" :family "DejaVu Sans Mono"))))
+ '(default ((t (:inherit nil :stipple nil :background "gray80" :foreground "gray17" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 150 :width normal :foundry "unknown" :family "Monaco"))))
  '(cursor ((t (:background "OrangeRed2"))))
  '(diff-added ((t (:foreground "green4"))))
  '(diff-context ((t (:inherit shadow :foreground "gray32"))))

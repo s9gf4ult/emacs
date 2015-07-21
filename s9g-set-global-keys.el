@@ -43,6 +43,14 @@
                                     (delete-region (region-beginning)
                                                    (region-end))
                                   (kill-whole-line lines-count))))
+
+(global-unset-key (kbd "C-k"))
+(global-set-key
+ (kbd "C-k")
+ #'(lambda ()
+     (interactive)
+     (kill-line)))
+
 (global-set-key (kbd "C-o")
                 (lambda (&optional arg) (interactive "p")
                   (end-of-line)
