@@ -43,7 +43,7 @@
   (save-excursion
     (nxml-backward-up-element)
     (beginning-of-line)
-    (set-mark-command nil)
+    (push-mark)
     (back-to-indentation)
     (nxml-forward-element)
     (end-of-line)

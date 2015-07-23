@@ -70,6 +70,7 @@
 (require 's9g-set-global-keys)
 (require 's9g-modalist)
 
+(windmove-default-keybindings)
 ;; (load-theme 'solarized-light t)
 
 (require 's9g-configs)

@@ -51,6 +51,17 @@
      (interactive)
      (kill-line)))
 
+(global-unset-key (kbd "M-\\"))
+(global-set-key
+ (kbd "M-\\")
+ (lambda ()
+   (interactive)
+   (delete-horizontal-space)
+   (insert " ")
+   (save-excursion
+     (insert " "))))
+
+
 (global-set-key (kbd "C-o")
                 (lambda (&optional arg) (interactive "p")
                   (end-of-line)

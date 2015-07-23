@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: lens
+# key: lens
+# binding: direct-keybinding
+# --
+$(makeLenses ${1:Type})

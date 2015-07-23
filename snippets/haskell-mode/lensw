@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: lensw
+# key: lensw
+# binding: direct-keybinding
+# --
+$(makeWrapped ''${1:Type})
