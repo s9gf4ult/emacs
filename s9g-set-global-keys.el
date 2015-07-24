@@ -61,6 +61,8 @@
    (save-excursion
      (insert " "))))
 
+(global-unset-key (kbd "C-x C-o"))
+(global-set-key (kbd "C-x C-o") #'delete-blank-lines-then-insert)
 
 (global-set-key (kbd "C-o")
                 (lambda (&optional arg) (interactive "p")

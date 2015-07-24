@@ -188,6 +188,21 @@ BEG and END (region to sort)."
           (comment-kill dif)))
     (comment-kill 1)))
 
+(defun delete-blank-lines-then-insert (lines-count)
+  (interactive "p")
+  (delete-blank-lines)
+  (save-excursion
+    (beginning-of-line)
+    (unless (looking-at "[ \t]*$")
+     ; insert one blank line if fukin delete-blank-lines removed all
+     ; of them, stupid lispers, I hate you!
+        (newline))
+    ; One line we have already, now insert the rest if required
+    (let ((c (- lines-count 1)))
+      (if (> c 0)
+          (newline c)))))
+
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Haskell helpers ;;
 ;;;;;;;;;;;;;;;;;;;;;
