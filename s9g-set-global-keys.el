@@ -167,9 +167,7 @@
                     ;; (switch-to-buffer-other-window (second (buffer-list)))
                     ))
 
-(global-set-key (kbd "C-x 3")
-                #'(lambda () (interactive)
-                    (split-window-horizontally (round (/ (window-width) 1.618)))))
+(global-set-key (kbd "C-x 3") #'split-window-horizontally)
 
 (global-set-key (kbd "M-N") #'next-multiframe-window)
 (global-set-key (kbd "M-P") #'previous-multiframe-window)
