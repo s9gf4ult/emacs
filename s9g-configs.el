@@ -253,7 +253,9 @@
  '(company-auto-complete-chars (quote (32 41)))
  '(company-dabbrev-downcase nil)
  '(company-dabbrev-ignore-case nil)
- '(company-global-modes (quote (haskell-mode haskell-cabal-mode git-commit-mode)))
+ '(company-global-modes
+   (quote
+    (haskell-mode haskell-cabal-mode git-commit-mode markdown-mode)))
  '(company-idle-delay 0.1)
  '(company-show-numbers t)
  '(compilation-always-kill t)
@@ -286,6 +288,7 @@
  '(fill-column 70)
  '(fixme-foreground-color "#CC0019")
  '(fixme-highlighted-words (quote ("FIXME" "TODO" "BUG" "KLUDGE")))
+ '(fixme-mode t)
  '(flycheck-checkers
    (quote
     (haskell-hdevtools ada-gnat asciidoc c/c++-clang c/c++-gcc c/c++-cppcheck cfengine chef-foodcritic coffee coffee-coffeelint coq css-csslint d-dmd emacs-lisp emacs-lisp-checkdoc erlang eruby-erubis fortran-gfortran go-gofmt go-golint go-vet go-build go-test go-errcheck haml handlebars html-tidy javascript-jshint javascript-eslint javascript-gjslint javascript-jscs javascript-standard json-jsonlint less luacheck lua perl perl-perlcritic php php-phpmd php-phpcs puppet-parser puppet-lint python-flake8 python-pylint python-pycompile r-lintr racket rpm-rpmlint rst rst-sphinx ruby-rubocop ruby-rubylint ruby ruby-jruby rust sass scala scala-scalastyle scss-lint scss sh-bash sh-posix-dash sh-posix-bash sh-zsh sh-shellcheck slim tex-chktex tex-lacheck texinfo verilog-verilator xml-xmlstarlet xml-xmllint yaml-jsyaml yaml-ruby)))

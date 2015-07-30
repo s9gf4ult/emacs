@@ -24,6 +24,7 @@
 
 ;;; Code:
 
+(require 's9g-fixme-mode)
 (require 's9g-layout)
 (require 's9g-elisp)
 (require 's9g-lisp)
