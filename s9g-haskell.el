@@ -69,6 +69,9 @@
      (kbd "C-c i") #'haskell-process-do-info)
 
     (local-set-key
+     (kbd "C-c r") #'haskell-process-restart)
+
+    (local-set-key
      (kbd "C-c s") #'haskell-sort-imports)
 
     (local-set-key

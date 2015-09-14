@@ -247,6 +247,7 @@
              (css-mode html-mode))))))
  '(auto-insert (quote not-modified))
  '(blink-cursor-mode nil)
+ '(browse-url-browser-function (quote browse-url-chromium))
  '(coffee-tab-width 2)
  '(column-number-mode t)
  '(comment-auto-fill-only-comments t)
@@ -255,7 +256,7 @@
  '(company-dabbrev-ignore-case nil)
  '(company-global-modes
    (quote
-    (haskell-mode haskell-cabal-mode git-commit-mode markdown-mode)))
+    (haskell-mode haskell-cabal-mode git-commit-mode markdown-mode ruby-mode)))
  '(company-idle-delay 0.1)
  '(company-show-numbers t)
  '(compilation-always-kill t)

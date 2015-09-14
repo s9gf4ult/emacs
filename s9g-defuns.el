@@ -202,6 +202,12 @@ BEG and END (region to sort)."
       (if (> c 0)
           (newline c)))))
 
+(defun insert-neigbour-buffer-name ()
+  (interactive)
+  (let ((w (second (window-list))))
+    (when w
+      (insert
+       (buffer-name (window-buffer w))))))
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Haskell helpers ;;
