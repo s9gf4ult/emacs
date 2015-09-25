@@ -7,7 +7,9 @@
 
 (define-abbrev-table 'apropos-mode-abbrev-table '())
 
-(define-abbrev-table 'awk-mode-abbrev-table '())
+(define-abbrev-table 'awk-mode-abbrev-table
+  '(
+   ))
 
 (define-abbrev-table 'bibtex-mode-abbrev-table '())
 
@@ -15,9 +17,13 @@
 
 (define-abbrev-table 'bookmark-edit-annotation-mode-abbrev-table '())
 
-(define-abbrev-table 'c++-mode-abbrev-table '())
+(define-abbrev-table 'c++-mode-abbrev-table
+  '(
+   ))
 
-(define-abbrev-table 'c-mode-abbrev-table '())
+(define-abbrev-table 'c-mode-abbrev-table
+  '(
+   ))
 
 (define-abbrev-table 'calendar-mode-abbrev-table '())
 
@@ -30,6 +36,10 @@
 (define-abbrev-table 'completion-list-mode-abbrev-table '())
 
 (define-abbrev-table 'css-mode-abbrev-table '())
+
+(define-abbrev-table 'data-debug-mode-abbrev-table '())
+
+(define-abbrev-table 'debugger-mode-abbrev-table '())
 
 (define-abbrev-table 'diff-mode-abbrev-table '())
 
@@ -61,6 +71,8 @@
 
 (define-abbrev-table 'gfm-mode-abbrev-table '())
 
+(define-abbrev-table 'ghci-script-mode-abbrev-table '())
+
 (define-abbrev-table 'git-commit-mode-abbrev-table '())
 
 (define-abbrev-table 'git-rebase-mode-abbrev-table '())
@@ -88,9 +100,11 @@
     ("ia" "import Control.Applicative" nil 0)
     ("iap" "import Control.Applicative" nil 0)
     ("ib" "import Data.ByteString ( ByteString )" nil 0)
+    ("idep" "import Control.DeepSeq" nil 0)
     ("ifo" "import Data.Foldable" nil 0)
+    ("igen" "import GHC.Generics ( Generic )" nil 0)
+    ("ilen" "import Control.Lens" nil 0)
     ("im" "import Control.Monad" nil 0)
-    ("import qualified data.text.encoding as t" "iqte" nil 0)
     ("iqbc" "import qualified Data.ByteString.Char8 as BC" nil 0)
     ("iqbl" "import qualified Data.ByteString.Lazy as BL" nil 0)
     ("iqbs" "import qualified Data.ByteString as BS" nil 0)
@@ -114,7 +128,11 @@
 
 (define-abbrev-table 'inferior-moz-mode-abbrev-table '())
 
-(define-abbrev-table 'java-mode-abbrev-table '())
+(define-abbrev-table 'inferior-python-mode-abbrev-table '())
+
+(define-abbrev-table 'java-mode-abbrev-table
+  '(
+   ))
 
 (define-abbrev-table 'js-mode-abbrev-table '())
 
@@ -160,7 +178,9 @@
 
 (define-abbrev-table 'nxml-mode-abbrev-table '())
 
-(define-abbrev-table 'objc-mode-abbrev-table '())
+(define-abbrev-table 'objc-mode-abbrev-table
+  '(
+   ))
 
 (define-abbrev-table 'occur-edit-mode-abbrev-table '())
 
@@ -174,7 +194,9 @@
 
 (define-abbrev-table 'php-mode-abbrev-table '())
 
-(define-abbrev-table 'pike-mode-abbrev-table '())
+(define-abbrev-table 'pike-mode-abbrev-table
+  '(
+   ))
 
 (define-abbrev-table 'plain-tex-mode-abbrev-table '())
 
@@ -190,9 +212,15 @@
 
 (define-abbrev-table 'python-mode-abbrev-table '())
 
+(define-abbrev-table 'python-mode-skeleton-abbrev-table
+  '(
+   ))
+
 (define-abbrev-table 'quickurl-list-mode-abbrev-table '())
 
-(define-abbrev-table 'rst-mode-abbrev-table '())
+(define-abbrev-table 'rst-mode-abbrev-table
+  '(
+   ))
 
 (define-abbrev-table 'rst-toc-mode-abbrev-table '())
 
@@ -201,6 +229,8 @@
 (define-abbrev-table 'select-tags-table-mode-abbrev-table '())
 
 (define-abbrev-table 'sgml-mode-abbrev-table '())
+
+(define-abbrev-table 'sh-mode-abbrev-table '())
 
 (define-abbrev-table 'shell-mode-abbrev-table '())
 
@@ -214,7 +244,9 @@
 
 (define-abbrev-table 'speedbar-mode-abbrev-table '())
 
-(define-abbrev-table 'sql-mode-abbrev-table '())
+(define-abbrev-table 'sql-mode-abbrev-table
+  '(
+   ))
 
 (define-abbrev-table 'tabulated-list-mode-abbrev-table '())
 
@@ -241,4 +273,3 @@
 (define-abbrev-table 'web-vcs-investigate-output-mode-abbrev-table '())
 
 (define-abbrev-table 'yaml-mode-abbrev-table '())
-
