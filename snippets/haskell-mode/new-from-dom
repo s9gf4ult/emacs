@@ -1,9 +1,8 @@
 # -*- mode: snippet; require-final-newline: nil -*-
-# name: struct
-# key: struct
+# name: new-from-dom
+# key: newfromdom
 # binding: direct-keybinding
 # expand-env: ((yas-indent-line 'fixed))
 # --
-data ${1:Type} = $1
-  { $0
-  } deriving ( Ord, Eq, Show, Generic )
+instance FromDOM ${1:Type} where
+  fromDOM = $1 <\$> fromDOM

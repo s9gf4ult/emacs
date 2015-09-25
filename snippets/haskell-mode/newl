@@ -1,0 +1,13 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: newl
+# key: newl
+# binding: direct-keybinding
+# expand-env: ((yas-indent-line 'fixed))
+# --
+newtype ${1:Type} = $1
+  { un$1 :: ${2:a}
+  } deriving ( Ord, Eq, Show, Generic )
+
+instance NFData $1
+
+makeWrapped ''$1

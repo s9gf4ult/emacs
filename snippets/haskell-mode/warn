@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: warn
+# key: warn
+# binding: direct-keybinding
+# --
+{-# WARNING ${1:name} "${2:message}" #-}

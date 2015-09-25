@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: fune
+# key: fune
+# expand-env: ((yas-indent-line 'fixed))
+# --
+${1:function-name} :: ${2:type}
+$1 = $0error "Not implemented: $1"
+{-# WARNING $1 "FIXME: $1 is not implemented" #-}

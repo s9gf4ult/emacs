@@ -1,9 +1,10 @@
 # -*- mode: snippet; require-final-newline: nil -*-
-# name: struct
-# key: struct
+# name: json
+# key: json
 # binding: direct-keybinding
 # expand-env: ((yas-indent-line 'fixed))
 # --
-data ${1:Type} = $1
-  { $0
-  } deriving ( Ord, Eq, Show, Generic )
+$(deriveJSON
+  defaultOptions
+  { fieldLabelModifier = $0 }
+  ''${1:Name})
