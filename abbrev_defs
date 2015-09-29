@@ -99,18 +99,25 @@
   '(
     ("ia" "import Control.Applicative" nil 0)
     ("iap" "import Control.Applicative" nil 0)
+    ("iarr" "import Control.Arrow" nil 0)
     ("ib" "import Data.ByteString ( ByteString )" nil 0)
     ("idep" "import Control.DeepSeq" nil 0)
     ("ifo" "import Data.Foldable" nil 0)
     ("igen" "import GHC.Generics ( Generic )" nil 0)
+    ("ihm" "import Data.HashMap.Strict ( HashMap )" nil 0)
+    ("ihr" "import Control.Monad.HReader" nil 0)
     ("ilen" "import Control.Lens" nil 0)
     ("im" "import Control.Monad" nil 0)
+    ("ipgq" "import Database.PostgreSQL.Query" nil 0)
+    ("ipgs" "import Database.PostgreSQL.Simple" nil 0)
     ("iqbc" "import qualified Data.ByteString.Char8 as BC" nil 0)
     ("iqbl" "import qualified Data.ByteString.Lazy as BL" nil 0)
     ("iqbs" "import qualified Data.ByteString as BS" nil 0)
+    ("iqhm" "import qualified Data.HashMap.Strict as H" nil 0)
     ("iql" "import qualified Data.List as L" nil 0)
     ("iqt" "import qualified Data.Text as T" nil 4)
     ("iqte" "import qualified Data.Text.Encoding as T" nil 0)
+    ("ishake" "import Text.Shakespeare.Text ( st )" nil 0)
     ("it" "import Data.Text ( Text )" nil 0)
    ))
 
@@ -273,3 +280,4 @@
 (define-abbrev-table 'web-vcs-investigate-output-mode-abbrev-table '())
 
 (define-abbrev-table 'yaml-mode-abbrev-table '())
+
