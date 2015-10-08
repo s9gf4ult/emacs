@@ -35,6 +35,20 @@
 
 (define-abbrev-table 'completion-list-mode-abbrev-table '())
 
+(define-abbrev-table 'conf-colon-mode-abbrev-table '())
+
+(define-abbrev-table 'conf-javaprop-mode-abbrev-table '())
+
+(define-abbrev-table 'conf-ppd-mode-abbrev-table '())
+
+(define-abbrev-table 'conf-space-mode-abbrev-table '())
+
+(define-abbrev-table 'conf-unix-mode-abbrev-table '())
+
+(define-abbrev-table 'conf-windows-mode-abbrev-table '())
+
+(define-abbrev-table 'conf-xdefaults-mode-abbrev-table '())
+
 (define-abbrev-table 'css-mode-abbrev-table '())
 
 (define-abbrev-table 'data-debug-mode-abbrev-table '())
@@ -109,6 +123,8 @@
     ("ihr" "import Control.Monad.HReader" nil 0)
     ("ilen" "import Control.Lens" nil 0)
     ("im" "import Control.Monad" nil 0)
+    ("imb" "import Control.Monad.Base" nil 0)
+    ("iml" "import Control.Monad.Logger" nil 0)
     ("ine" "import Data.List.NonEmpty (NonEmpty(..))" nil 0)
     ("ipgq" "import Database.PostgreSQL.Query" nil 0)
     ("ipgs" "import Database.PostgreSQL.Simple" nil 0)
@@ -284,3 +300,4 @@
 (define-abbrev-table 'web-vcs-investigate-output-mode-abbrev-table '())
 
 (define-abbrev-table 'yaml-mode-abbrev-table '())
+
