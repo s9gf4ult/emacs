@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: scc
+# key: scc
+# binding: direct-keybinding
+# --
+{-# SCC "${1:name}" #-}

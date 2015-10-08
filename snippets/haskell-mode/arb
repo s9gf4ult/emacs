@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: arb
+# key: arb
+# binding: direct-keybinding
+# --
+derive makeArbitrary ${1:Name}

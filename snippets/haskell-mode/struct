@@ -6,4 +6,4 @@
 # --
 data ${1:Type} = $1
   { $0
-  } deriving ( Ord, Eq, Show, Generic )
+  } deriving (Ord, Eq, Show, Generic)

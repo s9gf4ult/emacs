@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: inl
+# key: inl
+# binding: direct-keybinding
+# --
+{-# INLINE ${1:functioName} #-}
