@@ -139,6 +139,7 @@
     ("iqte" "import qualified Data.Text.Encoding as T" nil 0)
     ("ishake" "import Text.Shakespeare.Text (st)" nil 0)
     ("it" "import Data.Text (Text)" nil 0)
+    ("ityp" "import Data.Typeable" nil 0)
    ))
 
 (define-abbrev-table 'haskell-presentation-mode-abbrev-table '())
