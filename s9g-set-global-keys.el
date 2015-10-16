@@ -213,6 +213,9 @@
 (global-set-key (kbd "<C-S-iso-lefttab>") #'s9g-indent-down)
 (global-set-key (kbd "M-\"") #'align-current)
 
+(global-unset-key (kbd "C-'"))
+(global-set-key (kbd "C-'") #'align)
+
 ;;;;;;;;;;;;;;;
 ;; helm-dash ;;
 ;;;;;;;;;;;;;;;
