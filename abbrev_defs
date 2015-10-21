@@ -127,6 +127,7 @@
     ("ihset" "import Data.HSet" nil 0)
     ("ilen" "import Control.Lens" nil 0)
     ("im" "import Control.Monad" nil 0)
+    ("imay" "import Data.Maybe" nil 0)
     ("imb" "import Control.Monad.Base" nil 0)
     ("iml" "import Control.Monad.Logger" nil 0)
     ("ine" "import Data.List.NonEmpty (NonEmpty(..))" nil 0)
