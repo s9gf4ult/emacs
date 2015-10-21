@@ -256,7 +256,7 @@
  '(company-dabbrev-ignore-case nil)
  '(company-global-modes
    (quote
-    (haskell-mode haskell-cabal-mode git-commit-mode markdown-mode ruby-mode)))
+    (haskell-mode haskell-cabal-mode git-commit-mode markdown-mode ruby-mode js-mode)))
  '(company-idle-delay 0.1)
  '(company-show-numbers t)
  '(compilation-always-kill t)

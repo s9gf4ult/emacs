@@ -1,4 +1,4 @@
-;;; s9g-defuns.el --- function definitions
+  ;;; s9g-defuns.el --- function definitions
 
 ;; Copyright (C) 2011
 
@@ -148,23 +148,34 @@ BEG and END (region to sort)."
      (shell-command (concat "touch " (shell-quote-argument (buffer-file-name))))
      (clear-visited-file-modtime))
 
+(defun indent-by (ind &optional beg end)
+  (interactive)
+  (when (or (and beg end) (region-active-p))
+    (let* ((deactivate-mark)
+           (beg (or beg (region-beginning)))
+           (end (or end (region-end)))
+           (mark-after (region-active-p))
+           (bline (line-number-at-pos beg))
+           (eline (line-number-at-pos end)))
+      (flet ((getlinepos (line)
+                         (save-excursion
+                           (goto-line line)
+                           (beginning-of-line)
+                           (point))))
+        (indent-rigidly (getlinepos bline)
+                        (getlinepos eline) ind)
+        (when mark-after
+          (push-mark (getlinepos bline))
+          (goto-char (getlinepos eline))
+          (activate-mark))))))
+
 (defun s9g-indent-up ()
   (interactive)
-  (if (region-active-p)
-      (save-lined-selection
-       (indent-code-rigidly
-        (region-beginning)
-        (region-end)
-        tab-width))))
+  (indent-by 1))
 
 (defun s9g-indent-down ()
   (interactive)
-  (if (region-active-p)
-      (save-lined-selection
-       (indent-code-rigidly
-        (region-beginning)
-        (region-end)
-        (- tab-width)))))
+  (indent-by -1))
 
 (defun replace-word (tosearch toreplace)
   (interactive "sSearch for word: \nsReplace with: ")
