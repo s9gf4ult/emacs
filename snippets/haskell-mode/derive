@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: derive
+# key: derive
+# binding: direct-keybinding
+# --
+deriving (Eq, Ord, Show, Generic)$0
