@@ -115,6 +115,8 @@
     ("iap" "import Control.Applicative" nil 0)
     ("iarr" "import Control.Arrow" nil 0)
     ("ib" "import Data.ByteString (ByteString)" nil 0)
+    ("ice" "import Control.Exception" nil 0)
+    ("icel" "import Control.Exception.Lifted" nil 0)
     ("icmb" "import Control.Monad.Base" nil 0)
     ("icon" "import Data.Conduit" nil 0)
     ("idef" "import Data.Default" nil 0)
@@ -129,7 +131,9 @@
     ("im" "import Control.Monad" nil 0)
     ("imay" "import Data.Maybe" nil 0)
     ("imb" "import Control.Monad.Base" nil 0)
+    ("ime" "import Control.Monad.Except" nil 0)
     ("iml" "import Control.Monad.Logger" nil 0)
+    ("imtc" "import Control.Monad.Trans.Control" nil 0)
     ("ine" "import Data.List.NonEmpty (NonEmpty(..))" nil 0)
     ("ipgq" "import Database.PostgreSQL.Query" nil 0)
     ("ipgs" "import Database.PostgreSQL.Simple" nil 0)
@@ -220,6 +224,8 @@
 (define-abbrev-table 'occur-edit-mode-abbrev-table '())
 
 (define-abbrev-table 'occur-mode-abbrev-table '())
+
+(define-abbrev-table 'org-export-stack-mode-abbrev-table '())
 
 (define-abbrev-table 'org-mode-abbrev-table '())
 
