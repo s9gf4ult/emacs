@@ -88,3 +88,9 @@
 [submodule "packages/flycheck-hdevtools"]
 	path = packages/flycheck-hdevtools
 	url = git@github.com:flycheck/flycheck-hdevtools.git
+[submodule "packages/prop-menu-el"]
+	path = packages/prop-menu-el
+	url = git@github.com:david-christiansen/prop-menu-el.git
+[submodule "packages/idris-mode"]
+	path = packages/idris-mode
+	url = git@github.com:idris-hackers/idris-mode.git
