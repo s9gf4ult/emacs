@@ -5,6 +5,8 @@
 
 (define-abbrev-table 'Info-edit-mode-abbrev-table '())
 
+(define-abbrev-table 'agda2-mode-abbrev-table '())
+
 (define-abbrev-table 'apropos-mode-abbrev-table '())
 
 (define-abbrev-table 'awk-mode-abbrev-table
@@ -118,6 +120,7 @@
     ("ice" "import Control.Exception" nil 0)
     ("icel" "import Control.Exception.Lifted" nil 0)
     ("icmb" "import Control.Monad.Base" nil 0)
+    ("icmc" "import Control.Monad.Catch" nil 0)
     ("icon" "import Data.Conduit" nil 0)
     ("idef" "import Data.Default" nil 0)
     ("idep" "import Control.DeepSeq" nil 0)
@@ -164,6 +167,24 @@
 (define-abbrev-table 'html-mode-abbrev-table '())
 
 (define-abbrev-table 'idl-mode-abbrev-table '())
+
+(define-abbrev-table 'idris-compiler-notes-mode-abbrev-table '())
+
+(define-abbrev-table 'idris-hole-list-mode-abbrev-table '())
+
+(define-abbrev-table 'idris-info-mode-abbrev-table '())
+
+(define-abbrev-table 'idris-ipkg-mode-abbrev-table '())
+
+(define-abbrev-table 'idris-log-mode-abbrev-table '())
+
+(define-abbrev-table 'idris-mode-abbrev-table '())
+
+(define-abbrev-table 'idris-prover-script-mode-abbrev-table '())
+
+(define-abbrev-table 'idris-repl-mode-abbrev-table '())
+
+(define-abbrev-table 'idris-tree-info-mode-abbrev-table '())
 
 (define-abbrev-table 'inferior-moz-mode-abbrev-table '())
 
