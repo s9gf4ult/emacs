@@ -61,6 +61,9 @@
       (add-to-list 'custom-theme-load-path fname)))
 
 
+(load-file (let ((coding-system-for-read 'utf-8))
+                (shell-command-to-string "agda-mode locate")))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; change default confgis location ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -96,3 +99,4 @@
 ;; (color-theme-xemacs)
 
 ;;; init.el ends here
+
