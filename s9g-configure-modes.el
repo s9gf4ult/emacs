@@ -56,6 +56,7 @@
 (require 'helm-config)
 (require 'helm-dash)
 (require 'sql-indent)
+(require 'idris-mode)
 
 (provide 's9g-configure-modes)
 ;;; s9g-set-hooks.el ends here
