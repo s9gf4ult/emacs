@@ -94,3 +94,6 @@
 [submodule "packages/idris-mode"]
 	path = packages/idris-mode
 	url = git@github.com:idris-hackers/idris-mode.git
+[submodule "packages/haskell-snippets"]
+	path = packages/haskell-snippets
+	url = git@github.com:haskell/haskell-snippets.git
