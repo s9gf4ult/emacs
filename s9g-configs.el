@@ -256,7 +256,7 @@
  '(company-dabbrev-ignore-case nil)
  '(company-global-modes
    (quote
-    (haskell-mode haskell-cabal-mode git-commit-mode markdown-mode ruby-mode js-mode)))
+    (haskell-mode haskell-cabal-mode git-commit-mode markdown-mode ruby-mode js-mode sql-mode)))
  '(company-idle-delay 0.1)
  '(company-show-numbers t)
  '(compilation-always-kill t)
@@ -387,7 +387,10 @@
  '(vc-annotate-color-map nil)
  '(warning-minimum-level :error)
  '(woman-fill-column (- (window-width) 5))
- '(woman-use-own-frame nil))
+ '(woman-use-own-frame nil)
+ '(yas-prompt-functions
+   (quote
+    (yas-ido-prompt yas-x-prompt yas-dropdown-prompt yas-completing-prompt yas-no-prompt))))
 (put 'set-goal-column 'disabled nil)
 
 

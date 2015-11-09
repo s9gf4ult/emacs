@@ -83,6 +83,12 @@
     (local-set-key
      (kbd "C-c w") #'haskell-mode-stylish-buffer)
 
+    (local-set-key
+     (kbd "C-c n") #'haskell-goto-next-error)
+
+    (local-set-key
+     (kbd "C-c p") #'haskell-goto-prev-error)
+
     ;; (local-set-key
     ;;  (kbd "M-n") #'flycheck-next-error)
 

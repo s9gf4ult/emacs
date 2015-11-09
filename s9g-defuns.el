@@ -220,6 +220,11 @@ BEG and END (region to sort)."
       (insert
        (buffer-name (window-buffer w))))))
 
+(defun dired-ido-find-file-in-current-directory ()
+  (interactive)
+  (let ((default-directory (dired-current-directory)))
+    (ido-find-file)))
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Haskell helpers ;;
 ;;;;;;;;;;;;;;;;;;;;;
