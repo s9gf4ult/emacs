@@ -110,8 +110,6 @@
   (local-set-key (kbd "<f5>") #'s9g-haskell-compile)
   (local-set-key (kbd "C-c s") #'haskell-cabal-subsection-arrange-lines))
 
-
-
 (add-hook 'haskell-cabal-mode-hook #'s9g-cabal-hook)
 (add-hook 'haskell-mode-hook #'s9g-haskell-hook)
 

@@ -157,6 +157,8 @@
 
 (global-set-key (kbd "C-S-u") #'uniq-sort-lines)
 
+(global-set-key (kbd "C-c b") #'ido-insert-buffer-name)
+
 ;;;;;;;;;;;;;;;;;
 ;; Navigating  ;;
 ;;;;;;;;;;;;;;;;;

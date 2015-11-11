@@ -220,6 +220,11 @@ BEG and END (region to sort)."
       (insert
        (buffer-name (window-buffer w))))))
 
+(defun ido-insert-buffer-name ()
+  (interactive)
+  (let ((buf (ido-read-buffer "Buffer: ")))
+    (insert buf)))
+
 (defun dired-ido-find-file-in-current-directory ()
   (interactive)
   (let ((default-directory (dired-current-directory)))
