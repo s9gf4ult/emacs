@@ -29,7 +29,7 @@
                         load-file-name)))
 (add-to-list 'load-path dotfiles-dir)
 
-(setq gc-cons-threshold 20000000)
+(setq gc-cons-threshold 40000000)
 
 ; (require 's9g-cedet)
 
