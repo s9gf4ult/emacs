@@ -60,6 +60,7 @@
 (require 'haskell-snippets)
 (require 's9g-ghc-mod)
 (require 's9g-dired-mode)
+(require 's9g-flx)
 
 (provide 's9g-configure-modes)
 ;;; s9g-set-hooks.el ends here
