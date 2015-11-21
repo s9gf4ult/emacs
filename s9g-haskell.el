@@ -25,6 +25,7 @@
 ;;; Code:sh
 
 (require 'haskell-mode-autoloads)
+(require 's9g-neotree)
 
 (add-to-list 'Info-default-directory-list "~/.emacs.d/packages/haskell-mode/")
 
@@ -43,6 +44,10 @@
          (let* ((cabal-file (haskell-cabal-find-file (file-name-directory buffer-file-name)))
                 (proj-dir (file-name-directory cabal-file)))
            (rgrep regexp "*.hs" proj-dir))))
+
+(defun haskell-neotree-open-proj ()
+  (interactive)
+  (neo-global--open-dir (haskell-cabal-find-dir)))
 
 (defun s9g-haskell-hook ()
   (when (buffer-file-name)              ; fix
@@ -88,6 +93,9 @@
 
     (local-set-key
      (kbd "C-c p") #'haskell-goto-prev-error)
+
+    (local-set-key
+     (kbd "<f12>") #'haskell-neotree-open-proj)
 
     ;; (local-set-key
     ;;  (kbd "M-n") #'flycheck-next-error)

@@ -61,6 +61,7 @@
 (require 's9g-ghc-mod)
 (require 's9g-dired-mode)
 (require 's9g-flx)
+(require 's9g-neotree)
 
 (provide 's9g-configure-modes)
 ;;; s9g-set-hooks.el ends here
