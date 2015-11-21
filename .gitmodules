@@ -97,3 +97,6 @@
 [submodule "packages/flx"]
 	path = packages/flx
 	url = git@github.com:lewang/flx.git
+[submodule "packages/emacs-neotree"]
+	path = packages/emacs-neotree
+	url = git@github.com:jaypei/emacs-neotree.git
