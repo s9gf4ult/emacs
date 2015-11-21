@@ -51,17 +51,7 @@
  do (let ((fname (first file)))
       (add-to-list 'load-path fname)))
 
-
-(loop
- for file in (directory-files-and-attributes (concat dotfiles-dir "themes") t)
- if (and (second file)
-         (let ((fn (file-name-base (first file))))
-           (and
-            (not (string-equal "." fn))
-            (not (string-equal ".." fn)))))
- do (let ((fname (first file)))
-      (add-to-list 'custom-theme-load-path fname)))
-
+(add-to-list 'load-path (concat dotfiles-dir "packages/magit/lisp"))
 
 (load-file (let ((coding-system-for-read 'utf-8))
                 (shell-command-to-string "agda-mode locate")))
