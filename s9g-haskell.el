@@ -47,7 +47,9 @@
 
 (defun haskell-neotree-open-proj ()
   (interactive)
-  (neo-global--open-dir (haskell-cabal-find-dir)))
+  (if (neo-global--window-exists-p)
+      (neotree-hide)
+    (neo-global--open-dir (haskell-cabal-find-dir))))
 
 (defun s9g-haskell-hook ()
   (when (buffer-file-name)              ; fix
