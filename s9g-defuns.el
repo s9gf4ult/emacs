@@ -230,6 +230,16 @@ BEG and END (region to sort)."
   (let ((default-directory (dired-current-directory)))
     (ido-find-file)))
 
+(defun delete-horizontal-space-forward ()
+  (interactive "*")
+  (let* ((beg (point))
+         (end (save-excursion
+                (skip-chars-forward " \t")
+                (point))))
+    (delete-region beg end)))
+
+
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Haskell helpers ;;
 ;;;;;;;;;;;;;;;;;;;;;

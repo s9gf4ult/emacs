@@ -61,6 +61,9 @@
    (save-excursion
      (insert " "))))
 
+(global-unset-key (kbd "C-\\"))
+(global-set-key (kbd "C-\\") #'delete-horizontal-space-forward)
+
 (global-unset-key (kbd "C-x C-o"))
 (global-set-key (kbd "C-x C-o") #'delete-blank-lines-then-insert)
 
