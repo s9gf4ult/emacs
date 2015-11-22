@@ -51,6 +51,32 @@
       (neotree-hide)
     (neo-global--open-dir (haskell-cabal-find-dir))))
 
+(defun haskell-process-modules ()
+  (let* ((process (haskell-interactive-process))
+         (inp "import "))
+    (cdr (haskell-process-get-repl-completions process inp))))
+
+(defun haskell-buffers-list ()
+  (let ((bufs ()))
+    (dolist (buf (buffer-list) bufs)
+      (with-current-buffer buf
+        (when (string-equal "haskell-mode" major-mode)
+          (push buf bufs))))))
+
+;; (defun helm-haskell-buffers ()
+;;   (interactive)
+;;   (helm :source (helm-build-sync-source
+;;                   "Haskell buffers"
+;;                   :candidates (haskell-buffers-list))
+;;         :buffer "*helm-haskell-buffers*"))
+
+(defun haskell-process-insert-module ()
+  (interactive "*")
+  (insert (helm :sources (helm-build-sync-source
+                          "Haskell modules"
+                          :candidates (haskell-process-modules))
+                :buffer "*helm-haskell-modules*")))
+
 (defun s9g-haskell-hook ()
   (when (buffer-file-name)              ; fix
     ;; (local-set-key (kbd "<return>") #'newline-and-indent)
@@ -95,6 +121,9 @@
 
     (local-set-key
      (kbd "C-c p") #'haskell-goto-prev-error)
+
+    (local-set-key
+     (kbd "C-c m") #'haskell-process-insert-module)
 
     (local-set-key
      (kbd "<f12>") #'haskell-neotree-open-proj)
