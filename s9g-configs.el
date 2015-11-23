@@ -324,6 +324,7 @@
  '(haskell-stylish-on-save nil)
  '(helm-autoresize-mode t)
  '(helm-dash-browser-func (quote eww))
+ '(helm-etags-execute-action-at-once-if-one nil)
  '(hscroll-margin -1)
  '(ido-auto-merge-delay-time 2)
  '(ido-auto-merge-work-directories-length -1)

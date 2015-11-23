@@ -180,7 +180,7 @@
 
 
 (global-unset-key (kbd "M-."))
-(global-set-key (kbd "M-.") #'etags-select-find-tag)
+(global-set-key (kbd "M-.") #'helm-etags-select)
 
 (global-set-key (kbd "C-.") #'etags-select-find-tag-other-window)
 
