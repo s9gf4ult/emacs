@@ -55,6 +55,7 @@
 (require 'async)
 (require 'helm-config)
 (require 'helm-dash)
+(require 's9g-helm)
 (require 'sql-indent)
 (require 'idris-mode)
 (require 'haskell-snippets)

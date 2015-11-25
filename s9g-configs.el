@@ -290,7 +290,6 @@
  '(fixme-foreground-color "#CC0019")
  '(fixme-highlighted-words (quote ("FIXME" "TODO" "BUG" "KLUDGE")))
  '(fixme-mode t)
- '(flx-ido-mode t)
  '(flycheck-checkers
    (quote
     (haskell-hdevtools ada-gnat asciidoc c/c++-clang c/c++-gcc c/c++-cppcheck cfengine chef-foodcritic coffee coffee-coffeelint coq css-csslint d-dmd emacs-lisp emacs-lisp-checkdoc erlang eruby-erubis fortran-gfortran go-gofmt go-golint go-vet go-build go-test go-errcheck haml handlebars html-tidy javascript-jshint javascript-eslint javascript-gjslint javascript-jscs javascript-standard json-jsonlint less luacheck lua perl perl-perlcritic php php-phpmd php-phpcs puppet-parser puppet-lint python-flake8 python-pylint python-pycompile r-lintr racket rpm-rpmlint rst rst-sphinx ruby-rubocop ruby-rubylint ruby ruby-jruby rust sass scala scala-scalastyle scss-lint scss sh-bash sh-posix-dash sh-posix-bash sh-zsh sh-shellcheck slim tex-chktex tex-lacheck texinfo verilog-verilator xml-xmlstarlet xml-xmllint yaml-jsyaml yaml-ruby)))
@@ -322,9 +321,15 @@
  '(haskell-process-type (quote cabal-repl))
  '(haskell-program-name "cabal-dev ghci")
  '(haskell-stylish-on-save nil)
+ '(helm-M-x-fuzzy-match t)
+ '(helm-autoresize-max-height 40)
  '(helm-autoresize-mode t)
+ '(helm-buffer-max-length 80)
+ '(helm-buffers-favorite-modes (quote (haskell-mode haskell-cabal-mode)))
+ '(helm-buffers-fuzzy-matching nil)
  '(helm-dash-browser-func (quote eww))
  '(helm-etags-execute-action-at-once-if-one nil)
+ '(helm-mode t)
  '(hscroll-margin -1)
  '(ido-auto-merge-delay-time 2)
  '(ido-auto-merge-work-directories-length -1)
@@ -334,7 +339,7 @@
  '(ido-ignore-files
    (quote
     ("\\`CVS/" "\\`#" "\\`.#" "\\`\\.\\./" "\\`\\./" "\\`~/")))
- '(ido-mode (quote both) nil (ido))
+ '(ido-mode nil nil (ido))
  '(indent-tabs-mode nil)
  '(inferior-lisp-program "/usr/bin/sbcl --control-stack-size 20")
  '(js-indent-level 4)

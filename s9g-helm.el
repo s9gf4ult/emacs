@@ -1,4 +1,4 @@
-;;; s9g-dired-mode.el ---                            -*- lexical-binding: t; -*-
+;;; s9g-helm.el ---                                  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2015
 
@@ -24,14 +24,19 @@
 
 ;;; Code:
 
-(require 's9g-defuns)
+(require 'helm)
+(require 'helm-buffers)
+(require 'helm-ls-git)
 
-(add-hook
- 'dired-mode-hook
- #'(lambda ()
-     (local-set-key (kbd "C-x C-f")
-                    #'dired-ido-find-file-in-current-directory)
-     ))
+;; Conveinience
+(define-key helm-map (kbd "<C-return>")
+  (lambda ()
+    (interactive)
+    (helm-select-nth-action 1)))
 
-(provide 's9g-dired-mode)
-;;; s9g-dired-mode.el ends here
+(global-set-key
+ (kbd "<f8>")
+ #'helm-ls-git-ls)
+
+(provide 's9g-helm)
+;;; s9g-helm.el ends here

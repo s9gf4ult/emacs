@@ -26,13 +26,19 @@
 
 (require 's9g-defuns)
 
-(global-set-key
- (kbd "<f7>")
- #'ido-switch-buffer)
+;;;;;;;;;;;;;
+;; generic ;;
+;;;;;;;;;;;;;
 
 (global-set-key
- (kbd "<f8>")
- #'ido-switch-buffer-other-window)
+ (kbd "<f7>")
+ #'helm-buffers-list)
+
+(global-unset-key (kbd "M-x"))
+(global-set-key (kbd "M-x") #'helm-M-x)
+
+(global-unset-key (kbd "C-x C-f"))
+(global-set-key (kbd "C-x C-f") #'helm-find-files)
 
 ;;;;;;;;;;;;;;
 ;; Editing  ;;
