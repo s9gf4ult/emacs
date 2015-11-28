@@ -321,7 +321,7 @@
  '(haskell-process-type (quote cabal-repl))
  '(haskell-program-name "cabal-dev ghci")
  '(haskell-stylish-on-save nil)
- '(helm-M-x-fuzzy-match t)
+ '(helm-M-x-fuzzy-match nil)
  '(helm-autoresize-max-height 40)
  '(helm-autoresize-mode t)
  '(helm-buffer-max-length 80)
@@ -329,6 +329,9 @@
  '(helm-buffers-fuzzy-matching nil)
  '(helm-dash-browser-func (quote eww))
  '(helm-etags-execute-action-at-once-if-one nil)
+ '(helm-ls-git-default-sources
+   (quote
+    (helm-source-ls-git-buffers helm-source-ls-git helm-source-ls-git-status)))
  '(helm-mode t)
  '(hscroll-margin -1)
  '(ido-auto-merge-delay-time 2)
@@ -346,6 +349,7 @@
  '(layout-restore-after-killbuffer nil)
  '(layout-restore-after-otherwindow nil)
  '(layout-restore-after-switchbuffer nil)
+ '(magit-commit-show-diff nil)
  '(magit-push-always-verify nil)
  '(make-backup-files nil)
  '(menu-bar-mode nil)

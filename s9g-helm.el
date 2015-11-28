@@ -30,9 +30,10 @@
 
 ;; Conveinience
 (define-key helm-map (kbd "<C-return>")
-  (lambda ()
-    (interactive)
-    (helm-select-nth-action 1)))
+  #'helm-buffer-switch-other-window)
+
+(define-key helm-etags-map (kbd "<C-return>")
+  #'helm-etags-run-switch-other-window)
 
 (global-set-key
  (kbd "<f8>")
