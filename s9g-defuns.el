@@ -238,7 +238,21 @@ BEG and END (region to sort)."
                 (point))))
     (delete-region beg end)))
 
+(defun upcase-character ()
+  (interactive "*")
+  (let ((beg (point))
+        (end (progn
+               (right-char)
+               (point))))
+    (upcase-region beg end)))
 
+(defun downcase-character ()
+  (interactive "*")
+  (let ((beg (point))
+        (end (progn
+               (right-char)
+               (point))))
+    (downcase-region beg end)))
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Haskell helpers ;;

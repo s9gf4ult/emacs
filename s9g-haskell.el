@@ -77,6 +77,23 @@
                           :candidates (haskell-process-modules))
                 :buffer "*helm-haskell-modules*")))
 
+(defun haskell-move-identifier-name ()
+  (interactive)
+  (beginning-of-thing 'word)
+  (skip-chars-forward "_"))
+
+(defun haskell-upcase-indentifier ()
+  (interactive "*")
+  (save-excursion
+    (haskell-move-identifier-name)
+    (upcase-character)))
+
+(defun haskell-downcase-indentifier ()
+  (interactive "*")
+  (save-excursion
+    (haskell-move-identifier-name)
+    (downcase-character)))
+
 (defun s9g-haskell-hook ()
   (when (buffer-file-name)              ; fix
     ;; (local-set-key (kbd "<return>") #'newline-and-indent)
@@ -124,6 +141,12 @@
 
     (local-set-key
      (kbd "C-c m") #'haskell-process-insert-module)
+
+    (local-set-key
+     (kbd "C-c C-u") #'haskell-upcase-indentifier)
+
+    (local-set-key
+     (kbd "C-c C-l") #'haskell-downcase-indentifier)
 
     (local-set-key
      (kbd "<f12>") #'haskell-neotree-open-proj)

@@ -398,7 +398,8 @@
  '(vc-annotate-background "cornsilk")
  '(vc-annotate-color-map nil)
  '(warning-minimum-level :error)
- '(woman-fill-column (- (window-width) 5))
+ '(woman-fill-column 120)
+ '(woman-fill-frame t)
  '(woman-use-own-frame nil)
  '(yas-prompt-functions
    (quote

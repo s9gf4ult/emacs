@@ -184,12 +184,8 @@
 (global-set-key (kbd "M-N") #'next-multiframe-window)
 (global-set-key (kbd "M-P") #'previous-multiframe-window)
 
-
 (global-unset-key (kbd "M-."))
 (global-set-key (kbd "M-.") #'helm-etags-select)
-
-(global-set-key (kbd "C-.") #'etags-select-find-tag-other-window)
-
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; narrowing and firends ;;
