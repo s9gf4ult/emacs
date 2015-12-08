@@ -187,6 +187,8 @@
 (global-unset-key (kbd "M-."))
 (global-set-key (kbd "M-.") #'helm-etags-select)
 
+(global-set-key (kbd "C-c h") #'s9g-helm-do-ag)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; narrowing and firends ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;

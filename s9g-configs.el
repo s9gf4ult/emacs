@@ -247,7 +247,6 @@
              (css-mode html-mode))))))
  '(auto-insert (quote not-modified))
  '(blink-cursor-mode nil)
- '(browse-url-browser-function (quote browse-url-chromium))
  '(coffee-tab-width 2)
  '(column-number-mode t)
  '(comment-auto-fill-only-comments t)
@@ -299,8 +298,9 @@
  '(global-hl-line-mode nil)
  '(global-visual-line-mode nil)
  '(haskell-ask-also-kill-buffers nil)
- '(haskell-compile-cabal-build-alt-command "cd %s && LANG=C cabal build")
- '(haskell-compile-cabal-build-command "cd %s && LANG=C nice cabal build")
+ '(haskell-compile-cabal-build-alt-command "stack -j5 test %s")
+ '(haskell-compile-cabal-build-command "stack -j5 build %s")
+ '(haskell-compile-command "ghc -Wall -ferror-spans -fforce-recomp -c %s")
  '(haskell-font-lock-symbols nil)
  '(haskell-hoogle-command nil)
  '(haskell-indentation-ifte-offset 2)
@@ -312,13 +312,14 @@
  '(haskell-mode-hook
    (quote
     (turn-on-haskell-decl-scan turn-on-haskell-indentation s9g-haskell-hook)) t)
+ '(haskell-process-args-cabal-repl (quote ("--ghc-option=-ferror-spans" "--no-load")))
  '(haskell-process-log t)
  '(haskell-process-path-cabal "/usr/bin/cabal")
  '(haskell-process-suggest-haskell-docs-imports nil)
  '(haskell-process-suggest-hoogle-imports t)
  '(haskell-process-suggest-remove-import-lines nil)
  '(haskell-process-suggest-restart nil)
- '(haskell-process-type (quote cabal-repl))
+ '(haskell-process-type (quote stack-ghci))
  '(haskell-program-name "cabal-dev ghci")
  '(haskell-stylish-on-save nil)
  '(helm-M-x-fuzzy-match nil)
@@ -412,7 +413,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "gray80" :foreground "gray17" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 150 :width normal :foundry "unknown" :family "Monaco"))))
+ '(default ((t (:inherit nil :stipple nil :background "gray80" :foreground "gray17" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 130 :width normal :foundry "unknown" :family "Monaco"))))
  '(cursor ((t (:background "OrangeRed2"))))
  '(diff-added ((t (:foreground "green4"))))
  '(diff-context ((t (:inherit shadow :foreground "gray32"))))

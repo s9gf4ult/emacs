@@ -170,6 +170,7 @@
 
 (defun s9g-cabal-hook ()
   (local-set-key (kbd "<f5>") #'s9g-haskell-compile)
+  (local-set-key (kbd "<f12>") #'haskell-neotree-open-proj)
   (local-set-key (kbd "C-c s") #'haskell-cabal-subsection-arrange-lines))
 
 (add-hook 'haskell-cabal-mode-hook #'s9g-cabal-hook)

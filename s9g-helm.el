@@ -27,6 +27,7 @@
 (require 'helm)
 (require 'helm-buffers)
 (require 'helm-ls-git)
+(require 'helm-ag)
 
 ;; Conveinience
 (define-key helm-map (kbd "<C-return>")
@@ -34,6 +35,9 @@
 
 (define-key helm-etags-map (kbd "<C-return>")
   #'helm-etags-run-switch-other-window)
+
+(define-key helm-ls-git-map (kbd "<C-return>")
+  #'helm-ff-run-switch-other-window)
 
 (global-set-key
  (kbd "<f8>")

@@ -24,6 +24,12 @@
 
 ;;; Code:
 
+(defun s9g-helm-do-ag (&optional pref)
+  (interactive "P")
+  (if pref
+      (helm-do-ag)
+    (helm-do-ag-project-root)))
+
 (defmacro save-lined-selection (&rest body)
   (let ((start (gensym))
         (end (gensym))
@@ -258,10 +264,12 @@ BEG and END (region to sort)."
 ;; Haskell helpers ;;
 ;;;;;;;;;;;;;;;;;;;;;
 
-(defun s9g-haskell-compile ()
-  (interactive)
+(defun s9g-haskell-compile (&optional alt)
+  (interactive "P")
   (save-some-buffers t)
-  (haskell-compile))
+  (if alt
+      (haskell-compile '-)
+    (haskell-compile)))
 
 (defun s9g-haskell-yesod-handler-name ()
   (interactive)
