@@ -103,3 +103,6 @@
 [submodule "packages/helm-ls-git"]
 	path = packages/helm-ls-git
 	url = git@github.com:emacs-helm/helm-ls-git.git
+[submodule "packages/emacs-helm-ag"]
+	path = packages/emacs-helm-ag
+	url = git@github.com:syohex/emacs-helm-ag.git
