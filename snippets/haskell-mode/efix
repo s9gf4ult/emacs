@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: efix
+# key: efix
+# binding: direct-keybinding
+# --
+error "FIXME: not implemented"

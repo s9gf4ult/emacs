@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: funex
+# key: funex
+# binding: direct-keybinding
+# --
+${1:function-name} = error "FIXME: $1 is not implemented"
