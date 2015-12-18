@@ -106,3 +106,6 @@
 [submodule "packages/emacs-helm-ag"]
 	path = packages/emacs-helm-ag
 	url = git@github.com:syohex/emacs-helm-ag.git
+[submodule "packages/fill-column-indicator"]
+	path = packages/fill-column-indicator
+	url = git@github.com:alpaker/Fill-Column-Indicator.git
