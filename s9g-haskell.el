@@ -26,6 +26,7 @@
 
 (require 'haskell-mode-autoloads)
 (require 's9g-neotree)
+(require 'whitespace)
 
 (add-to-list 'Info-default-directory-list "~/.emacs.d/packages/haskell-mode/")
 
@@ -155,6 +156,8 @@
     ;;  (kbd "M-n") #'flycheck-next-error)
 
     (setq tab-width 2)
+    (setq whitespace-style '(face empty tabs lines-tail trailing))
+    (whitespace-mode 1)
 
     (auto-insert-mode t)
 
