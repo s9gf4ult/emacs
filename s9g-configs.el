@@ -440,7 +440,9 @@
  '(monky-diff-add ((t (:foreground "forest green"))))
  '(region ((t (:background "gray61" :distant-foreground "gtk_selection_fg_color"))))
  '(vc-annotate-face-3F3FFF ((t (:foreground "#3F3FFF"))))
- '(warning ((t (:foreground "medium violet red" :weight bold)))))
+ '(warning ((t (:foreground "medium violet red" :weight bold))))
+ '(whitespace-empty ((t nil)))
+ '(whitespace-trailing ((t nil))))
 
 
 (provide 's9g-configs)
