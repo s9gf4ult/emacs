@@ -300,7 +300,7 @@
  '(global-visual-line-mode nil)
  '(haskell-ask-also-kill-buffers nil)
  '(haskell-compile-cabal-build-alt-command "stack test %s")
- '(haskell-compile-cabal-build-command "stack build -j2 --test --no-run-tests %s")
+ '(haskell-compile-cabal-build-command "stack build --test --no-run-tests %s")
  '(haskell-compile-command "ghc -Wall -ferror-spans -fforce-recomp -c %s")
  '(haskell-font-lock-symbols nil)
  '(haskell-hoogle-command nil)
