@@ -247,6 +247,7 @@
              (css-mode html-mode))))))
  '(auto-insert (quote not-modified))
  '(blink-cursor-mode nil)
+ '(calendar-week-start-day 1)
  '(coffee-tab-width 2)
  '(column-number-mode t)
  '(comment-auto-fill-only-comments t)
