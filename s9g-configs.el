@@ -286,7 +286,7 @@
                  (completion-at-point)
                (indent-for-tab-command))))))))))
  '(even-window-heights nil)
- '(fill-column 70)
+ '(fill-column 80)
  '(fixme-foreground-color "#CC0019")
  '(fixme-highlighted-words (quote ("FIXME" "TODO" "BUG" "KLUDGE")))
  '(fixme-mode t)
@@ -414,7 +414,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "gray80" :foreground "gray17" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 120 :width normal :foundry "unknown" :family "Monaco"))))
+ '(default ((t (:inherit nil :stipple nil :background "gray80" :foreground "gray17" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 135 :width normal :foundry "unknown" :family "Monaco"))))
  '(cursor ((t (:background "OrangeRed2"))))
  '(diff-added ((t (:foreground "green4"))))
  '(diff-context ((t (:inherit shadow :foreground "gray32"))))
@@ -441,7 +441,9 @@
  '(monky-diff-add ((t (:foreground "forest green"))))
  '(region ((t (:background "gray61" :distant-foreground "gtk_selection_fg_color"))))
  '(vc-annotate-face-3F3FFF ((t (:foreground "#3F3FFF"))))
- '(warning ((t (:foreground "medium violet red" :weight bold)))))
+ '(warning ((t (:foreground "medium violet red" :weight bold))))
+ '(whitespace-empty ((t nil)))
+ '(whitespace-trailing ((t nil))))
 
 
 (provide 's9g-configs)
