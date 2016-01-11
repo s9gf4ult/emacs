@@ -39,6 +39,9 @@
 (define-key helm-ls-git-map (kbd "<C-return>")
   #'helm-ff-run-switch-other-window)
 
+(define-key helm-find-files-map (kbd "<C-return>")
+  #'helm-ff-run-switch-other-window)
+
 (global-set-key
  (kbd "<f8>")
  #'helm-ls-git-ls)

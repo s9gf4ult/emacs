@@ -247,6 +247,7 @@
              (css-mode html-mode))))))
  '(auto-insert (quote not-modified))
  '(blink-cursor-mode nil)
+ '(calendar-week-start-day 1)
  '(coffee-tab-width 2)
  '(column-number-mode t)
  '(comment-auto-fill-only-comments t)
@@ -299,7 +300,7 @@
  '(global-visual-line-mode nil)
  '(haskell-ask-also-kill-buffers nil)
  '(haskell-compile-cabal-build-alt-command "stack test %s")
- '(haskell-compile-cabal-build-command "stack build -j2 --test --no-run-tests %s")
+ '(haskell-compile-cabal-build-command "stack build --test --no-run-tests %s")
  '(haskell-compile-command "ghc -Wall -ferror-spans -fforce-recomp -c %s")
  '(haskell-font-lock-symbols nil)
  '(haskell-hoogle-command nil)
@@ -413,7 +414,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "gray80" :foreground "gray17" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 135 :width normal :foundry "unknown" :family "Monaco"))))
+ '(default ((t (:inherit nil :stipple nil :background "gray80" :foreground "gray17" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 120 :width normal :foundry "unknown" :family "Monaco"))))
  '(cursor ((t (:background "OrangeRed2"))))
  '(diff-added ((t (:foreground "green4"))))
  '(diff-context ((t (:inherit shadow :foreground "gray32"))))
