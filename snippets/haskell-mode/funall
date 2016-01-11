@@ -1,0 +1,12 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: funall
+# key: funall
+# binding: direct-keybinding
+# expand-env: ((yas-indent-line 'fixed))
+# --
+${1:function-name}
+  :: forall
+   . ()
+  => ${2:args}
+  -> ${3:returns}
+$1 = $0error "FIXME: $1 not implemented"

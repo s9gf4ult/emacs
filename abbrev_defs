@@ -61,6 +61,8 @@
 
 (define-abbrev-table 'doctex-mode-abbrev-table '())
 
+(define-abbrev-table 'edebug-eval-mode-abbrev-table '())
+
 (define-abbrev-table 'edit-abbrevs-mode-abbrev-table '())
 
 (define-abbrev-table 'eieio-custom-mode-abbrev-table '())
@@ -134,7 +136,9 @@
     ("ihr" "import Control.Monad.HReader" nil 0)
     ("ihset" "import Data.HSet" nil 0)
     ("ilen" "import Control.Lens" nil 0)
+    ("ilit" "import GHC.TypeLits" nil 0)
     ("im" "import Control.Monad" nil 0)
+    ("imap" "import Data.Map.Strict (Map)" nil 0)
     ("imay" "import Data.Maybe" nil 0)
     ("imb" "import Control.Monad.Base" nil 0)
     ("ime" "import Control.Monad.Except" nil 0)
@@ -151,18 +155,22 @@
     ("iqdm" "import qualified Data.Map.Strict as M" nil 0)
     ("iqhm" "import qualified Data.HashMap.Strict as H" nil 0)
     ("iql" "import qualified Data.List as L" nil 0)
+    ("iqmap" "import qualified Data.Map.Strict as M" nil 0)
     ("iqne" "import qualified Data.List.NonEmpty as NE" nil 0)
     ("iqs" "import qualified Data.Set as S" nil 0)
     ("iqt" "import qualified Data.Text as T" nil 4)
     ("iqte" "import qualified Data.Text.Encoding as T" nil 0)
     ("iqtl" "import qualified Data.Text.Lazy as TL" nil 0)
     ("ishake" "import Text.Shakespeare.Text (st)" nil 0)
+    ("istr" "import Data.String" nil 0)
     ("it" "import Data.Text (Text)" nil 0)
     ("itrav" "import Data.Traversable" nil 0)
     ("ityp" "import Data.Typeable" nil 0)
    ))
 
 (define-abbrev-table 'haskell-presentation-mode-abbrev-table '())
+
+(define-abbrev-table 'helm-ag-mode-abbrev-table '())
 
 (define-abbrev-table 'helm-grep-mode-abbrev-table '())
 
@@ -192,6 +200,10 @@
 
 (define-abbrev-table 'idris-tree-info-mode-abbrev-table '())
 
+(define-abbrev-table 'image-dired-display-image-mode-abbrev-table '())
+
+(define-abbrev-table 'image-dired-thumbnail-mode-abbrev-table '())
+
 (define-abbrev-table 'inferior-moz-mode-abbrev-table '())
 
 (define-abbrev-table 'inferior-python-mode-abbrev-table '())
@@ -220,11 +232,25 @@
 
 (define-abbrev-table 'magit-log-mode-abbrev-table '())
 
+(define-abbrev-table 'magit-log-select-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-merge-preview-mode-abbrev-table '())
+
 (define-abbrev-table 'magit-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-popup-mode-abbrev-table '())
 
 (define-abbrev-table 'magit-process-mode-abbrev-table '())
 
 (define-abbrev-table 'magit-reflog-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-refs-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-revision-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-stash-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-stashes-mode-abbrev-table '())
 
 (define-abbrev-table 'magit-status-mode-abbrev-table '())
 
@@ -237,6 +263,8 @@
 (define-abbrev-table 'messages-buffer-mode-abbrev-table '())
 
 (define-abbrev-table 'monky-log-edit-mode-abbrev-table '())
+
+(define-abbrev-table 'neotree-mode-abbrev-table '())
 
 (define-abbrev-table 'noshell-process-mode-abbrev-table '())
 
@@ -280,9 +308,7 @@
 
 (define-abbrev-table 'python-mode-abbrev-table '())
 
-(define-abbrev-table 'python-mode-skeleton-abbrev-table
-  '(
-   ))
+(define-abbrev-table 'python-mode-skeleton-abbrev-table '())
 
 (define-abbrev-table 'quickurl-list-mode-abbrev-table '())
 
@@ -317,6 +343,8 @@
    ))
 
 (define-abbrev-table 'tabulated-list-mode-abbrev-table '())
+
+(define-abbrev-table 'term-mode-abbrev-table '())
 
 (define-abbrev-table 'tex-mode-abbrev-table '())
 
