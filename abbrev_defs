@@ -5,6 +5,8 @@
 
 (define-abbrev-table 'Info-edit-mode-abbrev-table '())
 
+(define-abbrev-table 'Man-mode-abbrev-table '())
+
 (define-abbrev-table 'agda2-mode-abbrev-table '())
 
 (define-abbrev-table 'apropos-mode-abbrev-table '())
@@ -136,6 +138,7 @@
     ("ihr" "import Control.Monad.HReader" nil 0)
     ("ihset" "import Data.HSet" nil 0)
     ("ilen" "import Control.Lens" nil 0)
+    ("ilist" "import qualified Data.List as L" nil 0)
     ("ilit" "import GHC.TypeLits" nil 0)
     ("im" "import Control.Monad" nil 0)
     ("imap" "import Data.Map.Strict (Map)" nil 0)

@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: tfix
+# key: tfix
+# binding: direct-keybinding
+# --
+("FIXME: not implemented $0" :: Text)

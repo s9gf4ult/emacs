@@ -256,7 +256,7 @@
  '(company-dabbrev-ignore-case nil)
  '(company-global-modes
    (quote
-    (haskell-mode haskell-cabal-mode git-commit-mode markdown-mode ruby-mode js-mode sql-mode)))
+    (haskell-mode haskell-cabal-mode git-commit-mode markdown-mode ruby-mode js-mode sql-mode hamlet-mode)))
  '(company-idle-delay 0.1)
  '(company-show-numbers t)
  '(compilation-always-kill t)
@@ -300,7 +300,7 @@
  '(global-visual-line-mode nil)
  '(haskell-ask-also-kill-buffers nil)
  '(haskell-compile-cabal-build-alt-command "stack test %s")
- '(haskell-compile-cabal-build-command "stack build --test --no-run-tests %s")
+ '(haskell-compile-cabal-build-command "stack build --test --no-run-tests --fast %s")
  '(haskell-compile-command "ghc -Wall -ferror-spans -fforce-recomp -c %s")
  '(haskell-font-lock-symbols nil)
  '(haskell-hoogle-command nil)
@@ -414,7 +414,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "gray80" :foreground "gray17" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 120 :width normal :foundry "unknown" :family "Monaco"))))
+ '(default ((t (:inherit nil :stipple nil :background "gray80" :foreground "gray17" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 140 :width normal :foundry "paratype" :family "PT Mono"))))
  '(cursor ((t (:background "OrangeRed2"))))
  '(diff-added ((t (:foreground "green4"))))
  '(diff-context ((t (:inherit shadow :foreground "gray32"))))

@@ -34,6 +34,11 @@
 ;; (require 'flycheck)
 ;; (require 'flycheck-hdevtools)
 
+(defun haskell-helm-do-ag ()
+  (interactive)
+  (let ((proot (helm-ag--project-root)))
+    (helm-do-ag proot "*.hs")))
+
 (defun s9g-haskell-set-buffer-name ()
   (let ((modname (haskell-guess-module-name)))
     (unless (string-equal "" modname)
@@ -148,6 +153,9 @@
 
     (local-set-key
      (kbd "C-c C-l") #'haskell-downcase-indentifier)
+
+    (local-set-key
+     (kbd "C-c h") #'haskell-helm-do-ag)
 
     (local-set-key
      (kbd "<f12>") #'haskell-neotree-open-proj)
