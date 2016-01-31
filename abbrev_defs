@@ -151,6 +151,7 @@
     ("ine" "import Data.List.NonEmpty (NonEmpty(..))" nil 0)
     ("ipgq" "import Database.PostgreSQL.Query" nil 0)
     ("ipgs" "import Database.PostgreSQL.Simple" nil 0)
+    ("ipgt" "import Database.PostgreSQL.Typed" nil 0)
     ("iprox" "import Data.Proxy" nil 0)
     ("iqbc" "import qualified Data.ByteString.Char8 as BC" nil 0)
     ("iqbl" "import qualified Data.ByteString.Lazy as BL" nil 0)

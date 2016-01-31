@@ -314,6 +314,7 @@
    (quote
     (turn-on-haskell-decl-scan turn-on-haskell-indentation s9g-haskell-hook)) t)
  '(haskell-process-args-cabal-repl (quote ("--ghc-option=-ferror-spans" "--no-load")))
+ '(haskell-process-args-stack-ghci (quote ("--ghci-options=-ferror-spans")))
  '(haskell-process-log t)
  '(haskell-process-path-cabal "/usr/bin/cabal")
  '(haskell-process-suggest-haskell-docs-imports nil)
@@ -357,7 +358,9 @@
  '(menu-bar-mode nil)
  '(org-agenda-files (quote ("~/org/work.org")))
  '(org-columns-default-format "%40ITEM(Task) %17Effort(Estimated Effort){:} %CLOCKSUM")
+ '(org-display-custom-times nil)
  '(org-remember-clock-out-on-exit t)
+ '(org-time-stamp-custom-formats (quote ("<%Y-%m-%d>" . "<%Y-%m-%d %H:%M>")))
  '(rng-nxml-auto-validate-flag nil)
  '(rst-level-face-base-color "goldenrod4")
  '(safe-local-variable-values

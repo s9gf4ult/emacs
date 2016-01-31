@@ -36,8 +36,8 @@
 
 (defun haskell-helm-do-ag ()
   (interactive)
-  (let ((proot (helm-ag--project-root)))
-    (helm-do-ag proot "*.hs")))
+  (let ((helm-do-ag--extensions (list "*.hs" "*.cabal")))
+    (helm-ag-project-root)))
 
 (defun s9g-haskell-set-buffer-name ()
   (let ((modname (haskell-guess-module-name)))
