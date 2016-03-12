@@ -1,0 +1,10 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: newid
+# key: newid
+# expand-env: ((yas-indent-line 'fixed))
+# condition: (= (length "newid") (current-column))
+# contributor: Luke Hoersten <luke@hoersten.org>
+# --
+newtype ${1:Type} = $1
+  { un$1 :: ${2:a}
+  } deriving (Eq, Read, Show, FromField, ToField, PathPiece)
