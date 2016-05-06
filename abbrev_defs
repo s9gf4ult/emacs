@@ -144,6 +144,7 @@
     ("imap" "import Data.Map.Strict (Map)" nil 0)
     ("imay" "import Data.Maybe" nil 0)
     ("imb" "import Control.Monad.Base" nil 0)
+    ("imbc" "import Control.Monad.Trans.Control" nil 0)
     ("ime" "import Control.Monad.Except" nil 0)
     ("iml" "import Control.Monad.Logger" nil 0)
     ("imon" "import Data.Monoid" nil 0)
@@ -177,6 +178,8 @@
 (define-abbrev-table 'helm-ag-mode-abbrev-table '())
 
 (define-abbrev-table 'helm-grep-mode-abbrev-table '())
+
+(define-abbrev-table 'helm-major-mode-abbrev-table '())
 
 (define-abbrev-table 'helm-moccur-mode-abbrev-table '())
 
