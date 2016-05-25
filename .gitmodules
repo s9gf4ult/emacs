@@ -9,7 +9,7 @@
 	url = git://github.com/fxbois/web-mode.git
 [submodule "packages/nxhtml"]
 	path = packages/nxhtml
-	url = git://github.com/emacsmirror/nxhtml.git
+        url = git@github.com:jwiegley/nxhtml.git
 [submodule "packages/ggtags"]
 	path = packages/ggtags
 	url = git://github.com/emacsmirror/ggtags.git
