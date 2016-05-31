@@ -106,3 +106,6 @@
 [submodule "packages/emacs-helm-ag"]
 	path = packages/emacs-helm-ag
 	url = git@github.com:syohex/emacs-helm-ag.git
+[submodule "packages/with-editor"]
+	path = packages/with-editor
+	url = git@github.com:magit/with-editor.git

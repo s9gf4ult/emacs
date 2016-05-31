@@ -399,6 +399,7 @@
  '(solarized-italic nil)
  '(solarized-underline nil)
  '(split-width-threshold 100)
+ '(sql-indent-offset 2)
  '(standard-indent 2)
  '(tab-width 4)
  '(tags-case-fold-search nil)
