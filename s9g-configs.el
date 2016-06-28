@@ -298,6 +298,7 @@
  '(global-company-mode t)
  '(global-flycheck-mode nil)
  '(global-hl-line-mode nil)
+ '(global-semantic-idle-scheduler-mode nil)
  '(global-visual-line-mode nil)
  '(haskell-ask-also-kill-buffers nil)
  '(haskell-compile-cabal-build-alt-command "stack test %s")
@@ -353,8 +354,11 @@
  '(layout-restore-after-killbuffer nil)
  '(layout-restore-after-otherwindow nil)
  '(layout-restore-after-switchbuffer nil)
+ '(magit-auto-revert-immediately nil)
  '(magit-commit-show-diff nil)
- '(magit-diff-arguments (quote ("--stat" "--no-ext-diff" "-M7")))
+ '(magit-diff-arguments
+   (quote
+    ("--stat" "--no-ext-diff" "-M7" "--diff-algorithm=patience")))
  '(magit-push-always-verify nil)
  '(make-backup-files nil)
  '(menu-bar-mode nil)
