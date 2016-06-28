@@ -109,3 +109,6 @@
 [submodule "packages/with-editor"]
 	path = packages/with-editor
 	url = git@github.com:magit/with-editor.git
+[submodule "packages/vlfi"]
+	path = packages/vlfi
+	url = git@github.com:m00natic/vlfi.git
