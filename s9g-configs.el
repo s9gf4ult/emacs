@@ -391,6 +391,8 @@
      ("semantic-decoration-on-protected-members" . t)
      ("semantic-decoration-on-private-members" . t)
      ("semantic-tag-boundary" . t))))
+ '(semantic-idle-scheduler-idle-time 100)
+ '(semantic-idle-summary-function (quote ignore))
  '(semantic-idle-work-parse-neighboring-files-flag t)
  '(semantic-idle-work-update-headers-flag t)
  '(semantic-mode t)

@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: pend
+# key: pend
+# binding: direct-keybinding
+# --
+it "FIXME: tests not impemented" pending$0

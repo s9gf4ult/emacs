@@ -226,9 +226,12 @@ BEG and END (region to sort)."
       (insert
        (buffer-name (window-buffer w))))))
 
-(defun ido-insert-buffer-name ()
+(defun helm-insert-buffer-name ()
   (interactive)
-  (let ((buf (ido-read-buffer "Buffer: ")))
+  (let* ((buffer-names (map 'list #'buffer-name (buffer-list)))
+         (buf (helm :sources (helm-build-sync-source "buffers-list"
+                               :candidates buffer-names)
+                    :buffer "*helm-buffer-file-name*")))
     (insert buf)))
 
 (defun dired-ido-find-file-in-current-directory ()

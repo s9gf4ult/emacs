@@ -166,7 +166,7 @@
 
 (global-set-key (kbd "C-S-u") #'uniq-sort-lines)
 
-(global-set-key (kbd "C-c b b") #'ido-insert-buffer-name)
+(global-set-key (kbd "C-c b b") #'helm-insert-buffer-name)
 (global-set-key (kbd "C-c b n") #'insert-neigbour-buffer-name)
 
 ;;;;;;;;;;;;;;;;;
