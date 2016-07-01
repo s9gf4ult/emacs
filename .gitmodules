@@ -109,3 +109,6 @@
 [submodule "packages/vlfi"]
 	path = packages/vlfi
 	url = git@github.com:m00natic/vlfi.git
+[submodule "packages/multicolumn"]
+	path = packages/multicolumn
+	url = git@github.com:Lindydancer/multicolumn.git
