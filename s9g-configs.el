@@ -299,6 +299,7 @@
  '(global-flycheck-mode nil)
  '(global-hl-line-mode nil)
  '(global-semantic-idle-scheduler-mode nil)
+ '(global-semanticdb-minor-mode nil)
  '(global-visual-line-mode nil)
  '(haskell-ask-also-kill-buffers nil)
  '(haskell-compile-cabal-build-alt-command "stack test %s")
@@ -355,6 +356,7 @@
  '(layout-restore-after-otherwindow nil)
  '(layout-restore-after-switchbuffer nil)
  '(magit-auto-revert-immediately nil)
+ '(magit-auto-revert-mode t)
  '(magit-commit-show-diff nil)
  '(magit-diff-arguments
    (quote

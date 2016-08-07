@@ -34,6 +34,8 @@
 ;; (require 'flycheck)
 ;; (require 'flycheck-hdevtools)
 
+
+
 (defun haskell-helm-do-ag ()
   (interactive)
   (let ((helm-do-ag--extensions (list "*.hs" "*.cabal")))
@@ -196,6 +198,16 @@
     '(haskell-mode . "Haskell mode")
     '("Description:"
       "module " (haskell-guess-module-name) " where" "\n\n")))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; usefull haskell kbd macros ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(fset 'haskell-lens-export
+      (lambda (&optional arg) "Keyboard macro."
+        (interactive "p")
+        (kmacro-exec-ring-item
+         (quote ([1 C-right C-left right backspace backspace backspace C-right 11 C-left 32 backspace 44 32] 0 "%d")) arg)))
 
 
 (provide 's9g-haskell)
