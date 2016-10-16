@@ -112,3 +112,6 @@
 [submodule "packages/multicolumn"]
 	path = packages/multicolumn
 	url = git@github.com:Lindydancer/multicolumn.git
+[submodule "packages/dockerfile-mode"]
+	path = packages/dockerfile-mode
+	url = git@github.com:spotify/dockerfile-mode.git

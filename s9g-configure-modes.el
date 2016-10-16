@@ -64,6 +64,7 @@
 (require 's9g-neotree)
 (require 'vlf-setup)
 (require 's9g-multicolumn)
+(require 's9g-dockerfile)
 
 (provide 's9g-configure-modes)
 ;;; s9g-set-hooks.el ends here
